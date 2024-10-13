@@ -49,7 +49,8 @@
               <label for="message">Message:</label>
               <textarea id="message" name="message" required></textarea><br>
             
-              <button type="submit">Send</button>
+              <button type="submit">Send via Default Email App</button>
+              <button type="button" onclick="sendViaGmail()">Send via Gmail</button>
             </form>
             
             <script>
@@ -66,6 +67,19 @@
             
                 // Open the user's default email client with the mailto link
                 window.location.href = mailtoLink;
+              }
+            
+              function sendViaGmail() {
+                // Get form field values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+            
+                // Create the Gmail URL with pre-filled values
+                const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=your-email@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+            
+                // Open Gmail web app in a new tab
+                window.open(gmailLink, '_blank');
               }
             </script>
         </div>

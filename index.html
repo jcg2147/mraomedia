@@ -65,7 +65,8 @@
                 <div class="form-group">
                     <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Send Message</button>
+                <button type="button" onclick="submitForm(event)" class="btn btn-dark">Send via Default Mail</button>
+                <button type="button" onclick="sendViaGmail()" class="btn btn-dark">Send via Gmail</button>
             </form>
         </div>
     </section>

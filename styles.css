@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#hero {
+    position: relative;
+    height: 100vh; /* Full viewport height to cover both header and hero */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Ensure content is above the video */
+}
+
+#hero .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind the content */
+    overflow: hidden;
+}
+
+#hero .video-background iframe, #hero .video-background #player {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable mouse events on the video */
+    object-fit: cover; /* Ensure the video covers the area */
+}
+
+header {
+    position: relative;
+    background: none; /* Remove the background color */
+    z-index: 1; /* Ensure it appears above the video */
+    width: 100%;
+    padding: 1rem 0; /* Adjust padding to ensure it doesn't collapse */
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure it appears above the video */
+    margin-top: auto; /* Align to the bottom of the section */
+    padding-bottom: 2rem; /* Add some padding to the bottom */
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.75em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Add a shadow to the text */
+}
+
+.hero-content h2 {
+    font-size: 1.75em; /* Explicitly set the font size for <h2> elements */
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Add a shadow to the text */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+    animation-delay: 1s; /* Text will be visible for 3 seconds before fading out */
+}
+
+.video-card {
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    filter: brightness(0.9);
+}
+
+.video-info h5 {
+    margin: 0.5em 0 0;
+    font-size: 1.2em;
+}
+
+.video-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+footer p {
+    margin: 0;
+}
+
+nav .nav-link {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-link:hover {
+    color: #ffc107; /* Change to a brighter color on hover */
+}
+
+/* About section styling */
+#about .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#about .about-photo {
+    flex: 1;
+    text-align: center;
+}
+
+#about .about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}

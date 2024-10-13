@@ -1,0 +1,128 @@
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Create a YouTube player after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        videoId: 'NLRUTUusD00',  // YouTube Video ID
+        playerVars: {
+            'autoplay': 1,
+            'mute': 1,
+            'controls': 0,
+            'start': 52,
+            'modestbranding': 1,  // Minimizes YouTube branding
+            'rel': 0,             // No related videos at the end
+            'iv_load_policy': 3,  // Hides annotations
+            'playsinline': 1      // Plays the video inline (useful for mobile views)
+        },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// Play the video when the player is ready.
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+// Loop the video between 52s and 71s.
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        var loopStart = 52; // Loop start time in seconds
+        var loopEnd = 71;   // Loop end time in seconds
+
+        // Check the video time and loop if necessary
+        var loopChecker = setInterval(function() {
+            var currentTime = player.getCurrentTime();
+            if (currentTime >= loopEnd) {
+                player.seekTo(loopStart); // Jump back to the start of the loop
+            }
+        }, 1000); // Check every second
+
+        // Clear the interval when the video is not playing
+        player.addEventListener('onStateChange', function(event) {
+            if (event.data != YT.PlayerState.PLAYING) {
+                clearInterval(loopChecker);
+            }
+        });
+    }
+}
+
+// Filter function for the portfolio videos
+function filterVideos(type) {
+    let videos = document.querySelectorAll('.video-card');
+
+    videos.forEach(video => {
+        if (type === 'all') {
+            video.style.display = 'block';
+        } else if (video.classList.contains(type)) {
+            video.style.display = 'block';
+        } else {
+            video.style.display = 'none';
+        }
+    });
+}
+
+// Function to play meow sound
+function playMeowSound() {
+    var meowSound = new Audio('audio/meow.mp3'); // Adjust the path as needed
+    meowSound.play();
+}
+
+// Smooth scrolling function
+function smoothScroll(target, duration) {
+    var targetElement = document.querySelector(target);
+    if (targetElement) {
+        var targetPosition = targetElement.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var run = ease(timeElapsed, startPosition, targetPosition, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+}
+
+// Add event listeners for smooth scrolling on navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    var meowButton = document.getElementById('meowButton');
+    if (meowButton) {
+        meowButton.addEventListener('click', playMeowSound);
+    }
+
+    // Add smooth scrolling to navigation links
+    var navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var target = this.getAttribute('href');
+            smoothScroll(target, 1000); // Adjust duration (in milliseconds) as needed
+        });
+    });
+});
+
+//Event listener to fade out main welcome text
+window.addEventListener('DOMContentLoaded', (event) => {
+    const fadeText = document.getElementById('fade-text');
+    fadeText.classList.add('fade-out');
+});
+

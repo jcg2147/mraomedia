@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Freelance Video Editor</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1 class="text-center">Freelance Video Editor</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="index.html#hero">Home</a>
+                <a class="nav-link text-white" href="index.html#about">About</a>
+                <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+                <a class="nav-link text-white" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Portfolio</h2>
+            <div class="text-center mb-4">
+                <button class="btn btn-dark mx-1" onclick="filterVideos('all')">All</button>
+                <button class="btn btn-dark mx-1" onclick="filterVideos('editor')">Editor</button>
+                <button class="btn btn-dark mx-1" onclick="filterVideos('videographer')">Videographer</button>
+                <button class="btn btn-dark mx-1" onclick="filterVideos('producer')">Producer</button>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 video-card producer editor videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LKWTwszLFQM?modestbranding=3" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>Save Halloween - Music Video</h5>
+                        <p>Producer, Editor, Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card producer editor videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/evsLPReGy-A" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>Through the Lens of an Immigrant Advocate - Documentary</h5>
+                        <p>Producer, Editor, Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dar6VJ_eDCE" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>Void Patrol 1 - Live Performance</h5>
+                        <p>Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card producer editor videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aq2vC4JkoJE" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>Learning from Video Games - Documentary</h5>
+                        <p>Producer, Editor, Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a7ubkmP84z8" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>Telepatia Cover - Music Video</h5>
+                        <p>Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card editor videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hmRwDY2yYt8" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>The Marriage of Figaro (William Paterson Production) - Trailer</h5>
+                        <p>Editor, Videographer</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 video-card videographer">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PNwJFblpltY" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-2 text-center">
+                        <h5>We Don't Talk About Bruno Cover - Music Video</h5>
+                        <p>Videographer</p>
+                    </div>
+                </div>
+                <!-- Add more video cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Contact</h2>
+            <p class="mb-4">Get in touch to discuss your next project or to request a quote.</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Freelance Video Editor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

@@ -38,9 +38,41 @@
                 </div>
                 <button type="submit" class="btn btn-dark">Send Message</button>
             </form>
+             <!-- Testing out local mail app submission functionality -->
+            <form onsubmit="submitForm(event)">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br>
+            
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br>
+            
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea><br>
+            
+              <button type="submit">Send</button>
+            </form>
+            
+            <script>
+              function submitForm(event) {
+                event.preventDefault();  // Prevent the default form submission
+            
+                // Get form field values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+            
+                // Create the mailto link with pre-filled values
+                const mailtoLink = `mailto:your-email@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+            
+                // Open the user's default email client with the mailto link
+                window.location.href = mailtoLink;
+              }
+            </script>
         </div>
     </section>
 
+    
+    
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
             <p>&copy; 2024 Freelance Video Editor. All rights reserved.</p>

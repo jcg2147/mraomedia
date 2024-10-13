@@ -136,7 +136,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const message = document.getElementById('message').value;
 
     // Create the mailto link with pre-filled values
-    const mailtoLink = `mailto:your-email@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+    const mailtoLink = `mailto:mraomedia@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
 
     // Open the user's default email client with the mailto link
     window.location.href = mailtoLink;
@@ -149,7 +149,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const message = document.getElementById('message').value;
 
     // Create the Gmail URL with pre-filled values
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=your-email@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mraomedia@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
 
     // Open Gmail web app in a new tab
     window.open(gmailLink, '_blank');

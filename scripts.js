@@ -71,7 +71,7 @@ function filterVideos(type) {
 
 // Function to play meow sound
 function playMeowSound() {
-    var meowSound = new Audio('audio/meow.mp3'); // Adjust the path as needed
+    var meowSound = new Audio('audio/mrao.wav'); // Adjust the path as needed
     meowSound.play();
 }
 

@@ -28,64 +28,49 @@
             <p class="mb-4">Get in touch to discuss your next project or to request a quote.</p>
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email" required>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Send Message</button>
+                <button type="button" onclick="submitForm(event)" class="btn btn-dark">Send Message</button>
+                <button type="button" onclick="sendViaGmail()" class="btn btn-dark">Send via Gmail</button>
             </form>
-             <!-- Testing out local mail app submission functionality -->
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required><br>
-            
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required><br>
-            
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" required></textarea><br>
-            
-              <button type="button" onclick="submitForm(event)">Send via Default Email App</button>
-              <button type="button" onclick="sendViaGmail()">Send via Gmail</button>
-            </form>
-            
-            <script>
-              function submitForm(event) {
-                event.preventDefault();  // Prevent the default form submission
-            
-                // Get form field values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-            
-                // Create the mailto link with pre-filled values
-                const mailtoLink = `mailto:your-email@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
-            
-                // Open the user's default email client with the mailto link
-                window.location.href = mailtoLink;
-              }
-            
-              function sendViaGmail() {
-                // Get form field values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-            
-                // Create the Gmail URL with pre-filled values
-                const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=your-email@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
-            
-                // Open Gmail web app in a new tab
-                window.open(gmailLink, '_blank');
-              }
-            </script>
         </div>
     </section>
 
+    <script>
+      function submitForm(event) {
+        event.preventDefault();  // Prevent the default form submission
     
+        // Get form field values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        // Create the mailto link with pre-filled values
+        const mailtoLink = `mailto:your-email@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+    
+        // Open the user's default email client with the mailto link
+        window.location.href = mailtoLink;
+      }
+    
+      function sendViaGmail() {
+        // Get form field values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        // Create the Gmail URL with pre-filled values
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=your-email@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+    
+        // Open Gmail web app in a new tab
+        window.open(gmailLink, '_blank');
+      }
+    </script>    
     
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">

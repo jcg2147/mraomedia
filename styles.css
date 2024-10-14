@@ -105,8 +105,9 @@ header h1 {
 /* Shrink video card when filtered out */
 .video-card.shrink {
     opacity: 0;
-    transform: scale(0); /* Shrinks to 0 size */
-    visibility: hidden; /* Ensure it's hidden */
+    transform: scale(0.5); /* Shrinks to half size */
+    visibility: hidden; /* Hidden when transition completes */
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s; /* Delay visibility change until transition ends */
 }
 
 /* Unshrink video card when filtered back in */
@@ -114,6 +115,7 @@ header h1 {
     opacity: 1;
     transform: scale(1); /* Expands back to full size */
     visibility: visible; /* Make sure it's visible */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition occurs together */
 }
 
 .video-info h5 {

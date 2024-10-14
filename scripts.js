@@ -157,7 +157,7 @@ window.open(gmailLink, '_blank');
 
 // Function to load the contact form
 function loadContactForm() {
-  fetch('contact.html')
+  fetch('contact-form.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('contact-section').innerHTML = data;

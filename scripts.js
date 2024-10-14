@@ -127,31 +127,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 //Default & Gmail Mail Calls for sending forms
-  function submitForm(event) {
-    event.preventDefault();  // Prevent the default form submission
+function submitForm(event) {
+event.preventDefault();  // Prevent the default form submission
 
-    // Get form field values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+// Get form field values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
 
-    // Create the mailto link with pre-filled values
-    const mailtoLink = `mailto:mraomedia@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+// Create the mailto link with pre-filled values
+const mailtoLink = `mailto:mraomedia@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
 
-    // Open the user's default email client with the mailto link
-    window.location.href = mailtoLink;
-  }
+// Open the user's default email client with the mailto link
+window.location.href = mailtoLink;
+}
 
-  function sendViaGmail() {
-    // Get form field values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+function sendViaGmail() {
+// Get form field values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
 
-    // Create the Gmail URL with pre-filled values
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mraomedia@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+// Create the Gmail URL with pre-filled values
+const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mraomedia@gmail.com&su=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
 
-    // Open Gmail web app in a new tab
-    window.open(gmailLink, '_blank');
-  }
+// Open Gmail web app in a new tab
+window.open(gmailLink, '_blank');
+}
 
+// Function to load the contact form
+function loadContactForm() {
+  fetch('contact.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('contact-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the contact form:', error));
+}

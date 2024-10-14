@@ -210,7 +210,7 @@ nav .nav-link:hover {
     #latest-projects {
         flex-direction: column;
         height: auto;
-        margin: 90vw;
+        margin: 2vw;
     }
 
     #latest-projects .left-section {

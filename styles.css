@@ -253,7 +253,7 @@ nav .nav-link:hover {
 
     #latest-projects iframe {
         width: 90%; /* Make iframes take up almost full width on mobile */
-        max-width: 500px;
+        max-width: 600px;
     }
 
     #latest-projects img {

@@ -87,21 +87,28 @@ header h1 {
 }
 
 .video-card {
-    /* transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth shrinking and fading */
     opacity: 1;
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.video-card[style="display: none;"] {
-    opacity: 0; /* Hidden elements should not be seen, even during the transition */
+    transform: scale(1); /* Full size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .video-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transform: scale(1.05); /* Slightly bigger on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     filter: brightness(0.9);
+}
+
+/* Shrink video card when it's being filtered out */
+.video-card.shrink {
+    opacity: 0;
+    transform: scale(0); /* Shrinks to 0 size */
+}
+
+/* Make sure hidden elements are not interactable */
+.video-card[style="display: none;"] {
+    opacity: 0; /* Hidden elements should not be seen, even during the transition */
+    transform: scale(0); /* Ensure that hidden elements stay shrunk */
 }
 
 .video-info h5 {

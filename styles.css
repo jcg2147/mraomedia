@@ -249,11 +249,13 @@ nav .nav-link:hover {
         gap: 20px;
         display: flex;
         align-items: center;
+        padding: 0;
+        margin: 0;
     }
 
     #latest-projects iframe {
         width: 95%; /* Make iframes take up almost full width on mobile */
-        /* max-width: 600px; */
+        box-sizing: border-box; /* Ensure width includes paddings and borders */
     }
 
     #latest-projects img {

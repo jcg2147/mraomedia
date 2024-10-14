@@ -206,6 +206,7 @@ nav .nav-link:hover {
 #latest-projects iframe {
     width: 30%;
     aspect-ratio: 16 / 9;
+    box-sizing: border-box;
 }
 
 #latest-projects img {

@@ -197,6 +197,14 @@ nav .nav-link:hover {
     aspect-ratio: 16 / 9;
 }
 
+#latest-projects img {
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right */
+    width: 100%; /* Make image take full width */
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     #latest-projects {

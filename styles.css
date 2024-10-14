@@ -252,8 +252,8 @@ nav .nav-link:hover {
     }
 
     #latest-projects iframe {
-        width: 90%; /* Make iframes take up almost full width on mobile */
-        max-width: 600px;
+        width: 95%; /* Make iframes take up almost full width on mobile */
+        /* max-width: 600px; */
     }
 
     #latest-projects img {

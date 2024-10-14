@@ -154,3 +154,79 @@ nav .nav-link:hover {
   font-weight: <weight>;
   font-style: normal;
 }
+
+/* Default layout for larger screens */
+#latest-projects {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 0;
+    margin: 2vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#latest-projects .left-section {
+    flex: 1;
+    max-width: 65%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#latest-projects .right-section {
+    flex: 1;
+    max-width: 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#latest-projects .embedded-videos {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+/* Style for individual iframes (YouTube videos) */
+#latest-projects iframe {
+    width: 30%;
+    aspect-ratio: 16 / 9;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    #latest-projects {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #latest-projects .left-section {
+        max-width: 100%;
+    }
+
+    #latest-projects .right-section {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    #latest-projects .embedded-videos {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    #latest-projects iframe {
+        width: 90%; /* Make iframes take up almost full width on mobile */
+    }
+
+    #latest-projects img {
+        width: 100%; /* Make image take full width on mobile */
+        max-height: auto;
+        object-fit: contain;
+        border-radius: 0 0 15px 15px; /* Rounded corners on the bottom */
+    }
+}

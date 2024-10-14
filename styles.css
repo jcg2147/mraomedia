@@ -205,7 +205,9 @@ nav .nav-link:hover {
 /* Style for individual iframes (YouTube videos) */
 #latest-projects iframe {
     width: 30%;
+    max-width: 560px;
     aspect-ratio: 16 / 9;
+    height: auto;
     box-sizing: border-box;
 }
 

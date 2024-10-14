@@ -75,16 +75,22 @@ function filterVideos(category) {
 
     videos.forEach(function(video) {
         if (category === 'all' || video.classList.contains(category)) {
-            video.style.display = 'block'; // Show the video
+            video.classList.remove('shrink'); // Remove shrinking effect if it was hidden
+            video.classList.add('unshrink');  // Apply unshrinking effect
+
             setTimeout(() => {
-                video.classList.remove('shrink'); // Remove the shrinking class
-                video.style.opacity = 1;
+                video.style.visibility = 'visible'; // Make sure it's visible after unshrinking
+                video.style.opacity = 1; // Restore opacity
                 video.style.transform = 'scale(1)'; // Expand to full size
-            }, 50); // Slight delay to allow display change
+            }, 50); // Slight delay to ensure smooth transition
         } else {
+            video.classList.remove('unshrink'); // Remove unshrink effect
             video.classList.add('shrink'); // Start shrinking animation
+
             setTimeout(() => {
-                video.style.display = 'none'; // Hide after shrinking
+                video.style.visibility = 'hidden'; // Hide it after shrinking
+                video.style.opacity = 0;
+                video.style.transform = 'scale(0)'; // Shrink to 0
             }, 500); // Match the CSS transition duration (0.5s)
         }
     });

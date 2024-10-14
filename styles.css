@@ -247,10 +247,13 @@ nav .nav-link:hover {
         flex-direction: column;
         width: 100%;
         gap: 20px;
+        display: flex;
+        align-items: center;
     }
 
     #latest-projects iframe {
         width: 90%; /* Make iframes take up almost full width on mobile */
+        max-width: 500px;
     }
 
     #latest-projects img {

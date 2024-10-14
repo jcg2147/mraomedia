@@ -234,7 +234,7 @@ nav .nav-link:hover {
     }
     
     #latest-projects .left-section {
-        padding: 40px; 
+        padding: 10px; 
         max-width: 100%;
     }
 
@@ -254,7 +254,7 @@ nav .nav-link:hover {
     }
 
     #latest-projects iframe {
-        width: 95%; /* Make iframes take up almost full width on mobile */
+        width: 90%; /* Make iframes take up almost full width on mobile */
         box-sizing: border-box; /* Ensure width includes paddings and borders */
     }
 

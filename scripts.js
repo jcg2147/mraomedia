@@ -55,7 +55,7 @@ function onPlayerStateChange(event) {
 }
 
 // Filter function for the portfolio videos
-function filterVideos(type) {
+function filterVideosOLD(type) {
     let videos = document.querySelectorAll('.video-card');
 
     videos.forEach(video => {
@@ -65,6 +65,29 @@ function filterVideos(type) {
             video.style.display = 'block';
         } else {
             video.style.display = 'none';
+        }
+    });
+}
+
+// Filter function for the portfolio videos with animation
+function filterVideos(type) {
+    let videos = document.querySelectorAll('.video-card');
+
+    videos.forEach(video => {
+        if (type === 'all' || video.classList.contains(type)) {
+            // Fade in
+            video.style.display = 'block';
+            setTimeout(() => {
+                video.style.opacity = '1';
+                video.style.transform = 'scale(1)';
+            }, 10);
+        } else {
+            // Fade out
+            video.style.opacity = '0';
+            video.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                video.style.display = 'none';
+            }, 500);  // Wait for the fade-out transition to complete
         }
     });
 }

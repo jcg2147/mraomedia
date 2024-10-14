@@ -70,24 +70,22 @@ function filterVideosOLD(type) {
 }
 
 // Filter function for the portfolio videos with animation
-function filterVideos(type) {
-    let videos = document.querySelectorAll('.video-card');
+function filterVideos(category) {
+    var videos = document.querySelectorAll('.video-card');
 
-    videos.forEach(video => {
-        if (type === 'all' || video.classList.contains(type)) {
-            // Fade in
-            video.style.display = 'block';
+    videos.forEach(function(video) {
+        if (category === 'all' || video.classList.contains(category)) {
+            video.classList.remove('shrink');
+            video.style.display = 'block'; // Make sure the video is visible again
             setTimeout(() => {
-                video.style.opacity = '1';
-                video.style.transform = 'scale(1)';
-            }, 10);
+                video.style.opacity = 1;
+                video.style.transform = 'scale(1)'; // Restore original size
+            }, 50);
         } else {
-            // Fade out
-            video.style.opacity = '0';
-            video.style.transform = 'scale(0.95)';
+            video.classList.add('shrink'); // Start shrinking animation
             setTimeout(() => {
-                video.style.display = 'none';
-            }, 500);  // Wait for the fade-out transition to complete
+                video.style.display = 'none'; // Hide after shrinking
+            }, 500); // Match the CSS transition duration (0.5s)
         }
     });
 }

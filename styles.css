@@ -86,20 +86,22 @@ header h1 {
     animation-delay: 1s; /* Text will be visible for 3 seconds before fading out */
 }
 
+/* Initial video card state */
 .video-card {
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth shrinking and fading */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth shrinking and expanding */
     opacity: 1;
     transform: scale(1); /* Full size */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover effect */
 .video-card:hover {
     transform: scale(1.05); /* Slightly bigger on hover */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     filter: brightness(0.9);
 }
 
-/* Shrink video card when it's being filtered out */
+/* Shrink video card when filtered out */
 .video-card.shrink {
     opacity: 0;
     transform: scale(0); /* Shrinks to 0 size */
@@ -107,7 +109,7 @@ header h1 {
 
 /* Make sure hidden elements are not interactable */
 .video-card[style="display: none;"] {
-    opacity: 0; /* Hidden elements should not be seen, even during the transition */
+    opacity: 0;
     transform: scale(0); /* Ensure that hidden elements stay shrunk */
 }
 

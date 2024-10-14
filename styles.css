@@ -88,10 +88,11 @@ header h1 {
 
 /* Initial video card state */
 .video-card {
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth shrinking and expanding */
+    transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 1;
     transform: scale(1); /* Full size */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    visibility: visible; /* Ensure the cards are visible initially */
 }
 
 /* Hover effect */
@@ -105,12 +106,14 @@ header h1 {
 .video-card.shrink {
     opacity: 0;
     transform: scale(0); /* Shrinks to 0 size */
+    visibility: hidden; /* Ensure it's hidden */
 }
 
-/* Make sure hidden elements are not interactable */
-.video-card[style="display: none;"] {
-    opacity: 0;
-    transform: scale(0); /* Ensure that hidden elements stay shrunk */
+/* Unshrink video card when filtered back in */
+.video-card.unshrink {
+    opacity: 1;
+    transform: scale(1); /* Expands back to full size */
+    visibility: visible; /* Make sure it's visible */
 }
 
 .video-info h5 {

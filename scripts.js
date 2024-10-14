@@ -75,12 +75,12 @@ function filterVideos(category) {
 
     videos.forEach(function(video) {
         if (category === 'all' || video.classList.contains(category)) {
-            video.classList.remove('shrink');
-            video.style.display = 'block'; // Make sure the video is visible again
+            video.style.display = 'block'; // Show the video
             setTimeout(() => {
+                video.classList.remove('shrink'); // Remove the shrinking class
                 video.style.opacity = 1;
-                video.style.transform = 'scale(1)'; // Restore original size
-            }, 50);
+                video.style.transform = 'scale(1)'; // Expand to full size
+            }, 50); // Slight delay to allow display change
         } else {
             video.classList.add('shrink'); // Start shrinking animation
             setTimeout(() => {

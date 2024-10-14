@@ -167,6 +167,17 @@ nav .nav-link:hover {
     overflow: hidden;
 }
 
+#latest-projects h2 {
+    text-align: center; 
+    font-size: 2.5vw;
+}
+
+#latest-projects p {
+    text-align: center; 
+    margin-top: 2vw; 
+    font-size: 1.5vw;
+}
+
 #latest-projects .left-section {
     flex: 1;
     max-width: 65%;
@@ -213,6 +224,15 @@ nav .nav-link:hover {
         margin: 2vw;
     }
 
+    #latest-projects h2 {
+        font-size: 20px;
+    }
+    
+    #latest-projects p {
+        margin-top: 8px; 
+        font-size: 16px;
+    }
+    
     #latest-projects .left-section {
         padding: 40px; 
         max-width: 100%;

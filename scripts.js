@@ -55,7 +55,7 @@ function onPlayerStateChange(event) {
 }
 
 // Filter function for the portfolio videos
-function filterVideosOLD(type) {
+function filterVideos(type) {
     let videos = document.querySelectorAll('.video-card');
 
     videos.forEach(video => {
@@ -65,23 +65,6 @@ function filterVideosOLD(type) {
             video.style.display = 'block';
         } else {
             video.style.display = 'none';
-        }
-    });
-}
-
-// Filter function for the portfolio videos with animation
-function filterVideos(category) {
-    var videos = document.querySelectorAll('.video-card');
-
-    videos.forEach(function(video) {
-        if (category === 'all' || video.classList.contains(category)) {
-            // Unshrink the video if it should be displayed
-            video.classList.remove('shrink');
-            video.classList.add('unshrink');
-        } else {
-            // Shrink the video if it should be hidden
-            video.classList.remove('unshrink');
-            video.classList.add('shrink');
         }
     });
 }

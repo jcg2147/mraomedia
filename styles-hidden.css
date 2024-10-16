@@ -138,9 +138,9 @@ body {
     flex: 3;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
-    text-align: right;
 }
 
 .thanks-row strong {
@@ -161,5 +161,4 @@ body {
     display: block;
     margin-top: 5px;
     width: 100%;
-    clear: both;
 }

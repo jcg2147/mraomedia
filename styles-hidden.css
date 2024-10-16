@@ -123,12 +123,14 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .thanks-row strong {
     color: #5a5a8c;
     font-size: 1.2rem;
     display: block;
+    width: 100%;
 }
 
 .thanks-row p {
@@ -142,4 +144,6 @@ body {
     margin-left: 0;
     display: block;
     margin-top: 5px;
+    width: 100%;
+    clear: both;
 }

@@ -128,11 +128,15 @@ body {
 .thanks-left {
     align-items: center;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .thanks-right {
     align-items: center;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .thanks-row strong {

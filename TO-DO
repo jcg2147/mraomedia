@@ -1,7 +1,6 @@
 To do list:
 1. Why do the embedded youtube video thumbnails in latest work section look so blurry? FIX IT
-1a. Figure out how to make embedded youtube videos in the latest work section wider in mobile view
-2. Add animation for filtering through videos in portfolio page
+2. Figure out how to make embedded youtube videos in the latest work section wider in mobile view
 3. Change colors of buttons to mrao media colors
 4. Change colors of layouts to nicer colors
 5. Bring it Mrao Media image logo
@@ -16,6 +15,9 @@ To do list:
 14. Change fonts - Montserrat might be a good one - its the one in the website demo
 15. Change mobile view to only include default mail application submit button for contact forms
 16. Fix intro "Welcome to Mrao Media" Message
+
+Future State:
+1. Add animation for filtering through videos in portfolio page
 
 References:
 https://websitedemos.net/video-editor-04/services/?customize=template

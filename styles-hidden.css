@@ -123,10 +123,13 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     align-items: flex-start;
+}
+
+.thanks-left {
     flex-wrap: wrap;
 }
 
-.thanks-row strong {
+.thanks-left strong {
     color: #5a5a8c;
     font-size: 1.2rem;
     display: block;
@@ -138,7 +141,7 @@ body {
     color: #333;
 }
 
-.thanks-row em {
+.thanks-left em {
     font-size: 0.9rem;
     color: #888;
     margin-left: 0;

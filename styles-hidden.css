@@ -122,19 +122,21 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .thanks-left {
+    flex: 1;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    margin-right: 20px;
 }
 
 .thanks-right {
+    flex: 1;
     align-items: center;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }

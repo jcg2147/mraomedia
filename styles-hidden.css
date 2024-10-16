@@ -150,8 +150,8 @@ body {
 }
 
 .thanks-row p {
-    flex: 1;
     color: #333;
+    margin: 0; 
 }
 
 .thanks-row em {

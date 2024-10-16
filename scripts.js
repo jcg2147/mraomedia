@@ -164,3 +164,13 @@ function loadContactForm() {
     })
     .catch(error => console.error('Error loading the contact form:', error));
 }
+
+// Function to load the review form
+function loadReviewForm() {
+  fetch('review-form.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('review-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the review form:', error));
+}

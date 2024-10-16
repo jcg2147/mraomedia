@@ -1,0 +1,20 @@
+    <!-- Review Form -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Please Leave A Movie Review:</h2>
+            <p class="mb-4">We’d love to hear from you! Please describe your event needs below and we’ll do our best to get back to you within one business day.</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="button" onclick="submitForm(event)" class="btn btn-dark">Send via Default Mail</button>
+                <button type="button" onclick="sendViaGmail()" class="btn btn-dark">Send via Gmail</button>
+            </form>
+        </div>
+    </section>

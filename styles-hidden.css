@@ -126,10 +126,16 @@ body {
 }
 
 .thanks-left {
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.thanks-left strong {
+.thanks-right {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.thanks-row strong {
     color: #5a5a8c;
     font-size: 1.2rem;
     display: block;
@@ -141,7 +147,7 @@ body {
     color: #333;
 }
 
-.thanks-left em {
+.thanks-row em {
     font-size: 0.9rem;
     color: #888;
     margin-left: 0;

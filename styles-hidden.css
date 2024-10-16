@@ -127,7 +127,7 @@ body {
 
 .thanks-left {
     flex: 1;
-    align-items: center;
+    align-items: left;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -136,7 +136,7 @@ body {
 
 .thanks-right {
     flex: 2;
-    align-items: center;
+    align-items: right;
     margin: 0;
     padding: 0;
 }

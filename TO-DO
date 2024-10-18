@@ -3,7 +3,7 @@ Currently working on:
   - DONE - Center the photos + text section
   - DONE - "Rate our movie" section should be vertical
   - DONE - Reduce the width of the movie review section
-  - Leave a Movie Review should open default mail application (verify)
+  - DONE - Leave a Movie Review should open default mail application (verify)
   - Add the video section at the top
   - Add the header for the page
   - make sure all "Follow us links" redirect to the correct URL

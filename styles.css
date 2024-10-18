@@ -482,7 +482,7 @@ nav .nav-link:hover {
     background-image: url('photos/mountains.png');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.3);
+    filter: brightness(0.5);
     z-index: -1;  /* Ensure the background stays behind the content */
 }
 

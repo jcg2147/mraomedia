@@ -174,3 +174,33 @@ function loadReviewForm() {
     })
     .catch(error => console.error('Error loading the review form:', error));
 }
+
+// Default email sending function
+function submitReviewForm(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    // Get form field values
+    const name = document.getElementById('name').value;
+    const rating = document.querySelector('input[name="rating"]:checked') ? document.querySelector('input[name="rating"]:checked').value : "No rating";
+    const message = document.getElementById('message').value;
+
+    // Create the mailto link with pre-filled values, excluding the email field
+    const mailtoLink = `mailto:mraomedia@gmail.com?subject=Movie Review from ${name}&body=Name: ${name}%0D%0ARating: ${rating}%0D%0AMovie Review: ${message}`;
+
+    // Open the user's default email client with the mailto link
+    window.location.href = mailtoLink;
+}
+
+// Send via Gmail function
+function sendReviewViaGmail() {
+    // Get form field values
+    const name = document.getElementById('name').value;
+    const rating = document.querySelector('input[name="rating"]:checked') ? document.querySelector('input[name="rating"]:checked').value : "No rating";
+    const message = document.getElementById('message').value;
+
+    // Create the Gmail URL with pre-filled values, excluding the email field
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mraomedia@gmail.com&su=Movie Review from ${name}&body=Name: ${name}%0D%0ARating: ${rating}%0D%0AMovie Review: ${message}`;
+
+    // Open Gmail web app in a new tab
+    window.open(gmailLink, '_blank');
+}

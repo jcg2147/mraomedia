@@ -467,38 +467,43 @@ nav .nav-link:hover {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    display: flex; /* Use Flexbox for centering */
-    flex-direction: column; /* Stack the content vertically */
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow happens outside the section */
+}
+
+.video-section .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Make sure it covers the full height of the section */
+    background-image: url('photos/mountains.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1;  /* Ensure the background stays behind the content */
+}
+
+.content-wrapper {
+    text-align: center; /* Centers the text horizontally */
+    z-index: 1;  /* Keeps the content in front of the background */
+    padding: 20px;  /* Optional: padding around the content */
 }
 
 .video-section h2,
 .video-section p {
-    color: white; /* Optional: adjust text color for readability */
-    text-align: center; /* Centers the text horizontally */
-}
-
-.video-section .background-image {
-    position: absolute;  /* Keeps the background image fixed */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;  /* Adjust based on your design needs */
-    background-image: url('photos/mountains.png');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5); /* Darkens the background */
-    z-index: -1; /* Place the background image behind the content */
+    color: white;  /* Ensure text is readable */
+    margin: 10px 0;  /* Add some margin for spacing */
 }
 
 .video-section .video-embed {
-    position: relative;
-    z-index: 1;
-    width: 40%;  /* Adjust to your preferred width */
+    width: 60%;  /* Adjust to your preferred width */
     aspect-ratio: 16 / 9;
-    height: auto;  /* Keeps the aspect ratio */
-    max-width: 1200px; /* Optional: max width for larger screens */
-    margin: 0 auto;  /* Centers the video horizontally */
+    height: auto;
+    max-width: 1200px;  /* Optional: max width for larger screens */
+    margin: 20px auto;  /* Centers the video horizontally and adds space */
     border: none;
 }
+

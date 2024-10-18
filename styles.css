@@ -431,7 +431,3 @@ nav .nav-link:hover {
     width: 100%;
 }
 
-.form-group input[type="radio"],
-.form-group label {
-    display: block;
-}

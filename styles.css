@@ -313,7 +313,7 @@ nav .nav-link:hover {
 }
 
 .text-content p {
-    margin-bottom: 20px;
+    margin: 0 auto;  /* Center the content horizontally */
     font-size: 1rem;
 }
 

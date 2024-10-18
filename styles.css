@@ -471,7 +471,6 @@ nav .nav-link:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Ensures no overflow happens outside the section */
-    flex-direction: column;
 }
 
 .video-section .background-image {
@@ -506,12 +505,4 @@ nav .nav-link:hover {
     max-width: 1200px;  /* Optional: max width for larger screens */
     margin: 20px auto;  /* Centers the video horizontally and adds space */
     border: none;
-}
-
-.video-section .video-text {
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
 }

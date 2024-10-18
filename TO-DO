@@ -1,3 +1,11 @@
+Currently working on:
+1. Add the hidden page for /alongforthetelluride
+  - Center the photos + text section
+  - "Rate our movie" section should be vertical
+  - Leave a Movie Review should open default mail application (verify)
+  - Add the video section at the top
+  - Add the header for the page
+
 To do list:
 1. Why do the embedded youtube video thumbnails in latest work section look so blurry? FIX IT
 2. Figure out how to make embedded youtube videos in the latest work section wider in mobile view

@@ -481,7 +481,7 @@ nav .nav-link:hover {
     filter: brightness(0.5); /* Darkens the background */
 }
 
-.video-section .background-image .video-embed {
+.video-section .video-embed {
     position: relative;
     z-index: 1;
     width: 100%;

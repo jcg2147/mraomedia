@@ -485,6 +485,7 @@ nav .nav-link:hover {
     position: relative;
     z-index: 1;
     width: 40%;  /* Adjust to your preferred width */
+    aspect-ratio: 16 / 9;
     height: auto;  /* Keeps the aspect ratio */
     max-width: 1200px; /* Optional: max width for larger screens */
     margin: 0 auto;  /* Centers the video horizontally */

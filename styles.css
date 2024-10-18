@@ -438,5 +438,5 @@ nav .nav-link:hover {
 }
 
 #review .form-group div label {
-    margin-left: 5px; /* Adds a small space between the radio button and the label */
+    margin-left: 10px; /* Adds a small space between the radio button and the label */
 }

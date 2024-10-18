@@ -484,7 +484,9 @@ nav .nav-link:hover {
 .video-section .video-embed {
     position: relative;
     z-index: 1;
-    width: 25%;
-    height: auto;
+    width: 40%;  /* Adjust to your preferred width */
+    height: auto;  /* Keeps the aspect ratio */
+    max-width: 1200px; /* Optional: max width for larger screens */
+    margin: 0 auto;  /* Centers the video horizontally */
     border: none;
 }

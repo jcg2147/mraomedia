@@ -284,6 +284,7 @@ nav .nav-link:hover {
     display: flex;
     max-width: 1000px;
     width: 100%;
+    margin: 0 auto;  /* Center the content horizontally */
     align-items: center;
     justify-content: space-between;
     padding: 20px;

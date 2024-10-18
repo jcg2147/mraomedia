@@ -450,3 +450,9 @@ nav .nav-link:hover {
     max-width: 600px; /* Limits the width of the form */
     margin: 0 auto;    /* Centers the form horizontally */
 }
+
+#contact .button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 10px; /* Optional: adds space between the buttons */
+}

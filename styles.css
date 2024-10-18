@@ -309,6 +309,12 @@ nav .nav-link:hover {
     text-align: center;
 }
 
+.intro-content h2 {
+    color: #5a5a8c;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
 .text-content {
     width: 45%;
     padding: 20px;

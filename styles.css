@@ -484,7 +484,7 @@ nav .nav-link:hover {
 .video-section .video-embed {
     position: relative;
     z-index: 1;
-    width: 100%;
-    height: 100%;
+    width: 25%;
+    height: auto;
     border: none;
 }

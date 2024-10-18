@@ -288,7 +288,6 @@ nav .nav-link:hover {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    text-align: center;
 }
 
 .section-content.reverse {
@@ -305,6 +304,8 @@ nav .nav-link:hover {
 .intro-content {
     width: 50%;
     padding: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .text-content {

@@ -440,3 +440,13 @@ nav .nav-link:hover {
 #review .form-group div label {
     margin-left: 10px; /* Adds a small space between the radio button and the label */
 }
+
+#review .container {
+    max-width: 600px; /* Limits the width of the form */
+    margin: 0 auto;    /* Centers the form horizontally */
+}
+
+#contact .container {
+    max-width: 600px; /* Limits the width of the form */
+    margin: 0 auto;    /* Centers the form horizontally */
+}

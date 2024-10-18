@@ -300,6 +300,13 @@ nav .nav-link:hover {
     border-radius: 10px;
 }
 
+.intro-content {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
 .text-content {
     width: 45%;
     padding: 20px;

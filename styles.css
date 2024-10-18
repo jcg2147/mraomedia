@@ -431,3 +431,12 @@ nav .nav-link:hover {
     width: 100%;
 }
 
+#review .form-group div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+}
+
+#review .form-group div label {
+    margin-left: 5px; /* Adds a small space between the radio button and the label */
+}

@@ -35,8 +35,10 @@
                 <label for="message">Movie Review</label><br>
                 <textarea id="message" class="form-control" rows="4" placeholder="Movie Review" required></textarea>
             </div>
-            <button type="button" onclick="submitForm(event)" class="btn btn-dark text-center">Send via Default Mail</button>
-            <button type="button" onclick="sendViaGmail()" class="btn btn-dark text-center">Send via Gmail</button>
+            <div class="button-container">
+                <button type="button" onclick="submitForm(event)" class="btn btn-dark">Send via Default Mail</button>
+                <button type="button" onclick="sendViaGmail()" class="btn btn-dark">Send via Gmail</button>
+            </div>
         </form>
     </div>
 </section>

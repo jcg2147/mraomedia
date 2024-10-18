@@ -430,3 +430,8 @@ nav .nav-link:hover {
     margin-top: 5px;
     width: 100%;
 }
+
+.form-group input[type="radio"],
+.form-group label {
+    display: block;
+}

@@ -301,9 +301,7 @@ nav .nav-link:hover {
 }
 
 .intro-content {
-    display: flex;
-    max-width: 500px;
-    width: 100%;
+    width: 50%;
     padding: 20px;
 }
 

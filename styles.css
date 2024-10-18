@@ -471,6 +471,7 @@ nav .nav-link:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Ensures no overflow happens outside the section */
+    flex-direction: column;
 }
 
 .video-section .background-image {

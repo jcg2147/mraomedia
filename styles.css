@@ -302,7 +302,9 @@ nav .nav-link:hover {
 }
 
 .text-content {
-    width: 25%;
+    display: flex;
+    max-width: 500px;
+    width: 100%;
     padding: 10px;
     margin: 0 auto;  /* Center the content horizontally */
 }

@@ -574,7 +574,6 @@ header .nav {
 }
 
 header .nav-link {
-    margin-left: 20px; /* Space between each navigation link */
     text-decoration: none;
     color: #000; /* Text color */
 }

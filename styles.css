@@ -516,11 +516,3 @@ nav .nav-link:hover {
     margin: 20px auto;  /* Centers the video horizontally and adds space */
     border: none;
 }
-
-.jc-pose {
-    position: absolute;
-    width: 100%;
-    height: 80%;  /* Make sure it covers the full height of the section */
-    image: url('photos/JC-pose.png');
-    object-fit: cover;
-}

@@ -497,6 +497,13 @@ nav .nav-link:hover {
     margin: 0 auto;   /* Centers the text */
 }
 
+.video-container {
+    width: 100%; /* Ensures video container takes full width */
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    margin-top: 20px;
+}
+
 .video-section h2,
 .video-section p {
     color: white;  /* Ensure text is readable */

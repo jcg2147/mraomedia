@@ -550,3 +550,16 @@ nav .nav-link:hover {
         text-align: center !important; /* Centers social icons on smaller screens */
     }
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.logo img {
+    max-width: 100px;
+}

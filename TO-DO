@@ -1,8 +1,10 @@
 Currently working on:
 1. Bring in Mrao Media image logo to all necessary pages
   - DONE - Add logo to tab icon
-  - Add logo to footers
-  - Add logo to headers
+  - DONE - Add logo to footers
+  - DONE - Add logo to headers
+  - DONE - Create a separate html for headers
+  - Create a separate html for footers
 2. Finalize header format for portfolio, contact, and aftt pages
 2. Create a Services page
 3. Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)

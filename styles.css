@@ -560,6 +560,25 @@ header {
     color: white;
 }
 
+.header-logo {
+    padding-left: 50px;
+}
+
 .header-logo img {
     max-width: 450px;
+}
+
+header .nav {
+    display: flex;
+    padding-right: 50px; /* Add more padding to the right of the navigation links */
+}
+
+header .nav-link {
+    margin-left: 20px; /* Space between each navigation link */
+    text-decoration: none;
+    color: #000; /* Text color */
+}
+
+header .nav-link:hover {
+    color: #007bff; /* Optional hover color */
 }

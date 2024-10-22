@@ -8,8 +8,8 @@ Currently working on:
   - DONE - Add the header for the page
   - DONE - make sure all "Follow us links" redirect to the correct URL
   - DONE - Add Crowdsignal poll to the bottom most photo before Special Thanks section
-  - Increase the size of the photos in the about-the-movie section
-  - Add mrao button to the top right
+  - Increase the size of the photos in the about-the-movie section (FUTURE)
+  - DONE - Add mrao button to the top right
   - DONE - Update the text to match the original webpage
   - Add the social media icons and links to the bottom of the page
   - DONE - Add the footer
@@ -33,6 +33,7 @@ To do list:
 Future State:
 1. Add animation for filtering through videos in portfolio page
 2. Incorporate drone videography into portfolio
+3. Increase/Configure sizes of photos in alongforthetelluride section
 
 References:
 https://websitedemos.net/video-editor-04/services/?customize=template

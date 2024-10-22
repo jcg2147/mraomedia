@@ -290,13 +290,9 @@ nav .nav-link:hover {
     padding: 20px;
 }
 
-.section-content.reverse {
-    flex-direction: row-reverse;
-}
-
 .section-image {
     width: 50%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }

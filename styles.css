@@ -561,7 +561,7 @@ header {
 }
 
 .header-logo {
-    padding-left: 75px;
+    padding-left: 50px;
 }
 
 .header-logo img {
@@ -570,7 +570,7 @@ header {
 
 header .nav {
     display: flex;
-    padding-right: 75px; /* Add more padding to the right of the navigation links */
+    padding-right: 50px; /* Add more padding to the right of the navigation links */
 }
 
 header .nav-link {

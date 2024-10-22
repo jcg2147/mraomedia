@@ -516,3 +516,35 @@ nav .nav-link:hover {
     margin: 20px auto;  /* Centers the video horizontally and adds space */
     border: none;
 }
+
+.footer {
+    background-color: #f9f5e5; /* Light background like in your image */
+    padding: 40px 0;
+}
+
+.footer-logo {
+    max-width: 150px; /* Adjust the logo size */
+}
+
+.footer p {
+    margin: 0;
+    color: #006b75; /* Text color similar to your design */
+}
+
+.social-icon {
+    width: 40px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .footer .text-center {
+        text-align: center !important; /* Ensures proper centering on mobile */
+    }
+    .footer .text-md-left {
+        text-align: center !important; /* Centers logo on smaller screens */
+    }
+    .footer .text-md-right {
+        text-align: center !important; /* Centers social icons on smaller screens */
+    }
+}

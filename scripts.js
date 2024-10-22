@@ -155,6 +155,16 @@ const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mraomedia@gmail
 window.open(gmailLink, '_blank');
 }
 
+// Function to load the header
+function loadHeader() {
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the header:', error));
+}
+
 // Function to load the contact form
 function loadContactForm() {
   fetch('contact-form.html')

@@ -556,10 +556,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: black;
+    background-color: white;
     color: white;
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 400px;
 }

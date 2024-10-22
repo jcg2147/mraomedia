@@ -492,6 +492,11 @@ nav .nav-link:hover {
     padding: 20px;  /* Optional: padding around the content */
 }
 
+.aftt-intro-text {
+    max-width: 600px; /* Limits the width of the text */
+    margin: 0 auto;   /* Centers the text */
+}
+
 .video-section h2,
 .video-section p {
     color: white;  /* Ensure text is readable */

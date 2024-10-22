@@ -185,6 +185,16 @@ function loadReviewForm() {
     .catch(error => console.error('Error loading the review form:', error));
 }
 
+// Function to load the footer
+function loadFooter() {
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the footer:', error));
+}
+
 // Default email sending function
 function submitReviewForm(event) {
     event.preventDefault();  // Prevent the default form submission

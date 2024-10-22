@@ -10,17 +10,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <header class="bg-dark text-white py-3">
-        <div class="container">
-            <h1 class="text-center">Freelance Video Editor</h1>
-            <nav class="nav justify-content-center">
-                <a class="nav-link text-white" href="index.html#hero">Home</a>
-                <a class="nav-link text-white" href="index.html#about">About</a>
-                <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
-                <a class="nav-link text-white" href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Section -->
+    <div id="header-section"></div>
 
     <section id="portfolio" class="py-5">
         <div class="container">
@@ -115,6 +106,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <script>
+        loadHeader();
         loadContactForm();
     </script>
 </body>

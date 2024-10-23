@@ -5,6 +5,7 @@ Currently working on:
   - DONE - Add logo to headers
   - DONE - Create a separate html for headers
   - DONE - Create a separate html for footers
+  - Add a link to return home for the mrao media logo
 2. Finalize header format for portfolio, contact, and aftt pages
   - make the logo shrink with the shrinking of the web page and with mobile
   - DONE - how about for index.html? Should the header follow the same format?

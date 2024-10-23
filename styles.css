@@ -29,6 +29,10 @@ body {
     overflow: hidden;
 }
 
+#hero #header-section {
+    width: 100%;
+}
+
 #hero .video-background iframe, #hero .video-background #player {
     width: 100%;
     height: 100%;

@@ -165,6 +165,16 @@ function loadHeader() {
     .catch(error => console.error('Error loading the header:', error));
 }
 
+// Function to load the index header
+function loadIndexHeader() {
+  fetch('index-header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the header:', error));
+}
+
 // Function to load the contact form
 function loadContactForm() {
   fetch('contact-form.html')

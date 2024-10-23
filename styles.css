@@ -44,7 +44,7 @@ body {
     padding: 1rem 0; /* Adjust padding to ensure it doesn't collapse */
 }
 
-#hero header .container {
+#hero header .container-fluid {
     display: flex;
     flex-direction: column;
     /* align-items: center; */

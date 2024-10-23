@@ -17,17 +17,8 @@
         <div class="video-background">
             <div id="player"></div> <!-- YouTube player -->
         </div>
-        <header class="text-white py-3">
-            <div class="container">
-                <h1 class="text-center">Freelance Video Editor</h1>
-                <nav class="nav justify-content-center">
-                    <a class="nav-link text-white" href="#hero">Home</a>
-                    <a class="nav-link text-white" href="#about">About</a>
-                    <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
-                    <a class="nav-link text-white" href="contact.html">Contact</a>
-                </nav>
-            </div>
-        </header>
+        <!-- Header Section -->
+        <div id="header-section"></div>
         <div class="hero-content text-white mt-auto mb-4">
             <h2 id="fade-text">Welcome to Mrao Media</h2>
             <p>Professional video editing and filming services</p>
@@ -79,7 +70,7 @@
     <!-- Contact Section -->
     <div id="contact-section"></div>
     
-    <!-- Contact Section -->
+    <!-- Footer Section -->
     <div id="footer-section"></div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -88,6 +79,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <script>
+        loadHeader();
         loadContactForm();
         loadFooter();
     </script>

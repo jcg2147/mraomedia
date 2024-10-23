@@ -4,9 +4,10 @@ Currently working on:
   - DONE - Add logo to footers
   - DONE - Add logo to headers
   - DONE - Create a separate html for headers
-  - Create a separate html for footers
+  - DONE - Create a separate html for footers
 2. Finalize header format for portfolio, contact, and aftt pages
   - make the logo shrink with the shrinking of the web page and with mobile
+  - how about for index.html? Should the header follow the same format?
 2. Create a Services page
 3. Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
 

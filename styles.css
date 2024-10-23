@@ -36,7 +36,23 @@ body {
     object-fit: cover; /* Ensure the video covers the area */
 }
 
+#hero header {
+    position: relative;
+    background: none; /* Remove the background color */
+    z-index: 1; /* Ensure it appears above the video */
+    width: 100%;
+    padding: 1rem 0; /* Adjust padding to ensure it doesn't collapse */
+}
 
+#hero header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero header h1 {
+    margin-bottom: 0.5rem;
+}
 
 .hero-content {
     position: relative;

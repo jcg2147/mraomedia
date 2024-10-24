@@ -661,3 +661,30 @@ header .nav-link:hover {
     max-width: 60%; /* Controls the width of the text container */
     padding: 20px;
 }
+
+.four-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+}
+
+.four-text-container .column {
+    width: 23%; /* Adjust width as needed */
+    margin-top: 0; /* Reset margin */
+}
+
+.four-text-container .column:nth-child(1) {
+    margin-top: 0; /* First column stays at the top */
+}
+
+.four-text-container .column:nth-child(2) {
+    margin-top: 10px; /* Adjust this value for desired drop */
+}
+
+.four-text-container .column:nth-child(3) {
+    margin-top: 20px; /* Adjust this value for desired drop */
+}
+
+.four-text-container .column:nth-child(4) {
+    margin-top: 30px; /* Adjust this value for desired drop */
+}

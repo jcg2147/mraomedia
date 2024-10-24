@@ -666,14 +666,16 @@ header .nav-link:hover {
     max-width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Aligns items to the start of the flex container */
+    align-items: stretch;
     margin: 0 auto;
 }
 
 .four-text-container .column {
     width: 23%; /* Adjust width as needed */
-    height: 100%;
     margin-top: 0; /* Reset margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .four-text-container .column:nth-child(1) {

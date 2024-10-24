@@ -680,11 +680,11 @@ header .nav-link:hover {
 }
 
 .four-text-container .column:nth-child(2) {
-    margin-top: 20px; /* Adjust this value for desired drop */
+    margin-top: 40px; /* Adjust this value for desired drop */
 }
 
 .four-text-container .column:nth-child(3) {
-    margin-top: 40px; /* Adjust this value for desired drop */
+    margin-top: 50px; /* Adjust this value for desired drop */
 }
 
 .four-text-container .column:nth-child(4) {

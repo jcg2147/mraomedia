@@ -137,6 +137,13 @@ nav .nav-link:hover {
 #about .about-text {
     flex: 1;
     padding-right: 20px;
+    text-align: center;
+}
+
+#about .about-text img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensures responsiveness */
 }
 
 #about .about-photo {

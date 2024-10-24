@@ -586,3 +586,33 @@ header .nav-link {
 header .nav-link:hover {
     color: #007bff; /* Optional hover color */
 }
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.service-item {
+    width: 300px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.service-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+}
+.service-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}

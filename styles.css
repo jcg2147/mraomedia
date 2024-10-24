@@ -674,8 +674,6 @@ header .nav-link:hover {
     width: 23%; /* Adjust width as needed */
     margin-top: 0; /* Reset margin */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .four-text-container .column:nth-child(1) {

@@ -618,3 +618,35 @@ header .nav-link:hover {
         align-items: center;
     }
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Adjust layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

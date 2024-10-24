@@ -686,9 +686,9 @@ header .nav-link:hover {
 }
 
 .four-text-container .column:nth-child(3) {
-    margin-top: 50px; /* Adjust this value for desired drop */
+    margin-top: 55px; /* Adjust this value for desired drop */
 }
 
 .four-text-container .column:nth-child(4) {
-    margin-top: 60px; /* Adjust this value for desired drop */
+    margin-top: 70px; /* Adjust this value for desired drop */
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mraomedia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-section"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container d-flex align-items-center">
+            <div class="about-text w-50 pr-4">
+                <h2>About</h2>
+                <p>My name is Sabrina Enrriquez. I graduated from Montclair State University with a major in Television and Digital Media and a focus in TV Production. I’ve been focusing in TV production for over ten years now, having started to work on productions at age 15. I’m happy to share my work with you and thank you for visiting my online portfolio!</p>
+                <p>I believe that the power of visual media can amplify important messages and contribute to meaningful causes. Below you will see a collection of videos that showcase my skills and highlight various projects I have worked on. These videos encompass a range of subjects, styles, and techniques I have employed throughout my career.</p>
+            </div>
+            <div class="about-photo w-50">
+                <img src="photos/sabrina_aboutme.png" alt="Sabrina Enrriquez" class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="text-center">
+            <button id="meowButton" class="btn btn-dark mt-4">Mrao Button</button>
+        </div>
+    </section>
+
+    <!-- Services Seciton -->
+    <div class="container">
+        <h1>I can help you with</h1>
+        <div class="services">
+            <div class="service-item">
+                <img src="photos/video.png" alt="Editing">
+                <h3>Videography</h3>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+            </div>
+            <div class="service-item">
+                <img src="photos/editing.png" alt="Color Correction">
+                <h3>Editing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.</p>
+            </div>
+            <div class="service-item">
+                <img src="photos/color.png" alt="Sound Design">
+                <h3>Color Correction</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Latest Work Section -->    
+    <section id="latest-projects">
+        <!-- Left section with YouTube videos and text -->
+        <div class="left-section">
+            <h2>OUR LATEST PROJECTS</h2>
+            <p>We've provided services for:</p>
+            
+            <!-- Embedded YouTube videos -->
+            <div class="embedded-videos">
+                <iframe src="https://www.youtube.com/embed/hmRwDY2yYt8" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/PNwJFblpltY" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/LKWTwszLFQM?modestbranding=3" frameborder="0" allowfullscreen></iframe>
+            </div>
+    
+            <p>
+                View our project portfolio <a href="portfolio.html" style="color: white; text-decoration: underline;">here</a>
+            </p>
+        </div>
+    
+        <!-- Right section with image -->
+        <div class="right-section">
+            <img src="photos/latest-projects-photo.png" alt="Videographer">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div id="contact-section"></div>
+    
+    <!-- Footer Section -->
+    <div id="footer-section"></div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        loadHeader();
+        loadContactForm();
+        loadFooter();
+    </script>
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

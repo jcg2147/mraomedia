@@ -666,7 +666,7 @@ header .nav-link:hover {
     max-width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Aligns items to the start of the flex container */
+    align-items: center; /* Aligns items to the start of the flex container */
 }
 
 .four-text-container .column {

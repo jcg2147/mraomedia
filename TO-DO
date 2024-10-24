@@ -12,6 +12,8 @@ Currently working on:
 3. Bring in photos of Mrao Media/Add to About Section
 4. Create a Services page
 5. Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
+6. Create a separate About section that contains all the About Mrao Media photos
+7. Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
 
 To do list:
 1. Why do the embedded youtube video thumbnails in latest work section look so blurry? FIX IT
@@ -29,7 +31,9 @@ To do list:
 15. Change mobile view to only include default mail application submit button for contact forms
 16. Fix intro "Welcome to Mrao Media" Message
 17. Fix headers
-18. Add Dating During a Pandemic under Portfolio section
+18. Add to Portfolio section
+19. IN PROGRESS - Create a separate About section that contains all the About Mrao Media photos
+20. IN PROGRESS - Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
 
 Future State:
 1. Add animation for filtering through videos in portfolio page

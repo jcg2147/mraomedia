@@ -650,3 +650,14 @@ header .nav-link:hover {
         grid-template-columns: 1fr;
     }
 }
+
+.text-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Aligns the content container towards the right */
+    padding: 50px; /* Adds space around the container */
+}
+
+.text-container {
+    max-width: 60%; /* Controls the width of the text container */
+    padding: 20px;
+}

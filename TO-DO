@@ -1,15 +1,7 @@
 Currently working on:
-1. Bring in Mrao Media image logo to all necessary pages
-  - DONE - Add logo to tab icon
-  - DONE - Add logo to footers
-  - DONE - Add logo to headers
-  - DONE - Create a separate html for headers
-  - DONE - Create a separate html for footers
-  - DONE - Add a link to return home for the mrao media logo
 2. Finalize header format for portfolio, contact, and aftt pages
   - make the logo shrink with the shrinking of the web page and with mobile
   - DONE - how about for index.html? Should the header follow the same format?
-3. DONE - Bring in photos of Mrao Media/Add to About Section
 4. Create a Services page
 5. Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
 6. Create a separate About section that contains:
@@ -17,15 +9,15 @@ Currently working on:
   - DONE - all the About Mrao Media photos
   - Include link to Sabrina's youtube and linkedin profiles
   - maybe also include another cool video
-7. DONE - Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
+  - Fix text section
 
 To do list:
 1. Why do the embedded youtube video thumbnails in latest work section look so blurry? FIX IT
 2. Figure out how to make embedded youtube videos in the latest work section wider in mobile view
 3. Change colors of buttons to mrao media colors
 4. Change colors of layouts to nicer colors
-5. IN PROGRESS - Bring in Mrao Media image logo to all necessary pages
-6. IN PROGRESS - Bring in photos of Mrao Media
+5. DONE - Bring in Mrao Media image logo to all necessary pages
+6. DONE - Bring in photos of Mrao Media
 7. Assign it the wordpress domain - mraomedia.com
 9. DONE - Copy content over from /alongforthetelluride to the new site
 10. Make sure all pages are user friendly via mobile screen
@@ -37,7 +29,7 @@ To do list:
 17. Fix headers
 18. Add to Portfolio section
 19. IN PROGRESS - Create a separate About section that contains all the About Mrao Media photos
-20. IN PROGRESS - Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
+20. DONE - Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
 
 Future State:
 1. Add animation for filtering through videos in portfolio page

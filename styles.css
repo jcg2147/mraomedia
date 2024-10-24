@@ -605,10 +605,12 @@ header .nav-link:hover {
 .service-item h3 {
     margin: 15px 0 10px;
     font-size: 1.5rem;
+    color: white;
 }
 .service-item p {
     font-size: 0.9rem;
     line-height: 1.5;
+    color: white;
 }
 @media screen and (max-width: 768px) {
     .services {

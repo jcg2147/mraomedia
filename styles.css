@@ -784,7 +784,7 @@ header .nav-link:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #000;
     z-index: 1; /* Ensure content is above the video */
 }
 

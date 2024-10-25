@@ -884,4 +884,5 @@ header .nav-link:hover {
     max-width: 950px; /* Limits the width of the container */
     margin: 0 auto;    /* Centers content horizontally */
     background-color: #f2f2f2;
+    padding: 10px;
 }

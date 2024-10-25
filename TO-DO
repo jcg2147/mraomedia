@@ -12,8 +12,13 @@ Currently working on:
   - DONE - all the About Mrao Media photos
   - DONE - Include link to Sabrina's linkedin profile
   - Include link to Sabrina's youtube page
+  - Include link to Sabrina's CNBC portfolio
   - maybe also include another cool video
   - Fix text section
+7. Add to Portfolio section
+  - Add in Sabrina's CNBC portfolio somehow .. can you embed videos from CNBC??? That would be cool.
+  - Add in Dating during a pandemic
+  - Add in Along for the Telluride (as a feature film like in the example website)
 
 To do list:
 1. Why do the embedded youtube video thumbnails in latest work section look so blurry? FIX IT
@@ -31,7 +36,7 @@ To do list:
 15. Change mobile view to only include default mail application submit button for contact forms
 16. Fix intro "Welcome to Mrao Media" Message
 17. Fix headers
-18. Add to Portfolio section
+18. IN PROGRESS - Add to Portfolio section
 19. IN PROGRESS - Create a separate About section that contains all the About Mrao Media photos
 20. DONE - Bring in a summary of all important items in index.html - about Sabrina, services offered, latest projects, and contact form
 

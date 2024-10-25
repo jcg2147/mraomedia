@@ -870,3 +870,7 @@ header .nav-link:hover {
         margin-top: 20px;
     }
 }
+
+#contact-section {
+    background-color: #000;
+}

@@ -3,11 +3,15 @@ Currently working on:
   - make the logo shrink with the shrinking of the web page and with mobile
   - DONE - how about for index.html? Should the header follow the same format?
 4. Create a Services page
-5. Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
+  - fix why book my service section - center it more
+  - fix the spacing of each section
+  - finalize the types of services mrao media offers
+  - make the background color of the entire page black
 6. Create a separate About section that contains:
   - DONE - About Sabrina section
   - DONE - all the About Mrao Media photos
-  - Include link to Sabrina's youtube and linkedin profiles
+  - DONE - Include link to Sabrina's linkedin profile
+  - Include link to Sabrina's youtube page
   - maybe also include another cool video
   - Fix text section
 
@@ -22,7 +26,7 @@ To do list:
 9. DONE - Copy content over from /alongforthetelluride to the new site
 10. Make sure all pages are user friendly via mobile screen
 11. IN PROGRESS - Create a Services page
-13. IN PROGRESS - Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
+13. DONE - Introduce a cool video style section that showcases a piece of nice landscape video work by Sabrina in at least the Services page, like the site we're basing this off of (AFTT has a good montage to use)
 14. Change fonts - Montserrat might be a good one - its the one in the website demo
 15. Change mobile view to only include default mail application submit button for contact forms
 16. Fix intro "Welcome to Mrao Media" Message

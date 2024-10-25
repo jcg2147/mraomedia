@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
                 'playsinline': 1       // Plays the video inline (useful for mobile views)
             },
             events: {
-                'onReady': onPlayerReady,
+                'onReady': onPlayerServicesReady,
                 'onStateChange': onPlayerServicesStateChange // Separate event handler for looping
             }
         });
@@ -52,6 +52,20 @@ function onYouTubeIframeAPIReady() {
 
 // Play the video when the player is ready.
 function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+// Play the video when player2 is ready.
+function onPlayerServicesReady(event) {
+    var iframe = event.target.getIframe();
+
+    // Force the iframe to cover the full container size, cropping the edges
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100vw';  // Full viewport width
+    iframe.style.height = '100vh'; // Full viewport height
+    iframe.style.objectFit = 'cover'; // Ensures video covers the container
     event.target.playVideo();
 }
 

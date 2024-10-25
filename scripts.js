@@ -4,26 +4,50 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Create a YouTube player after the API code downloads.
-var player;
+// Create YouTube players after the API code downloads.
+var player1, player2;
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        videoId: 'NLRUTUusD00',  // YouTube Video ID
-        playerVars: {
-            'autoplay': 1,
-            'mute': 1,
-            'controls': 0,
-            'start': 52,
-            'modestbranding': 1,  // Minimizes YouTube branding
-            'rel': 0,             // No related videos at the end
-            'iv_load_policy': 3,  // Hides annotations
-            'playsinline': 1      // Plays the video inline (useful for mobile views)
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
+    // Check if the element with id "player" exists
+    if (document.getElementById('player')) {
+        player1 = new YT.Player('player', {
+            videoId: 'NLRUTUusD00',  // YouTube Video ID for player
+            playerVars: {
+                'autoplay': 1,
+                'mute': 1,
+                'controls': 0,
+                'start': 52,
+                'modestbranding': 1,  // Minimizes YouTube branding
+                'rel': 0,             // No related videos at the end
+                'iv_load_policy': 3,  // Hides annotations
+                'playsinline': 1      // Plays the video inline (useful for mobile views)
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // Check if the element with id "player-services" exists
+    if (document.getElementById('player-services')) {
+        player2 = new YT.Player('player-services', {
+            videoId: 'RPJ2yvkQLMA',  // Different YouTube Video ID for player-services
+            playerVars: {
+                'autoplay': 1,
+                'mute': 1,
+                'controls': 0,
+                'start': 520,          // Start at 520 seconds
+                'modestbranding': 1,   // Minimizes YouTube branding
+                'rel': 0,              // No related videos at the end
+                'iv_load_policy': 3,   // Hides annotations
+                'playsinline': 1       // Plays the video inline (useful for mobile views)
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerServicesStateChange // Separate event handler for looping
+            }
+        });
+    }
 }
 
 // Play the video when the player is ready.
@@ -31,7 +55,7 @@ function onPlayerReady(event) {
     event.target.playVideo();
 }
 
-// Loop the video between 52s and 71s.
+// Loop the video between 52s and 71s for player1.
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING) {
         var loopStart = 52; // Loop start time in seconds
@@ -39,15 +63,38 @@ function onPlayerStateChange(event) {
 
         // Check the video time and loop if necessary
         var loopChecker = setInterval(function() {
-            var currentTime = player.getCurrentTime();
+            var currentTime = event.target.getCurrentTime();
             if (currentTime >= loopEnd) {
-                player.seekTo(loopStart); // Jump back to the start of the loop
+                event.target.seekTo(loopStart); // Jump back to the start of the loop
             }
         }, 1000); // Check every second
 
         // Clear the interval when the video is not playing
-        player.addEventListener('onStateChange', function(event) {
-            if (event.data != YT.PlayerState.PLAYING) {
+        event.target.addEventListener('onStateChange', function(evt) {
+            if (evt.data != YT.PlayerState.PLAYING) {
+                clearInterval(loopChecker);
+            }
+        });
+    }
+}
+
+// Loop the video between 520s and 538s for player2.
+function onPlayerServicesStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        var loopStart = 520; // Loop start time in seconds
+        var loopEnd = 538;   // Loop end time in seconds
+
+        // Check the video time and loop if necessary
+        var loopChecker = setInterval(function() {
+            var currentTime = event.target.getCurrentTime();
+            if (currentTime >= loopEnd) {
+                event.target.seekTo(loopStart); // Jump back to the start of the loop
+            }
+        }, 1000); // Check every second
+
+        // Clear the interval when the video is not playing
+        event.target.addEventListener('onStateChange', function(evt) {
+            if (evt.data != YT.PlayerState.PLAYING) {
                 clearInterval(loopChecker);
             }
         });

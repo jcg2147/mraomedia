@@ -698,3 +698,77 @@ header .nav-link:hover {
 .four-text-container .column:nth-child(4) {
     margin-top: 70px; /* Adjust this value for desired drop */
 }
+
+.services-page {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services-page h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #111;
+    border: 1px solid #333;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+}
+
+.service-box h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.cta-section {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+}
+
+.cta-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #8bc34a;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #7cb342;
+}

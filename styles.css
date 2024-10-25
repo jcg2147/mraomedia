@@ -817,9 +817,9 @@ header .nav-link:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     background-color: #000;
-    color: white;
+    color: #000;
 }
 
 #why-container #image-section {

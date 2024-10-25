@@ -785,8 +785,9 @@ header .nav-link:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #000;
+    color: #fff;
     z-index: 1; /* Ensure content is above the video */
+    background-color: #000;
 }
 
 #hero-services .video-background {

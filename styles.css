@@ -879,3 +879,8 @@ header .nav-link:hover {
 #contact-section {
     background-color: #000;
 }
+
+#cta-container {
+    max-width: 600px; /* Limits the width of the container */
+    margin: 0 auto;    /* Centers content horizontally */
+}

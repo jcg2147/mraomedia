@@ -464,6 +464,10 @@ nav .nav-link:hover {
     margin: 0 auto;    /* Centers the form horizontally */
 }
 
+#contact .container h2, #contact .container p {
+    color: white;
+}
+
 #review .button-container {
     display: flex;
     justify-content: center; /* Centers the buttons horizontally */

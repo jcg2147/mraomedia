@@ -775,7 +775,7 @@ header .nav-link:hover {
 
 #hero-services {
     position: relative;
-    height: 70vh; /* Full viewport height to cover both header and hero */
+    height: 80vh; /* Full viewport height to cover both header and hero */
     width: 100%;
     overflow: hidden;
     display: flex;

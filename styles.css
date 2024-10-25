@@ -790,8 +790,9 @@ header .nav-link:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin-left: 20%; /* Push it to the right */
     z-index: -1; /* Place the video behind the content */
     overflow: hidden;
 }

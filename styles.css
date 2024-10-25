@@ -813,7 +813,7 @@ header .nav-link:hover {
     object-fit: cover; /* Ensure the video covers the area */
 }
 
-.why-container {
+#why-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -822,55 +822,55 @@ header .nav-link:hover {
     color: white;
 }
 
-.why-container .image-section {
+#why-container #image-section {
     flex: 1;
 }
 
-.why-container .image-section img {
+#why-container #image-section img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.why-container .text-section {
+#why-container #text-section {
     flex: 1;
     margin-left: 30px;
 }
 
-.why-container .text-section h2 {
+#why-container #text-section h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.why-container .text-section p {
+#why-container #text-section p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.why-container .checklist {
+#why-container .checklist {
     list-style: none;
     padding: 0;
 }
 
-.why-container .checklist li {
+#why-container .checklist li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.why-container .checklist li::before {
+#why-container .checklist li::before {
     content: '✔';
     color: #00ff00;
     margin-right: 10px;
 }
 
 @media (max-width: 768px) {
-    .why-container {
+    #why-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .why-container .text-section {
+    #why-container #text-section {
         margin-left: 0;
         margin-top: 20px;
     }

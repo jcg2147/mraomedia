@@ -734,11 +734,13 @@ header .nav-link:hover {
     font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .service-box p {
     font-size: 1em;
     line-height: 1.6;
+    color: white;
 }
 
 .cta-section {

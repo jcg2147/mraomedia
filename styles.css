@@ -775,7 +775,7 @@ header .nav-link:hover {
 
 #hero-services {
     position: relative;
-    height: 100vh; /* Full viewport height to cover both header and hero */
+    height: 70vh; /* Full viewport height to cover both header and hero */
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -790,9 +790,9 @@ header .nav-link:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 85%;
     height: 100%;
-    margin-left: 20%; /* Push it to the right */
+    margin-left: 15%; /* Push it to the right */
     z-index: -1; /* Place the video behind the content */
     overflow: hidden;
 }

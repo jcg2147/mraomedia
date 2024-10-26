@@ -897,6 +897,7 @@ header .nav-link:hover {
     align-items: flex-start;
     gap: 20px; /* Optional: space between slideshow and text */
     color: white;
+    padding: 100px 40px 40px 40px;
 }
 
 /* Slideshow container */

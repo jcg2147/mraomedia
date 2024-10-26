@@ -904,11 +904,15 @@ header .nav-link:hover {
     height: 70vh;
     overflow: hidden;
     border: 2px solid #ddd; /* Optional: for visualization */
+    position: relative;
 }
 
 .slides {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 1.5s ease-in-out; /* Smooth fade-in and fade-out */
 }
@@ -923,6 +927,7 @@ header .nav-link:hover {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Scales the image to cover the container while maintaining aspect ratio */
+    display: block; /* Removes extra spacing below images */
 }
 
 /* Text section */

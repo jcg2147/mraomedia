@@ -891,11 +891,13 @@ header .nav-link:hover {
 }
 
 /* Style for slideshow container */
-#slideshow .container {
+.slideshow-container {
     position: relative;
     max-width: 800px;
     height: 70vh;
     margin: auto;
+    overflow: hidden; /* Ensures images stay within the container bounds */
+    border: 2px solid #ddd; /* Optional: adds a border to visualize the container */
 }
 
 .slides {
@@ -908,4 +910,11 @@ header .nav-link:hover {
 /* Visible slide */
 .slides.show {
     opacity: 1;
+}
+
+/* Ensure images fit within the container */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the image to cover the container while maintaining aspect ratio */
 }

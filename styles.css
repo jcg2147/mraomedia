@@ -895,8 +895,9 @@ header .nav-link:hover {
     position: relative;
     max-width: 800px;
     height: 70vh;
-    margin: auto;
+    margin: 0;
     overflow: hidden; /* Ensures images stay within the container bounds */
+    float: left;
 }
 
 .slides {

@@ -295,3 +295,28 @@ function sendReviewViaGmail() {
     // Open Gmail web app in a new tab
     window.open(gmailLink, '_blank');
 }
+
+let slideIndex = 0;
+showSlides();
+
+// Function to show slides
+function showSlides() {
+    const slides = document.getElementsByClassName("slides");
+
+    // Hide all slides initially
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Increment slide index
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    // Display the current slide
+    slides[slideIndex - 1].style.display = "block";
+
+    // Change image every 3 seconds
+    setTimeout(showSlides, 3000); // 3000ms = 3 seconds
+}

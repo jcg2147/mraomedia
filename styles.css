@@ -891,7 +891,7 @@ header .nav-link:hover {
 }
 
 /* Style for slideshow container */
-.slideshow-container {
+#slideshow .container {
     position: relative;
     max-width: 800px;
     height: 70vh;

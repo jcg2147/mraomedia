@@ -303,9 +303,9 @@ showSlides();
 function showSlides() {
     const slides = document.getElementsByClassName("slides");
 
-    // Hide all slides initially
+    // Remove 'show' class from all slides (fade out)
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove("show");
     }
 
     // Increment slide index
@@ -314,8 +314,8 @@ function showSlides() {
         slideIndex = 1;
     }
 
-    // Display the current slide
-    slides[slideIndex - 1].style.display = "block";
+    // Add 'show' class to current slide (fade in)
+    slides[slideIndex - 1].classList.add("show");
 
     // Change image every 3 seconds
     setTimeout(showSlides, 3000); // 3000ms = 3 seconds

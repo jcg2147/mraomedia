@@ -904,7 +904,6 @@ header .nav-link:hover {
     width: 60%; /* Adjust width as needed */
     height: 70vh;
     overflow: hidden;
-    border: 2px solid #ddd; /* Optional: for visualization */
     position: relative;
 }
 

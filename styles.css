@@ -897,7 +897,6 @@ header .nav-link:hover {
     height: 70vh;
     margin: auto;
     overflow: hidden; /* Ensures images stay within the container bounds */
-    border: 2px solid #ddd; /* Optional: adds a border to visualize the container */
 }
 
 .slides {

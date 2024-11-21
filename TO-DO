@@ -1,7 +1,8 @@
 Currently working on:
 2. Finalize header format for portfolio, contact, and aftt pages
-  - make the logo shrink with the shrinking of the web page and with mobile
+  - DONE - make the logo shrink with the shrinking of the web page and with mobile
   - DONE - how about for index.html? Should the header follow the same format?
+  - Make the menu options a hamburger click for menu when it gets too small.
 4. Create a Services page
   - DONE - fix why book my service section - center it more
   - DONE - fix the spacing of each section

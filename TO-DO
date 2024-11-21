@@ -2,7 +2,7 @@ Currently working on:
 2. Finalize header format for portfolio, contact, and aftt pages
   - DONE - make the logo shrink with the shrinking of the web page and with mobile
   - DONE - how about for index.html? Should the header follow the same format?
-  - Make the menu options a hamburger click for menu when it gets too small - LATER
+  - Make the menu options a hamburger click for menu when it gets too small
 4. Create a Services page
   - DONE - fix why book my service section - center it more
   - DONE - fix the spacing of each section
@@ -56,6 +56,7 @@ Future State:
 5. Add a photo to the contact form section
 6. Add a Contact Us button above the index.html intro video
 7. Widen the intro/index video so that there is no black on either side of the youtube player
+8. Can we add videos in place of the photos for the services? e.g. a drone videography reel for drone videography service
 
 References:
 https://websitedemos.net/video-editor-04/services/?customize=template

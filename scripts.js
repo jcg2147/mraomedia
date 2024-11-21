@@ -226,14 +226,6 @@ function loadHeader() {
     .catch(error => console.error('Error loading the header:', error));
 }
 
-// Function to toggle the visibility of hamburger menu items
-function hamBurger() 
-    document.getElementById('hamburger-menu').addEventListener('click', function() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
-    });
-}
-
 // Function to load the index header
 function loadIndexHeader() {
   fetch('index-header.html')

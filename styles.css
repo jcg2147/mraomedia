@@ -583,7 +583,7 @@ header {
 }
 
 .header-logo img {
-    max-width: 100%;   /* Ensures the image will scale down within its container */
+    max-width: 80%;   /* Ensures the image will scale down within its container */
     height: auto;      /* Maintains the aspect ratio */
     width: auto;       /* Optional to make it more flexible */
 }

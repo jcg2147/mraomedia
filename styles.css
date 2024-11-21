@@ -583,7 +583,9 @@ header {
 }
 
 .header-logo img {
-    max-width: 450px;
+    max-width: 100%;   /* Ensures the image will scale down within its container */
+    height: auto;      /* Maintains the aspect ratio */
+    width: auto;       /* Optional to make it more flexible */
 }
 
 header .nav {
@@ -598,6 +600,27 @@ header .nav-link {
 
 header .nav-link:hover {
     color: #007bff; /* Optional hover color */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .header-logo img {
+        max-width: 70%;   /* Adjust the logo size for smaller screens */
+    }
+
+    header {
+        flex-direction: column; /* Stack header content on top of each other on small screens */
+        align-items: center;
+    }
+
+    header .nav {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+        padding-right: 0; /* Remove padding when stacked */
+    }
+
+    header .nav-link {
+        padding: 5px 0; /* Add some spacing between links */
+    }
 }
 
 .services {

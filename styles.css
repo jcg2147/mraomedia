@@ -588,6 +588,12 @@ header {
     width: auto;       /* Optional to make it more flexible */
 }
 
+header .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header .nav {
     display: flex;
     padding-right: 50px; /* Add more padding to the right of the navigation links */
@@ -595,11 +601,28 @@ header .nav {
 
 header .nav-link {
     text-decoration: none;
-    color: #000; /* Text color */
+    color: #fff; /* Text color */
 }
 
 header .nav-link:hover {
     color: #007bff; /* Optional hover color */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hide hamburger icon by default */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
 }
 
 /* Media query for smaller screens */
@@ -613,9 +636,15 @@ header .nav-link:hover {
         align-items: center;
     }
 
+    /* Hide nav links and show hamburger menu */
     header .nav {
-        flex-direction: column; /* Stack navigation items vertically on small screens */
+        display: none; /* Hide navigation links */
+        flex-direction: column; /* Stack navigation items vertically */
         padding-right: 0; /* Remove padding when stacked */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on small screens */
     }
 
     header .nav-link {

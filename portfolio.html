@@ -110,7 +110,9 @@
     <script>
         document.getElementById('hamburger-icon').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
+            console.log("Hamburger clicked!"); // Check if click event triggers
             navLinks.classList.toggle('active');
+            console.log(navLinks.classList); // Check if the class list is updated
         });
     </script>
 </body>

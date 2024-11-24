@@ -4,7 +4,7 @@ Currently working on:
   - DONE - how about for index.html? Should the header follow the same format?
   - DONE - Make the menu options a hamburger click for menu when it gets too small
   - Update the text of the navbar links
-  - Make it so that the MraoMedia logo does not get distorted when the hamburger menu is clicked and drop down menu is revealed
+  - Fix the placement of the mrao media logo in the home page, it should match its location in the other pages. Right now it is too centered compared to its location in the rest of the pages. 
 4. Create a Services page
   - DONE - fix why book my service section - center it more
   - DONE - fix the spacing of each section

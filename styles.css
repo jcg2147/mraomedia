@@ -583,43 +583,92 @@ header {
 }
 
 .header-logo img {
-    max-width: 80%;   /* Ensures the image will scale down within its container */
-    height: auto;      /* Maintains the aspect ratio */
-    width: auto;       /* Optional to make it more flexible */
+    max-width: 80%;
+    height: auto;
+    width: auto;
 }
 
-header .nav {
+header nav {
     display: flex;
-    padding-right: 50px; /* Add more padding to the right of the navigation links */
+    justify-content: flex-end; /* Align nav items to the right on larger screens */
+    width: 100%;
+}
+
+/* Navigation Links Styles */
+header .nav-links {
+    display: flex;
+    justify-content: flex-end;
 }
 
 header .nav-link {
     text-decoration: none;
-    color: #000; /* Text color */
+    color: #000;
+    padding: 10px 15px;
 }
 
 header .nav-link:hover {
-    color: #007bff; /* Optional hover color */
+    color: #007bff;
 }
 
-/* Media query for smaller screens */
+/* Hamburger Icon Styles */
+header .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
     .header-logo img {
-        max-width: 70%;   /* Adjust the logo size for smaller screens */
+        max-width: 70%;
     }
 
     header {
-        flex-direction: column; /* Stack header content on top of each other on small screens */
+        flex-direction: column;
         align-items: center;
     }
 
-    header .nav {
-        flex-direction: column; /* Stack navigation items vertically on small screens */
-        padding-right: 0; /* Remove padding when stacked */
+    header nav {
+        width: 100%;
+        justify-content: space-between;
     }
 
+    /* Hide nav links by default on small screens */
+    header .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px; /* Space for the logo */
+        left: 0;
+        padding: 20px 0;
+    }
+
+    /* Show nav links when active */
+    header .nav-links.active {
+        display: flex;
+    }
+
+    /* Show hamburger icon on small screens */
+    header .hamburger {
+        display: flex;
+    }
+
+    /* Spacing for links in mobile view */
     header .nav-link {
-        padding: 5px 0; /* Add some spacing between links */
+        padding: 10px 20px;
     }
 }
 

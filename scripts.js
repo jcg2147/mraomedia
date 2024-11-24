@@ -233,14 +233,22 @@ function loadHeader() {
       // Insert the fetched HTML into the DOM
       document.getElementById('header-section').innerHTML = data;
 
-      // Now that the header is inserted, add the event listener
+      // Now that the header is inserted, add the event listener for the hamburger icon
       const hamburgerIcon = document.getElementById('hamburger-icon');
-      if (hamburgerIcon) {
+      const navLinks = document.getElementById('nav-links');
+
+      if (hamburgerIcon && navLinks) {
         hamburgerIcon.addEventListener('click', function() {
-          const navLinks = document.getElementById('nav-links');
-          console.log("Hamburger clicked!"); // Check if click event triggers
-          navLinks.classList.toggle('active');
-          console.log(navLinks.classList); // Check if the class list is updated
+          console.log("Hamburger clicked!"); // Debug: Check if click event triggers
+          navLinks.classList.toggle('active'); // Show/hide the nav links
+          // Optionally toggle the visibility of the hamburger icon
+          hamburgerIcon.classList.toggle('active'); // Hide or show hamburger icon if needed
+        });
+
+        // When mouse leaves the nav-links area, hide the links and show the hamburger
+        navLinks.addEventListener('mouseleave', function() {
+          navLinks.classList.remove('active'); // Hide nav links when mouse leaves
+          hamburgerIcon.classList.remove('active'); // Show hamburger icon again (optional)
         });
       }
     })

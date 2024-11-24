@@ -224,6 +224,15 @@ function loadHeader() {
       document.getElementById('header-section').innerHTML = data;
     })
     .catch(error => console.error('Error loading the header:', error));
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+    if (hamburgerIcon) {
+        hamburgerIcon.addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            console.log("Hamburger clicked!"); // Check if click event triggers
+            navLinks.classList.toggle('active');
+            console.log(navLinks.classList); // Check if the class list is updated
+        });
+    }
 }
 
 // Function to load the index header

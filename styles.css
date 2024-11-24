@@ -661,6 +661,11 @@ header .hamburger .bar {
         display: flex;
     }
 
+    /* Show hamburger icon on small screens */
+    header .hamburger {
+        display: flex;
+    }
+    
     /* Hide hamburger icon when nav links are active (optional) */
     header .hamburger.active {
         display: none;

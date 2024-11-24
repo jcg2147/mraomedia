@@ -217,8 +217,8 @@ window.open(gmailLink, '_blank');
 }
 
 // Function to load the header
-function loadHeaderBackup() {
-  fetch('header.html')
+function loadHeader() {
+  fetch('header2.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-section').innerHTML = data;
@@ -226,7 +226,7 @@ function loadHeaderBackup() {
     .catch(error => console.error('Error loading the header:', error));
 }
 
-function loadHeader() {
+function loadHeaderBackup() {
   fetch('header.html')
     .then(response => response.text())
     .then(data => {

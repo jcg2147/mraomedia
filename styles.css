@@ -120,7 +120,7 @@ footer p {
     margin: 0;
 }
 
-nav .nav-link {
+/* nav .nav-link {
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -128,6 +128,7 @@ nav .nav-link {
 nav .nav-link:hover {
     color: #ffc107; /* Change to a brighter color on hover */
 }
+*/
 
 /* About section styling */
 #about .container {
@@ -588,13 +589,16 @@ header {
     width: auto;
 }
 
+/*
 header nav {
     display: flex;
     justify-content: flex-end; /* Align nav items to the right on larger screens */
     width: 100%;
 }
+*/
 
 /* Navigation Links Styles */
+/*
 header .nav-links {
     display: flex;
     justify-content: flex-end;
@@ -609,10 +613,12 @@ header .nav-link {
 header .nav-link:hover {
     color: #007bff;
 }
+*/
 
 /* Hamburger Icon Styles */
+/*
 header .hamburger {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -626,6 +632,7 @@ header .hamburger .bar {
     height: 3px;
     background-color: white;
 }
+*/
 
 /* Media Query for Small Screens */
 @media (max-width: 768px) {
@@ -637,13 +644,14 @@ header .hamburger .bar {
         flex-direction: column;
         align-items: center;
     }
-
+/*
     header nav {
         width: 100%;
         justify-content: space-between;
     }
-
+*/
     /* Hide nav links by default on small screens */
+/*
     header .nav-links {
       display: none; /* Hide by default */
       flex-direction: column;
@@ -655,31 +663,31 @@ header .hamburger .bar {
       left: 0;
       padding: 20px 0;
     }
-
+*/
     /* Show nav links when active */
+/*
     header .nav-links.active {
         display: flex;
     }
-
+*/
     /* Show hamburger icon on small screens */
+/*
     header .hamburger {
         display: flex;
     }
     
-    /* Hide hamburger icon when nav links are active (optional) */
     header .hamburger.active {
         display: none;
     }
 
-    /* Spacing for links in mobile view */
     header .nav-link {
         padding: 10px 20px;
     }
 
-    /* Hover behavior for nav links */
     header .nav-links:hover {
       display: flex;
     }
+*/
 }
 
 .services {

@@ -645,15 +645,15 @@ header .hamburger .bar {
 
     /* Hide nav links by default on small screens */
     header .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: black;
-        position: absolute;
-        top: 60px; /* Space for the logo */
-        left: 0;
-        padding: 20px 0;
+      display: none; /* Hide by default */
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      top: 60px; /* Space for the logo */
+      left: 0;
+      padding: 20px 0;
     }
 
     /* Show nav links when active */
@@ -661,14 +661,19 @@ header .hamburger .bar {
         display: flex;
     }
 
-    /* Show hamburger icon on small screens */
-    header .hamburger {
-        display: flex;
+    /* Hide hamburger icon when nav links are active (optional) */
+    header .hamburger.active {
+        display: none;
     }
 
     /* Spacing for links in mobile view */
     header .nav-link {
         padding: 10px 20px;
+    }
+
+    /* Hover behavior for nav links */
+    header .nav-links:hover {
+      display: flex;
     }
 }
 

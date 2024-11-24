@@ -217,22 +217,34 @@ window.open(gmailLink, '_blank');
 }
 
 // Function to load the header
-function loadHeader() {
+function loadHeaderBackup() {
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-section').innerHTML = data;
     })
     .catch(error => console.error('Error loading the header:', error));
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-    if (hamburgerIcon) {
+}
+
+function loadHeader() {
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insert the fetched HTML into the DOM
+      document.getElementById('header-section').innerHTML = data;
+
+      // Now that the header is inserted, add the event listener
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      if (hamburgerIcon) {
         hamburgerIcon.addEventListener('click', function() {
-            const navLinks = document.getElementById('nav-links');
-            console.log("Hamburger clicked!"); // Check if click event triggers
-            navLinks.classList.toggle('active');
-            console.log(navLinks.classList); // Check if the class list is updated
+          const navLinks = document.getElementById('nav-links');
+          console.log("Hamburger clicked!"); // Check if click event triggers
+          navLinks.classList.toggle('active');
+          console.log(navLinks.classList); // Check if the class list is updated
         });
-    }
+      }
+    })
+    .catch(error => console.error('Error loading the header:', error));
 }
 
 // Function to load the index header

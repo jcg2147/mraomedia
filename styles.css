@@ -686,8 +686,6 @@ header .hamburger .bar {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;  /* Allow items to wrap if needed */
-    width: 100%;
 }
 
 .service-item {

@@ -734,12 +734,14 @@ header .hamburger .bar {
     line-height: 1.5;
     color: white;
 }
+/*
 @media screen and (max-width: 768px) {
     .services {
         flex-direction: column;
         align-items: center;
     }
 }
+*/
 
 .gallery {
     display: grid;

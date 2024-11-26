@@ -669,39 +669,15 @@ header .hamburger .bar {
     /* Hide nav links by default on small screens */
 /*
     header .nav-links {
-      display: none; /* Hide by default */
+      display: none;
       flex-direction: column;
       align-items: center;
       width: 100%;
       background-color: black;
       position: absolute;
-      top: 60px; /* Space for the logo */
+      top: 60px;
       left: 0;
       padding: 20px 0;
-    }
-*/
-    /* Show nav links when active */
-/*
-    header .nav-links.active {
-        display: flex;
-    }
-*/
-    /* Show hamburger icon on small screens */
-/*
-    header .hamburger {
-        display: flex;
-    }
-    
-    header .hamburger.active {
-        display: none;
-    }
-
-    header .nav-link {
-        padding: 10px 20px;
-    }
-
-    header .nav-links:hover {
-      display: flex;
     }
 */
 }
@@ -734,14 +710,13 @@ header .hamburger .bar {
     line-height: 1.5;
     color: white;
 }
-/*
+
 @media screen and (max-width: 768px) {
     .services {
         flex-direction: column;
         align-items: center;
     }
 }
-*/
 
 .gallery {
     display: grid;

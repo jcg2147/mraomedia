@@ -16,7 +16,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     color: #fff;
     z-index: 1; /* Ensure content is above the video */

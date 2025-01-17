@@ -620,12 +620,12 @@ header nav {
 
 /* Change text color for navbar links for better contrast on transparent background */
 .navbar .nav-link {
-  color: white !important; /* Text color for navbar links */
+  color: white; /* Text color for navbar links */
 }
 
 /* Optional: Change the color of navbar links on hover */
 .navbar .nav-link:hover {
-  color: #aeb3fc !important; /* Hover color */
+  color: #aeb3fc; /* Hover color */
 }
 
 .navbar .nav-link.active {

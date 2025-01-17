@@ -348,7 +348,6 @@ nav .nav-link:hover {
     background-color: #9095e0; /* Purple color */
     border-color: #9095e0; /* Ensure border color matches */
     color: #000;
-    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     border-width: 3px; /* Default is 2px */
@@ -358,7 +357,6 @@ nav .nav-link:hover {
     background-color: #000; 
     border-color: #6d72bf; /* Darker purple color */
     color: #6d72bf; /* Ensure text color matches */
-    font-weight: bold;
     border-width: 3px;
 }
 

@@ -629,7 +629,7 @@ header nav {
 }
 
 .navbar .nav-link.active {
-  color: #aeb3fc; /* Active page color, same as hover */
+  color: #aeb3fc; /* Active page color, same as hover color */
 }
 
 /*

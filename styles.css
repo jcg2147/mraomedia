@@ -1122,6 +1122,20 @@ header .hamburger .bar {
 }
 
 /* Font Styles for Text Elements */
+
+h0 {
+    display: block;
+    font-size: 4em;
+    margin-before: 0.67em;
+    margin-after: 0.67em;
+    margin-start: 0;
+    margin-end: 0;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
 h1 {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;

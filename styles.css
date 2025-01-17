@@ -93,7 +93,7 @@ body {
 
 .fade-out {
     animation: fadeOut 2s forwards;
-    animation-delay: 1s; /* Text will be visible for 3 seconds before fading out */
+    animation-delay: 1.5s; /* Text will be visible for 3.5 seconds before fading out */
 }
 
 .video-card {

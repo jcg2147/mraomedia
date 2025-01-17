@@ -129,6 +129,11 @@ footer p {
 nav .nav-link:hover {
     color: #ffc107; /* Change to a brighter color on hover */
 }
+
+nav .nav-link.active {
+    color: #ffc107;
+}
+
 */
 
 /* About section styling */

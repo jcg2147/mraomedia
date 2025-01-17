@@ -6,12 +6,16 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-button {
-    background-color: #9095e0;
+/* Change the background color of buttons with .btn-dark */
+.btn-dark {
+    background-color: #9095e0; /* Purple color */
+    border-color: #9095e0; /* Ensure border color matches */
 }
 
-button:hover {
-    background-color: #6d72bf;
+/* Change the background color when hovering over .btn-dark */
+.btn-dark:hover {
+    background-color: #6d72bf; /* Lighter purple color */
+    border-color: #6d72bf; /* Ensure border color matches */
 }
 
 #services-body {

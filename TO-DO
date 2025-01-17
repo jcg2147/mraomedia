@@ -1,25 +1,18 @@
+To do before publishing:
+3. Change colors of buttons to mrao media colors
+4. Change colors of layouts to nicer colors
+14. Change fonts - Montserrat might be a good one - its the one in the website demo
+16. Fix intro "Welcome to Mrao Media" Message
+17. Fix headers
+21. Fix the footer icons - why does hovering over the social media icons make a small line appear to the right
+
 Currently working on: 
 2. Finalize header format for portfolio, contact, and aftt pages
-  - DONE - make the logo shrink with the shrinking of the web page and with mobile
-  - DONE - how about for index.html? Should the header follow the same format?
-  - DONE - Make the menu options a hamburger click for menu when it gets too small
   - Update the text of the navbar links
   - Fix the placement of the mrao media logo in the home page, it should match its location in the other pages. Right now it is too centered compared to its location in the rest of the pages. 
-  - DONE - Fix the three service bubbles in the main page - something we changed in the above items messed it up.
 4. Create a Services page
-  - DONE - fix why book my service section - center it more
-  - DONE - fix the spacing of each section
-  - DONE - finalize the types of services mrao media offers - video editing, event videography, drone videography
-  - DONE - Finish adding descriptions to each service
-  - DONE - Make the services in the services page bigger
-  - DONE - make the background color of the entire page black
-  - DONE - thicken the border of the service-boxes and make it white
-  - DONE - Add a slideshow below the video (Sabrina has photos), align it to the left, and have the Why book us text to the right of it
   - Finish adding all the photos for the slidehow showing our services/team
 6. Create a separate About section that contains:
-  - DONE - About Sabrina section
-  - DONE - all the About Mrao Media photos
-  - DONE - Include link to Sabrina's linkedin profile
   - Include link to Sabrina's youtube page
   - Include link to Sabrina's CNBC portfolio
   - Fix text section

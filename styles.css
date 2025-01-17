@@ -357,6 +357,7 @@ nav .nav-link:hover {
     background-color: #000; /* Lighter purple color */
     border-color: #6d72bf; /* Ensure border color matches */
     color: #6d72bf;
+    border-width: 4px;
 }
 
 @media (max-width: 768px) {

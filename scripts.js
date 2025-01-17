@@ -356,12 +356,12 @@ function activeNavlink(){
     const navLinks = document.querySelectorAll('.nav-link');
     // Get the current URL (without query parameters, if any)
     const currentPath = window.location.pathname;
-    console.log("Current Path: " + window.location.pathname);
+    //console.log("Current Path: " + window.location.pathname);
     // Loop through all nav links to check which one matches the current page
     navLinks.forEach(function(link) {
       // Remove 'active' class from all links first
       link.classList.remove('active');
-      console.log("href: " + link.getAttribute('href'));
+      //console.log("href: " + link.getAttribute('href'));
       // Check if the link's href is included in the current path
       if (currentPath.includes(link.getAttribute('href'))) {
         // Add the 'active' class to the matching link

@@ -356,9 +356,9 @@ nav .nav-link:hover {
 }
 
 .btn:hover {
-    background-color: #000; /* Lighter purple color */
-    border-color: #6d72bf; /* Ensure border color matches */
-    color: #6d72bf;
+    background-color: #000; 
+    border-color: #6d72bf; /* Darker purple color */
+    color: #6d72bf; /* Ensure text color matches */
     border-width: 3px;
 }
 
@@ -619,7 +619,7 @@ header nav {
 
 /* Optional: Change the color of navbar links on hover */
 .navbar .nav-link:hover {
-  color: #007bff !important; /* Change hover color */
+  color: #6d72bf !important; /* Change hover color */
 }
 
 /*

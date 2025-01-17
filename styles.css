@@ -17,6 +17,7 @@ button:hover {
 #services-body {
     background-color: #000;
 }
+
 #hero {
     position: relative;
     height: 100vh; /* Full viewport height to cover both header and hero */

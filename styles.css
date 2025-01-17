@@ -348,14 +348,15 @@ nav .nav-link:hover {
     padding: 10px 20px;
     background-color: #9095e0; /* Purple color */
     border-color: #9095e0; /* Ensure border color matches */
-    color: #fff;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #6d72bf; /* Lighter purple color */
+    background-color: #000; /* Lighter purple color */
     border-color: #6d72bf; /* Ensure border color matches */
+    color: #6d72bf;
 }
 
 @media (max-width: 768px) {

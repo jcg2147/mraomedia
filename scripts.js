@@ -358,7 +358,7 @@ function activeNavlink(){
 
     // Get the current URL (without query parameters, if any)
     const currentPath = window.location.pathname;
-
+    console.log("Location Path Name: " + currentPath);
     // Loop through all nav links to check which one matches the current page
     navLinks.forEach(function(link) {
       // Remove 'active' class from all links first

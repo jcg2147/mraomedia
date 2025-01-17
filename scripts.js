@@ -349,3 +349,26 @@ function showSlides() {
     // Change image every 3 seconds
     setTimeout(showSlides, 3000); // 3000ms = 3 seconds
 }
+
+// Function to add active class to current nav-link page
+function activeNavlink(){
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all nav-link elements
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Get the current URL (without query parameters, if any)
+    const currentPath = window.location.pathname;
+
+    // Loop through all nav links to check which one matches the current page
+    navLinks.forEach(function(link) {
+      // Remove 'active' class from all links first
+      link.classList.remove('active');
+
+      // Check if the href matches the current page URL
+      if (link.getAttribute('href') === currentPath) {
+        // Add the 'active' class to the matching link
+        link.classList.add('active');
+      }
+    });
+  });
+}

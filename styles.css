@@ -1058,9 +1058,65 @@ header .hamburger .bar {
 /* <uniquifier>: Use a unique and descriptive class name */
 /* <weight>: Use a value from 100 to 900 */
 
-.montserrat-<uniquifier> {
+.montserrat-100 {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.montserrat-200 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.montserrat-300 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-400 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-500 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-600 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-700 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-800 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-900 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
   font-style: normal;
 }

@@ -6,16 +6,6 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 100 to 900 */
-
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 #services-body {
     background-color: #000;
 }
@@ -1065,4 +1055,14 @@ header .hamburger .bar {
     content: '✔';
     color: #00ff00;
     margin-right: 10px;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }

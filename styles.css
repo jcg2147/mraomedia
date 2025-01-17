@@ -856,7 +856,7 @@ header .hamburger .bar {
 
 .cta-button {
     display: inline-block;
-    background-color: #8bc34a;
+    background-color: #9095e0;
     color: #000;
     padding: 15px 30px;
     text-decoration: none;
@@ -866,7 +866,7 @@ header .hamburger .bar {
 }
 
 .cta-button:hover {
-    background-color: #7cb342;
+    background-color: #6d72bf;
 }
 
 #hero-services {

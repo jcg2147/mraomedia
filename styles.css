@@ -351,14 +351,14 @@ nav .nav-link:hover {
     color: #000;
     text-decoration: none;
     border-radius: 5px;
-    border-width: 2px; /* Default */
+    border-width: 3px; /* Default is 2px */
 }
 
 .btn:hover {
     background-color: #000; /* Lighter purple color */
     border-color: #6d72bf; /* Ensure border color matches */
     color: #6d72bf;
-    border-width: 4px;
+    border-width: 3px;
 }
 
 @media (max-width: 768px) {

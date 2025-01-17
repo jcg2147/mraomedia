@@ -6,18 +6,6 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Change the background color of buttons with .btn-dark */
-.btn-dark {
-    background-color: #9095e0; /* Purple color */
-    border-color: #9095e0; /* Ensure border color matches */
-}
-
-/* Change the background color when hovering over .btn-dark */
-.btn-dark:hover {
-    background-color: #6d72bf; /* Lighter purple color */
-    border-color: #6d72bf; /* Ensure border color matches */
-}
-
 #services-body {
     background-color: #000;
 }
@@ -357,14 +345,16 @@ nav .nav-link:hover {
 
 .btn {
     padding: 10px 20px;
-    background-color: #004d40;
+    background-color: #9095e0; /* Purple color */
+    border-color: #9095e0; /* Ensure border color matches */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #003d33;
+    background-color: #6d72bf; /* Lighter purple color */
+    border-color: #6d72bf; /* Ensure border color matches */
 }
 
 @media (max-width: 768px) {

@@ -1158,3 +1158,10 @@ h2 {
   font-weight: 500;
   font-style: normal;
 }
+
+p {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}

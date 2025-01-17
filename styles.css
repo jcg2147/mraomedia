@@ -353,7 +353,7 @@ nav .nav-link:hover {
     border-width: 3px; /* Default is 2px */
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -364,7 +364,7 @@ nav .nav-link:hover {
     border-width: 3px;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
 }
 

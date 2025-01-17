@@ -218,7 +218,7 @@ window.open(gmailLink, '_blank');
 
 // Function to load the header
 function loadHeader() {
-  fetch('header2.html')
+  return fetch('header2.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-section').innerHTML = data;

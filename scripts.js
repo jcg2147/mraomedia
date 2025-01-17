@@ -352,10 +352,8 @@ function showSlides() {
 
 // Function to add active class to current nav-link page
 function activeNavlink(){
-  document.addEventListener("DOMContentLoaded", function () {
     // Get all nav-link elements
     const navLinks = document.querySelectorAll('.nav-link');
-
     // Get the current URL (without query parameters, if any)
     const currentPath = window.location.pathname;
     console.log("Current Path: " + window.location.pathname);
@@ -370,5 +368,4 @@ function activeNavlink(){
         link.classList.add('active');
       }
     });
-  });
 }

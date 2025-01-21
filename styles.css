@@ -563,6 +563,7 @@ footer p {
     height: 30px;
     margin: 0 10px;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 .social-icon.icon1:hover {

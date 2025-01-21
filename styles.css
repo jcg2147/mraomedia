@@ -558,6 +558,10 @@ footer p {
     color: #fff;
 }
 
+.footer a {
+    text-decoration: none;
+}
+
 .social-icon {
     width: 30px;
     height: 30px;

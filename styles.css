@@ -121,16 +121,6 @@ footer p {
     margin: 0;
 }
 
-/* nav .nav-link {
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav .nav-link:hover {
-    color: #ffc107; /* Change to a brighter color on hover */
-}
-*/
-
 /* About section styling */
 #about .container {
     display: flex;
@@ -603,14 +593,6 @@ header {
     width: auto;
 }
 
-/*
-header nav {
-    display: flex;
-    justify-content: flex-end; /* Align nav items to the right on larger screens */
-    width: 100%;
-}
-*/
-
 /* Navigation Links Styles */
 
 /* Make the navbar background transparent */
@@ -631,23 +613,6 @@ header nav {
 .navbar .nav-link.montserrat-300.active {
   color: #aeb3fc; /* Active page color, same as hover color */
 }
-
-/*
-header .nav-links {
-    display: flex;
-    justify-content: flex-end;
-}
-
-header .nav-link {
-    text-decoration: none;
-    color: #000;
-    padding: 10px 15px;
-}
-
-header .nav-link:hover {
-    color: #007bff;
-}
-*/
 
 /* Hamburger Icon Styles */
 /*

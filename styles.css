@@ -564,6 +564,22 @@ footer p {
     vertical-align: middle;
 }
 
+.social-icon.icon1:hover {
+  content: url('instagram-white.png'); /* Second image */
+}
+
+.social-icon.icon2:hover {
+  content: url('youtube-white.png'); /* Second image */
+}
+
+.social-icon.icon3:hover {
+  content: url('x-white.png'); /* Second image */
+}
+
+.social-icon.icon4:hover {
+  content: url('tiktok-white.png'); /* Second image */
+}
+
 @media (max-width: 768px) {
     .footer .text-center {
         text-align: center !important; /* Ensures proper centering on mobile */

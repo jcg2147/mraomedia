@@ -606,7 +606,7 @@ header {
 }
 
 /* Optional: Change the color of navbar links on hover */
-.navbar .nav-link:hover {
+.navbar .nav-link.montserrat-300:hover {
   color: #aeb3fc; /* Hover color */
 }
 

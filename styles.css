@@ -544,6 +544,7 @@ footer p {
     /*background-color: #f9f5e5; Light background like in old mraomedia site */
     background-color: #000;
     padding: 40px 0;
+    text-decoration: none;
 }
 
 .footer-logo {

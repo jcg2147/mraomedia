@@ -1181,6 +1181,13 @@ textarea {
   letter-spacing: 1px;
 }
 
+input.form-control {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
 .send-button {
   margin-top: 15px;
   height: 34px;

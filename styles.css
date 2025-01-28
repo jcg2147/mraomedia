@@ -334,7 +334,7 @@ footer p {
 }
 
 .btn {
-    padding: 5px 0px;
+    padding: 10px 20px;
     background-color: #9095e0; /* Purple color */
     border-color: #9095e0; /* Ensure border color matches */
     color: #000;
@@ -345,6 +345,10 @@ footer p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+form .btn {
+    padding: 5px 0px;
 }
 
 .btn:hover {

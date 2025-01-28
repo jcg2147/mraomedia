@@ -1181,7 +1181,7 @@ textarea {
   letter-spacing: 1px;
 }
 
-input.form-control {
+form div div input.form-control {
   max-width: 400px;
   background-color: #000;
   color: #fff;

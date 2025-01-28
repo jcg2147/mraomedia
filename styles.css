@@ -333,7 +333,7 @@ footer p {
     font-size: 1rem;
 }
 
-.btn {
+.btn-upd {
     padding: 10px 20px;
     background-color: #9095e0; /* Purple color */
     border-color: #9095e0; /* Ensure border color matches */
@@ -347,7 +347,7 @@ footer p {
     font-style: normal;
 }
 
-.btn:hover {
+.btn-upd:hover {
     background-color: #000; 
     border-color: #6d72bf; /* Darker purple color */
     color: #6d72bf; /* Ensure text color matches */

@@ -333,8 +333,7 @@ footer p {
     font-size: 1rem;
 }
 
-/* Custom .btn-upd class */
-.btn-upd {
+.btn {
     padding: 10px 20px;
     background-color: #9095e0; /* Purple color */
     border-color: #9095e0; /* Ensure border color matches */
@@ -348,23 +347,7 @@ footer p {
     font-style: normal;
 }
 
-/* Ensure the .btn-upd class uses the default Bootstrap button styling */
-.btn-upd {
-    /* This will ensure it has the general 'btn' button styling */
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: all 0.15s ease-in-out;
-}
-
-.btn-upd:hover {
+.btn:hover {
     background-color: #000; 
     border-color: #6d72bf; /* Darker purple color */
     color: #6d72bf; /* Ensure text color matches */

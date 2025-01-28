@@ -267,7 +267,7 @@ function loadIndexHeader() {
 
 // Function to load the contact form
 function loadContactForm() {
-  fetch('contact-form.html')
+  fetch('contact-form2.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('contact-section').innerHTML = data;

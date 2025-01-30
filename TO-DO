@@ -1,9 +1,10 @@
 To do before publishing:
-4. Change colors of layouts to nicer colors
-5. Check why the footer is up so high in the Contact page - make a bigger/more modern footer
+1. Fix lines of contact form
 5.5 Add third party service to send messages directly from website
   - check out Formspree - https://formspree.io/
   - or EmailJS - https://www.emailjs.com/
+4. Change colors of layouts to nicer colors
+5. Check why the footer is up so high in the Contact page - make a bigger/more modern footer
 6. Fix button style after pressed
 14. Change fonts - Montserrat - make sure all fonts have been updated (this includes colors)
 16. Fix intro "Welcome to Mrao Media" Message

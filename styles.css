@@ -1243,7 +1243,7 @@ form div div input.form-control {
 .contact-blurb {
   font: 300 18px 'Lato', sans-serif;
   color: #bbb;
-  width: 90%;
+  width: 100%;
   max-width: 300px;
   margin: 0 auto;
   text-align: center;

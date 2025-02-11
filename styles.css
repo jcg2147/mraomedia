@@ -879,7 +879,7 @@ header .hamburger .bar {
 }
 
 .cta-button:hover {
-    background-color: #fff; 
+    background-color: #f2f2f2; 
     border-color: #6d72bf; /* Darker purple color */
     color: #6d72bf; /* Ensure text color matches */
     border-width: 3px;

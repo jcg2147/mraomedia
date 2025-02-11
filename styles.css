@@ -85,6 +85,12 @@ body {
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Add a shadow to the text */
 }
 
+#hero #header-section header {
+  /* Reset or adjust margins, alignment, or position */
+  text-align: left; /* Or whatever alignment you prefer */
+  margin: 0 auto; /* Adjust margins as needed */
+}
+
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }

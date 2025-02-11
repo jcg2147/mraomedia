@@ -370,6 +370,17 @@ form .btn {
     font-style: normal;
 }
 
+.btn:active {
+    background-color: #000; 
+    border-color: #6d72bf; /* Darker purple color */
+    color: #6d72bf; /* Ensure text color matches */
+    border-width: 3px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 @media (max-width: 768px) {
     .section-content {
         flex-direction: column;

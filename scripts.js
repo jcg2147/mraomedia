@@ -167,10 +167,21 @@ function filterVideos_OLD2(type) {
 }
 
 // Filter Video Portfolio with Isotope
-function filterVideos(filterValue) {
-  // If "all" is selected, use "*" (the wildcard in Isotope)
-  let filterQuery = filterValue === 'all' ? '*' : '.' + filterValue;
-  iso.arrange({ filter: filterQuery });
+function filterVideos(filterValue, btn) {
+    // Remove the active class from all filter buttons within the portfolio section
+    var buttons = document.querySelectorAll('#portfolio .btn');
+    buttons.forEach(function(button) {
+        button.classList.remove('active-filter');
+    });
+    
+    // Add the active class to the clicked button
+    btn.classList.add('active-filter');
+    
+    // Determine the filter query for Isotope
+    let filterQuery = filterValue === 'all' ? '*' : '.' + filterValue;
+    
+    // Arrange items using Isotope
+    iso.arrange({ filter: filterQuery });
 }
 
 // Smooth scrolling function

@@ -137,7 +137,7 @@ function playMeowSound() {
 }
 
 //Updated Video Filter Function for Portfolio - contains smooth shrink/expanding effects
-function filterVideos(type) {
+function filterVideos_OLD2(type) {
   const videos = document.querySelectorAll('.video-card');
   
   videos.forEach(video => {
@@ -164,6 +164,13 @@ function filterVideos(type) {
       }
     }
   });
+}
+
+// Filter Video Portfolio with Isotope
+function filterVideos(filterValue) {
+  // If "all" is selected, use "*" (the wildcard in Isotope)
+  let filterQuery = filterValue === 'all' ? '*' : '.' + filterValue;
+  iso.arrange({ filter: filterQuery });
 }
 
 // Smooth scrolling function

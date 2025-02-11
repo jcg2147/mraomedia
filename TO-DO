@@ -1,6 +1,6 @@
 To do before publishing:
 4. Change colors of layouts to nicer colors
-5. Check why the footer is up so high in the Contact page - make a bigger/more modern footer
+5. Add padding below contact form in all pages but the contact.html page
 6. Fix button style after pressed
 14. Change fonts - Montserrat - make sure all fonts have been updated (this includes colors)
 16. Fix intro "Welcome to Mrao Media" Message

@@ -166,7 +166,7 @@ function filterVideos_OLD2(type) {
   });
 }
 
-// Filter Video Portfolio with Isotope
+// Filter Video Portfolio with Isotope, and attaches active-filter class to active portfolio filter button
 function filterVideos(filterValue, btn) {
     // Remove the active class from all filter buttons within the portfolio section
     var buttons = document.querySelectorAll('#portfolio .btn');

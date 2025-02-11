@@ -116,7 +116,7 @@ function onPlayerServicesStateChange(event) {
 }
 
 // Filter function for the portfolio videos
-function filterVideos(type) {
+function filterVideos_OLD(type) {
     let videos = document.querySelectorAll('.video-card');
 
     videos.forEach(video => {
@@ -134,6 +134,36 @@ function filterVideos(type) {
 function playMeowSound() {
     var meowSound = new Audio('audio/mrao.wav'); // Adjust the path as needed
     meowSound.play();
+}
+
+//Updated Video Filter Function for Portfolio - contains smooth shrink/expanding effects
+function filterVideos(type) {
+  const videos = document.querySelectorAll('.video-card');
+  
+  videos.forEach(video => {
+    // Case for items that should be visible.
+    if (type === 'all' || video.classList.contains(type)) {
+      // If the video is currently hidden (has display: none), we need to make it visible first.
+      if (video.style.display === 'none') {
+        video.style.display = 'block';
+        // Force a reflow to ensure the browser registers the display change before removing the class.
+        void video.offsetWidth;
+      }
+      // Remove the filtered-out class to animate the video back in.
+      video.classList.remove('filtered-out');
+      
+    } else {
+      // For videos that should be filtered out:
+      // Only add the filtered-out class if it’s not already there.
+      if (!video.classList.contains('filtered-out')) {
+        video.classList.add('filtered-out');
+        // After the transition duration (300ms in this case), set display to none.
+        setTimeout(() => {
+          video.style.display = 'none';
+        }, 300);
+      }
+    }
+  });
 }
 
 // Smooth scrolling function

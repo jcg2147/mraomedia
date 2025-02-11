@@ -1332,3 +1332,21 @@ form div div input.form-control {
   font-weight: 900;
   font-style: normal;
 }
+
+/* Ensure the HTML and contact-page body fill the viewport */
+html, body.contact-page {
+  height: 100%;
+  margin: 0;
+}
+
+/* Make the contact page a flex container */
+body.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Allow the main content area to expand */
+body.contact-page #contact-section {
+  flex: 1;
+}

@@ -865,18 +865,28 @@ header .hamburger .bar {
 }
 
 .cta-button {
-    display: inline-block;
-    background-color: #9095e0;
+    padding: 10px 20px;
+    background-color: #9095e0; /* Purple color */
+    border-color: #9095e0; /* Ensure border color matches */
     color: #000;
-    padding: 15px 30px;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-width: 3px; /* Default is 2px */
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cta-button:hover {
-    background-color: #6d72bf;
+    background-color: #fff; 
+    border-color: #6d72bf; /* Darker purple color */
+    color: #6d72bf; /* Ensure text color matches */
+    border-width: 3px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #hero-services {

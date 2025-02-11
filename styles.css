@@ -1212,8 +1212,10 @@ form div div input.form-control {
   text-decoration: none;
 }
 
-hr {
-  border-color: rgba(255,255,255,.6);
+.direct-contact-container hr {
+  width: 80%;
+  margin: 0 auto;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Begin Media Queries*/

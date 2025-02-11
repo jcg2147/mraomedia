@@ -89,6 +89,7 @@ body {
   /* Reset or adjust margins, alignment, or position */
   text-align: left; /* Or whatever alignment you prefer */
   margin: 0 auto; /* Adjust margins as needed */
+  padding: 20px;
 }
 
 @keyframes fadeOut {

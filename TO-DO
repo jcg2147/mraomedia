@@ -1,4 +1,5 @@
 To do before publishing:
+1. Add animation for filtering through videos in portfolio page
 4. Change colors of layouts to nicer colors
 6. Fix button style after pressed
 14. Change fonts - Montserrat - make sure all fonts have been updated (this includes colors)
@@ -50,7 +51,6 @@ To do list:
 22. Add and spruce up Drone page
 
 Future State:
-1. Add animation for filtering through videos in portfolio page
 2. Incorporate drone videography into portfolio
 3. Increase/Configure sizes of photos in alongforthetelluride section
 4. Add a dropdown list for navigation menu when screen gets too small

@@ -370,7 +370,7 @@ form .btn {
     font-style: normal;
 }
 
-.btn:active {
+.btn.active-filter {
     background-color: #000; 
     border-color: #6d72bf; /* Darker purple color */
     color: #6d72bf; /* Ensure text color matches */

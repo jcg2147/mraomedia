@@ -1,9 +1,4 @@
 To do before publishing:
-1. Finalize contact form:
-  - Fix the horizontal lines, add a gap inbetween the two elements?
-  - Add third party service to send messages directly from website
-    - check out Formspree - https://formspree.io/
-    - or EmailJS - https://www.emailjs.com/
 4. Change colors of layouts to nicer colors
 5. Check why the footer is up so high in the Contact page - make a bigger/more modern footer
 6. Fix button style after pressed

@@ -115,6 +115,14 @@
             activeNavlink();
         });
     </script>
+    <script>
+        // Initialize Isotope on the container with your video cards.
+        var iso = new Isotope('#portfolio-items', {
+          itemSelector: '.video-card',
+          layoutMode: 'fitRows',         // This works well with Bootstrap's grid.
+          transitionDuration: '0.3s'     // Adjust to your desired speed.
+        });
+    </script>
 </body>
 </html>
 

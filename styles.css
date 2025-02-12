@@ -206,12 +206,6 @@ footer p {
     position: relative;
 }
 
-#latest-projects .right-section::before {
-  content: "";
-  display: block;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 * 100 = 56.25%) */
-}
-
 #latest-projects .embedded-videos {
     display: flex;
     justify-content: center;

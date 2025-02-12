@@ -204,7 +204,7 @@ footer p {
 #latest-projects .right-section {
     flex: 1;
     position: relative;
-    max-width: 40%;
+    max-width: 35%;
 }
 
 #latest-projects .embedded-videos {

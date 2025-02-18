@@ -185,6 +185,7 @@ footer p {
     font-size: 2vw;
     letter-spacing: 8px;
     padding-bottom: 3.5vw;
+    text-transform: uppercase;
 }
 
 #latest-projects p {

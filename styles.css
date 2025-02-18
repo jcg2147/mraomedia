@@ -182,7 +182,9 @@ footer p {
 
 #latest-projects h2 {
     text-align: center; 
-    font-size: 2.5vw;
+    font-size: 2vw;
+    letter-spacing: 8px;
+    padding-bottom: 40px;
 }
 
 #latest-projects p {

@@ -1,12 +1,11 @@
 To do before publishing:
-1. Fix all headers - make them consistent (the services, portfolio and contact form headers are good to go, work on sub-headers)
 1. Fix spacing between sections (ex. space between about_me photo and description)
 2. Fix intro "Welcome to Mrao Media" Message
 3. Figure out why the welcome video does not take up the entire width of the viewport
-4. Make sure all descriptions are good and in line with what Sabrina wants to say
+4. Change index.html About section talk about Mrao Media as a company
+5. Update Sabrina's about me section in about.html to be exactly what she wants. Remove age 15 and be more specific on the types of productions she's been in.
 5. Bring mraomedia domain over to github pages
 6. Cancel wordpress payment plan
-7. How do I split the about section between sabrina and myself? Do I only introduce myself in the drone section? Also include something about mraomedia and how sabrina and I are co-founders.
 
 After publishing:
 1. Add pricing to Services (maybe)
@@ -16,6 +15,7 @@ After publishing:
   - Create a 365 view in Galaxy park? Or some cool place along edgewater?
 3. Make sure mobile version works well
 4. Add in the 15 years of experience section shown in the "About Me" reference website
+5. How do I split the about section between sabrina and myself? Do I only introduce myself in the drone section? Also include something about mraomedia and how sabrina and I are co-founders.
 
 Currently working on: 
 2. Finalize header format for portfolio, contact, and aftt pages

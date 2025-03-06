@@ -1,7 +1,4 @@
 To do before publishing:
-3. Figure out why the welcome video does not take up the entire width of the viewport
-4. Change index.html About section talk about Mrao Media as a company
-5. Update Sabrina's about me section in about.html to be exactly what she wants. Remove age 15 and be more specific on the types of productions she's been in.
 5. Bring mraomedia domain over to github pages
 6. Cancel wordpress payment plan
 
@@ -14,6 +11,7 @@ After publishing:
 3. Make sure mobile version works well
 4. Add in the 15 years of experience section shown in the "About Me" reference website
 5. How do I split the about section between sabrina and myself? Do I only introduce myself in the drone section? Also include something about mraomedia and how sabrina and I are co-founders.
+6. Figure out why the welcome video does not take up the entire width of the viewport 
 
 Currently working on: 
 2. Finalize header format for portfolio, contact, and aftt pages

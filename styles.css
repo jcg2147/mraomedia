@@ -1037,6 +1037,13 @@ header .hamburger .bar {
     display: block; /* Removes extra spacing below images */
 }
 
+.slide-image-small {
+    width: 75%;
+    height: 75%;
+    object-fit: cover; /* Scales the image to cover the container while maintaining aspect ratio */
+    display: block; /* Removes extra spacing below images */
+}
+
 /* Text section */
 .slideshow-text-container #text-section {
     flex: 1;

@@ -139,7 +139,7 @@ footer p {
 
 #about .about-text {
     flex: 1;
-    padding-right: 60px !important;
+    padding-right: 20px !important;
 }
 
 #about .about-text img {
@@ -1010,6 +1010,13 @@ header .hamburger .bar {
 .slideshow-container {
     width: 60%; /* Adjust width as needed */
     height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-container-index {
+    width: 50%; /* Adjust width as needed */
+    height: 45vh;
     overflow: hidden;
     position: relative;
 }

@@ -137,9 +137,14 @@ footer p {
     align-items: center;
 }
 
-#about .about-text {
+#about .about-text-index {
     flex: 1;
     padding-right: 20px !important;
+}
+
+#about .about-text {
+    flex: 1;
+    padding-right: 60px !important;
 }
 
 #about .about-text img {

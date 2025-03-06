@@ -1022,6 +1022,10 @@ header .hamburger .bar {
     height: 100%;
     opacity: 0;
     transition: opacity 1.5s ease-in-out; /* Smooth fade-in and fade-out */
+/*take out this part if it messes things up*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Visible slide */
@@ -1038,8 +1042,9 @@ header .hamburger .bar {
 }
 
 .slide-image-small {
-    width: 75%;
-    height: 75%;
+    width: 75%;      /* Sets a consistent width */
+    height: auto;    /* Allows the height to scale naturally */
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
 }
 
 /* Text section */

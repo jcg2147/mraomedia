@@ -1,7 +1,6 @@
 To do before publishing:
-1.75. Change color of rating in hidden page
-2. Bring mraomedia domain over to github pages
-3. Cancel wordpress payment plan
+1. Bring mraomedia domain over to github pages
+2. Cancel wordpress payment plan
 
 After publishing:
 1. Add pricing to Services (maybe)
@@ -13,6 +12,7 @@ After publishing:
 4. Add in the 15 years of experience section shown in the "About Me" reference website
 5. How do I split the about section between sabrina and myself? Do I only introduce myself in the drone section? Also include something about mraomedia and how sabrina and I are co-founders.
 6. Figure out why the welcome video does not take up the entire width of the viewport 
+7. Update the hidden page and bring in the email functionality to the review form
 
 Currently working on: 
 2. Finalize header format for portfolio, contact, and aftt pages

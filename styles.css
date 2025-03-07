@@ -1005,7 +1005,7 @@ header .hamburger .bar {
 .slideshow-text-container {
     display: flex;
     justify-content: flex-start; /* Aligns items to the start (left) */
-    align-items: flex-start;
+    align-items: center;
     gap: 20px; /* Optional: space between slideshow and text */
     color: white;
     padding: 100px 40px 40px 40px;
@@ -1083,7 +1083,7 @@ header .hamburger .bar {
 .slideshow-text-container .checklist li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .slideshow-text-container .checklist li::before {

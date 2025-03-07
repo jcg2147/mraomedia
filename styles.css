@@ -1000,6 +1000,7 @@ header .hamburger .bar {
     margin: 0 auto;    /* Centers content horizontally */
     background-color: #cfd2fc;
     padding: 10px;
+    border: 4px solid #9095e0;
 }
 
 /* Container to hold both slideshow and text */

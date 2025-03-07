@@ -317,6 +317,10 @@ footer p {
     border-radius: 10px;
 }
 
+#review h2 {
+    color: #5a5a8c;
+}
+
 .intro-content {
     max-width: 600px;
     width: 100%;

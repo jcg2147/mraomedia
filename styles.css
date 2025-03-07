@@ -854,7 +854,7 @@ header .hamburger .bar {
 }
 
 .cta-section {
-    background-color: #c7caff;
+    background-color: #000;
     color: #000;
     padding-bottom: 100px;
     margin-top: 0;
@@ -998,7 +998,7 @@ header .hamburger .bar {
 #cta-container {
     max-width: 940px; /* Limits the width of the container */
     margin: 0 auto;    /* Centers content horizontally */
-    background-color: #f2f2f2;
+    background-color: #cfd2fc;
     padding: 10px;
 }
 

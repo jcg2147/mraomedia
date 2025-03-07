@@ -481,6 +481,10 @@ form .btn {
     width: 100%;
 }
 
+#review {
+    background-color: #cfd2fc;
+}
+
 #review .form-group div {
     display: flex;
     align-items: center;

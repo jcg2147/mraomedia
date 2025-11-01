@@ -1,0 +1,40 @@
+# Add new portfolio videos here. Each entry should include a title, either a full
+# `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
+# `youtube_query` values let you append query parameters to the generated embed.
+
+- title: Telepatia Cover - Music Video
+  youtube_id: a7ubkmP84z8
+  roles:
+    - videographer
+- title: The Marriage of Figaro (William Paterson Production) - Trailer
+  youtube_id: hmRwDY2yYt8
+  roles:
+    - editor
+    - videographer
+- title: We Don't Talk About Bruno Cover - Music Video
+  youtube_id: PNwJFblpltY
+  roles:
+    - videographer
+- title: Void Patrol 1 - Live Performance
+  youtube_id: dar6VJ_eDCE
+  roles:
+    - videographer
+- title: Save Halloween - Music Video
+  youtube_id: LKWTwszLFQM
+  youtube_query: modestbranding=3
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: Through the Lens of an Immigrant Advocate - Documentary
+  youtube_id: evsLPReGy-A
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: Learning from Video Games - Documentary
+  youtube_id: aq2vC4JkoJE
+  roles:
+    - producer
+    - editor
+    - videographer

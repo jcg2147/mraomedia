@@ -1,0 +1,41 @@
+{% assign video_data = include.video %}
+{% assign embed_url = nil %}
+{% if video_data.embed_url %}
+  {% assign embed_url = video_data.embed_url %}
+{% elsif video_data.youtube_id %}
+  {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_data.youtube_id %}
+  {% if video_data.youtube_query %}
+    {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
+  {% endif %}
+{% endif %}
+
+{% capture role_classes %}
+  {% for role in video_data.roles %}
+    {{- role | strip | slugify: 'raw' -}}{% unless forloop.last %} {% endunless %}
+  {% endfor %}
+{% endcapture %}
+{% assign role_classes = role_classes | strip %}
+
+{% assign roles_display = '' %}
+{% for role in video_data.roles %}
+  {% assign role_label = role | strip | capitalize %}
+  {% if forloop.first %}
+    {% assign roles_display = role_label %}
+  {% else %}
+    {% assign roles_display = roles_display | append: ', ' | append: role_label %}
+  {% endif %}
+{% endfor %}
+
+<div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
+  <div class="embed-responsive embed-responsive-16by9">
+    {% if embed_url %}
+      <iframe class="embed-responsive-item" src="{{ embed_url }}" title="{{ video_data.title | escape }}" allowfullscreen></iframe>
+    {% endif %}
+  </div>
+  <div class="video-info mt-2 text-center">
+    <h5 class="montserrat-400">{{ video_data.title }}</h5>
+    {% if roles_display != '' %}
+      <p>{{ roles_display }}</p>
+    {% endif %}
+  </div>
+</div>

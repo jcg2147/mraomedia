@@ -34,70 +34,9 @@ permalink: /portfolio
                 <button class="btn mx-1" onclick="filterVideos('producer', this)">Producer</button>
             </div>
             <div id="portfolio-items" class="row">
-                <div class="col-md-4 mb-4 video-card videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a7ubkmP84z8" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">Telepatia Cover - Music Video</h5>
-                        <p>Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card editor videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hmRwDY2yYt8" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">The Marriage of Figaro (William Paterson Production) - Trailer</h5>
-                        <p>Editor, Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PNwJFblpltY" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">We Don't Talk About Bruno Cover - Music Video</h5>
-                        <p>Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dar6VJ_eDCE" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">Void Patrol 1 - Live Performance</h5>
-                        <p>Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card producer editor videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LKWTwszLFQM?modestbranding=3" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">Save Halloween - Music Video</h5>
-                        <p>Producer, Editor, Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card producer editor videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/evsLPReGy-A" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">Through the Lens of an Immigrant Advocate - Documentary</h5>
-                        <p>Producer, Editor, Videographer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 video-card producer editor videographer">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aq2vC4JkoJE" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info mt-2 text-center">
-                        <h5 class="montserrat-400">Learning from Video Games - Documentary</h5>
-                        <p>Producer, Editor, Videographer</p>
-                    </div>
-                </div>
-                <!-- Add more video cards as needed -->
+                {% for video in site.data.portfolio %}
+                    {% include portfolio-video.html video=video %}
+                {% endfor %}
             </div>
         </div>
     </section>

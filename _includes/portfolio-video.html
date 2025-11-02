@@ -38,7 +38,19 @@
   {% if video_data.instagram_embed_url %}
     {% assign embed_url = video_data.instagram_embed_url %}
   {% elsif instagram_shortcode %}
-    {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed?hidecaption=true' %}
+    {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed/?hidecaption=true' %}
+  {% endif %}
+  {% if embed_url and embed_url contains '/reel/' and embed_url contains '/embed' %}
+    {% unless embed_url contains '?hidecaption=' %}
+      {% if embed_url contains '?' %}
+        {% assign embed_url = embed_url | append: '&hidecaption=true' %}
+      {% else %}
+        {% assign embed_url = embed_url | append: '?hidecaption=true' %}
+      {% endif %}
+    {% endunless %}
+    {% unless embed_url contains '/embed/' %}
+      {% assign embed_url = embed_url | replace: '/embed', '/embed/' %}
+    {% endunless %}
   {% endif %}
 {% endif %}
 

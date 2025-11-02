@@ -108,6 +108,14 @@ body {
     opacity: 1;
 }
 
+.instagram-embed-wrapper {
+    width: 100%;
+}
+
+.instagram-embed-wrapper .instagram-media {
+    margin: 0 auto !important;
+}
+
 .video-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);

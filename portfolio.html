@@ -3,6 +3,14 @@ layout: none
 permalink: /portfolio
 ---
 
+{% assign has_instagram = false %}
+{% for entry in site.data.portfolio %}
+  {% if entry.platform == 'instagram' %}
+    {% assign has_instagram = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,6 +75,16 @@ permalink: /portfolio
           transitionDuration: '0.4s'     // Adjust to your desired speed.
         });
     </script>
+    {% if has_instagram %}
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === 'function') {
+          window.instgrm.Embeds.process();
+        }
+      });
+    </script>
+    {% endif %}
 </body>
 </html>
 

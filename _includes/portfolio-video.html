@@ -10,6 +10,25 @@
       {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
     {% endif %}
   {% endif %}
+{% elsif platform == 'instagram' %}
+  {% if video_data.instagram_embed_url %}
+    {% assign embed_url = video_data.instagram_embed_url %}
+  {% elsif video_data.instagram_shortcode %}
+    {% assign embed_url = 'https://www.instagram.com/reel/' | append: video_data.instagram_shortcode | append: '/embed?hidecaption=true' %}
+  {% elsif video_data.instagram_permalink %}
+    {% assign permalink = video_data.instagram_permalink | split: '?' | first %}
+    {% assign segments = permalink | split: '/' %}
+    {% assign instagram_shortcode = '' %}
+    {% for segment in segments %}
+      {% assign trimmed = segment | strip %}
+      {% if trimmed != '' and trimmed != 'reel' and trimmed != 'reels' and trimmed != 'p' %}
+        {% assign instagram_shortcode = trimmed %}
+      {% endif %}
+    {% endfor %}
+    {% if instagram_shortcode != '' %}
+      {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed?hidecaption=true' %}
+    {% endif %}
+  {% endif %}
 {% endif %}
 
 {% capture role_classes %}
@@ -30,23 +49,11 @@
 {% endfor %}
 
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
-  {% if platform == 'instagram' %}
-    {% assign permalink = video_data.instagram_permalink %}
-    {% assign captioned = video_data.instagram_captioned | default: false %}
-    <div class="instagram-embed-wrapper">
-      {% if permalink %}
-        <blockquote class="instagram-media" data-instgrm-permalink="{{ permalink | escape }}" data-instgrm-version="14"{% if captioned %} data-instgrm-captioned="true"{% endif %}>
-          <a href="{{ permalink | escape }}" target="_blank" rel="noopener">{{ video_data.instagram_cta | default: 'View this post on Instagram' }}</a>
-        </blockquote>
-      {% endif %}
-    </div>
-  {% else %}
-    <div class="embed-responsive embed-responsive-16by9">
-      {% if embed_url %}
-        <iframe class="embed-responsive-item" src="{{ embed_url }}" title="{{ video_data.title | escape }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-      {% endif %}
-    </div>
-  {% endif %}
+  <div class="embed-responsive embed-responsive-16by9">
+    {% if embed_url %}
+      <iframe class="embed-responsive-item" src="{{ embed_url }}" title="{{ video_data.title | escape }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    {% endif %}
+  </div>
   <div class="video-info mt-2 text-center">
     <h5 class="montserrat-400">{{ video_data.title }}</h5>
     {% if roles_display != '' %}

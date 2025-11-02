@@ -1,6 +1,8 @@
 {% assign video_data = include.video %}
 {% assign platform = video_data.platform | default: 'youtube' %}
 {% assign embed_url = nil %}
+{% assign instagram_shortcode = nil %}
+
 {% if platform == 'youtube' %}
   {% if video_data.embed_url %}
     {% assign embed_url = video_data.embed_url %}
@@ -11,24 +13,48 @@
     {% endif %}
   {% endif %}
 {% elsif platform == 'instagram' %}
-  {% if video_data.instagram_embed_url %}
-    {% assign embed_url = video_data.instagram_embed_url %}
-  {% elsif video_data.instagram_shortcode %}
-    {% assign embed_url = 'https://www.instagram.com/reel/' | append: video_data.instagram_shortcode | append: '/embed?hidecaption=true' %}
+  {% if video_data.instagram_shortcode %}
+    {% assign instagram_shortcode = video_data.instagram_shortcode %}
   {% elsif video_data.instagram_permalink %}
     {% assign permalink = video_data.instagram_permalink | split: '?' | first %}
     {% assign segments = permalink | split: '/' %}
-    {% assign instagram_shortcode = '' %}
     {% for segment in segments %}
       {% assign trimmed = segment | strip %}
       {% if trimmed != '' and trimmed != 'reel' and trimmed != 'reels' and trimmed != 'p' %}
         {% assign instagram_shortcode = trimmed %}
       {% endif %}
     {% endfor %}
-    {% if instagram_shortcode != '' %}
-      {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed?hidecaption=true' %}
-    {% endif %}
+  {% elsif video_data.instagram_embed_url %}
+    {% assign embed_path = video_data.instagram_embed_url | split: '?' | first %}
+    {% assign segments = embed_path | split: '/' %}
+    {% for segment in segments %}
+      {% assign trimmed = segment | strip %}
+      {% if trimmed != '' and trimmed != 'embed' and trimmed != 'reel' and trimmed != 'reels' %}
+        {% assign instagram_shortcode = trimmed %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
+
+  {% if video_data.instagram_embed_url %}
+    {% assign embed_url = video_data.instagram_embed_url %}
+  {% elsif instagram_shortcode %}
+    {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed?hidecaption=true' %}
+  {% endif %}
+{% endif %}
+
+{% assign thumbnail_url = video_data.thumbnail_url %}
+{% if thumbnail_url == nil or thumbnail_url == '' %}
+  {% if platform == 'instagram' and instagram_shortcode %}
+    {% assign thumbnail_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/media/?size=l' %}
+  {% endif %}
+{% endif %}
+{% if thumbnail_url == nil or thumbnail_url == '' %}
+  {% if platform == 'youtube' and video_data.youtube_id %}
+    {% assign thumbnail_url = 'https://img.youtube.com/vi/' | append: video_data.youtube_id | append: '/hqdefault.jpg' %}
+  {% endif %}
+{% endif %}
+{% if thumbnail_url == nil or thumbnail_url == '' %}
+  {% assign thumbnail_url = '/photos/latest-projects-photo.png' %}
 {% endif %}
 
 {% capture role_classes %}
@@ -51,7 +77,20 @@
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
   <div class="embed-responsive embed-responsive-16by9">
     {% if embed_url %}
-      <iframe class="embed-responsive-item" src="{{ embed_url }}" title="{{ video_data.title | escape }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      <div
+        class="embed-responsive-item video-placeholder"
+        role="button"
+        tabindex="0"
+        data-embed-url="{{ embed_url | escape }}"
+        data-platform="{{ platform }}"
+        data-video-title="{{ video_data.title | escape }}"
+        aria-label="Play video: {{ video_data.title | escape }}"
+      >
+        <img src="{{ thumbnail_url | escape }}" alt="Thumbnail for {{ video_data.title | escape }}" loading="lazy" />
+        <span class="video-play-button" aria-hidden="true">
+          <i class="fas fa-play"></i>
+        </span>
+      </div>
     {% endif %}
   </div>
   <div class="video-info mt-2 text-center">

@@ -12,6 +12,12 @@
       {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
     {% endif %}
   {% endif %}
+{% elsif platform == 'facebook' %}
+  {% if video_data.embed_url %}
+    {% assign embed_url = video_data.embed_url %}
+  {% elsif video_data.facebook_embed_url %}
+    {% assign embed_url = video_data.facebook_embed_url %}
+  {% endif %}
 {% elsif platform == 'instagram' %}
   {% if video_data.instagram_shortcode %}
     {% assign instagram_shortcode = video_data.instagram_shortcode %}

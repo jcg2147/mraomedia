@@ -71,9 +71,6 @@
     {% assign thumbnail_url = 'https://img.youtube.com/vi/' | append: video_data.youtube_id | append: '/hqdefault.jpg' %}
   {% endif %}
 {% endif %}
-{% if thumbnail_url == nil or thumbnail_url == '' %}
-  {% assign thumbnail_url = '/photos/latest-projects-photo.png' %}
-{% endif %}
 
 {% capture role_classes %}
   {% for role in video_data.roles %}

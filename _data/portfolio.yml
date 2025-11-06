@@ -2,10 +2,35 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
-- title: Telepatia Cover - Music Video
-  youtube_id: a7ubkmP84z8
+- title: Broadway and Beyond
+  youtube_id: NLRUTUusD00
+  youtube_query: start=50&end=382
   roles:
+    - editor
+- title: BTS Christmas Spectacular 2024
+  youtube_id: k7KujpYUD5A
+  roles:
+    - producer
+    - editor
     - videographer
+- title: Learning from Video Games - Documentary
+  youtube_id: aq2vC4JkoJE
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: Through the Lens of an Immigrant Advocate - Documentary
+  youtube_id: evsLPReGy-A
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: WWE-Themed Event Promotion
+  youtube_id: 1KIjmMXemHc
+  roles:
+    - producer
+    - editor
+    - videographer 
 - title: The Marriage of Figaro (William Paterson Production) - Trailer
   youtube_id: hmRwDY2yYt8
   roles:
@@ -19,6 +44,10 @@
   youtube_id: dar6VJ_eDCE
   roles:
     - videographer
+- title: Telepatia Cover - Music Video
+  youtube_id: a7ubkmP84z8
+  roles:
+    - videographer
 - title: Save Halloween - Music Video
   youtube_id: LKWTwszLFQM
   youtube_query: modestbranding=3
@@ -26,29 +55,6 @@
     - producer
     - editor
     - videographer
-- title: Through the Lens of an Immigrant Advocate - Documentary
-  youtube_id: evsLPReGy-A
-  roles:
-    - producer
-    - editor
-    - videographer
-- title: Learning from Video Games - Documentary
-  youtube_id: aq2vC4JkoJE
-  roles:
-    - producer
-    - editor
-    - videographer
-- title: BTS Christmas Spectacular 2024
-  youtube_id: k7KujpYUD5A
-  roles:
-    - producer
-    - editor
-    - videographer
-- title: Broadway and Beyond
-  youtube_id: NLRUTUusD00
-  youtube_query: start=50&end=382
-  roles:
-    - editor
 - title: Presenting FBCLG's New Youth Center
   platform: instagram
   instagram_permalink: https://www.instagram.com/reel/DKaDkBFR4ZI/
@@ -56,9 +62,3 @@
     - producer
     - editor
     - videographer
-- title: WWE-Themed Event Promotion
-  youtube_id: 1KIjmMXemHc
-  roles:
-    - producer
-    - editor
-    - videographer 

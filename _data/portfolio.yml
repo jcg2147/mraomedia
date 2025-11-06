@@ -64,7 +64,7 @@
     - videographer
 - title: Father's Day 2025 Video
   platform: facebook
-  embed_url: https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4099878450290001%2F&show_text=false&width=560&t=0
+  facebook_permalink: https://www.facebook.com/reel/4099878450290001
   roles:
     - producer
     - editor

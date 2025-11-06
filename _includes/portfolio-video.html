@@ -17,6 +17,14 @@
     {% assign embed_url = video_data.embed_url %}
   {% elsif video_data.facebook_embed_url %}
     {% assign embed_url = video_data.facebook_embed_url %}
+  {% elsif video_data.facebook_permalink %}
+    {% assign permalink = video_data.facebook_permalink | split: '?' | first %}
+    {% assign encoded_permalink = permalink | uri_escape %}
+    {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
+  {% elsif video_data.facebook_url %}
+    {% assign permalink = video_data.facebook_url | split: '?' | first %}
+    {% assign encoded_permalink = permalink | uri_escape %}
+    {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
   {% endif %}
 {% elsif platform == 'instagram' %}
   {% if video_data.instagram_shortcode %}
@@ -60,61 +68,6 @@
   {% endif %}
 {% endif %}
 
-{% assign thumbnail_url = video_data.thumbnail_url %}
-{% if thumbnail_url == nil or thumbnail_url == '' %}
-  {% if platform == 'instagram' and instagram_shortcode %}
-    {% assign thumbnail_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/media/?size=l' %}
-  {% endif %}
-{% endif %}
-{% if thumbnail_url == nil or thumbnail_url == '' %}
-  {% if platform == 'facebook' %}
-    {% assign facebook_source_url = nil %}
-    {% if video_data.facebook_thumbnail_url %}
-      {% assign thumbnail_url = video_data.facebook_thumbnail_url %}
-    {% else %}
-      {% if video_data.facebook_permalink %}
-        {% assign facebook_source_url = video_data.facebook_permalink %}
-      {% elsif video_data.facebook_url %}
-        {% assign facebook_source_url = video_data.facebook_url %}
-      {% elsif video_data.embed_url %}
-        {% assign facebook_source_url = video_data.embed_url %}
-      {% elsif video_data.facebook_embed_url %}
-        {% assign facebook_source_url = video_data.facebook_embed_url %}
-      {% endif %}
-      {% if facebook_source_url %}
-        {% assign facebook_href = facebook_source_url %}
-        {% if facebook_href contains 'href=' %}
-          {% assign href_segment = facebook_href | split: 'href=' | last %}
-          {% assign facebook_href = href_segment | split: '&' | first | uri_decode %}
-        {% endif %}
-        {% assign facebook_href = facebook_href | split: '?' | first %}
-        {% assign facebook_segments = facebook_href | split: '/' %}
-        {% assign facebook_video_id = nil %}
-        {% for segment in facebook_segments %}
-          {% assign trimmed_segment = segment | strip %}
-          {% if trimmed_segment != '' %}
-            {% assign trimmed_segment = trimmed_segment | split: '?' | first %}
-            {% assign trimmed_segment = trimmed_segment | split: '&' | first %}
-            {% assign trimmed_segment = trimmed_segment | split: '=' | last %}
-            {% assign lowered_segment = trimmed_segment | downcase %}
-            {% unless trimmed_segment contains ':' or lowered_segment == 'reel' or lowered_segment == 'reels' or lowered_segment == 'videos' or lowered_segment == 'watch' or lowered_segment == 'facebook.com' or lowered_segment == 'www.facebook.com' or lowered_segment == 'm.facebook.com' or lowered_segment == 'www.facebook' or lowered_segment == 'facebook' %}
-              {% assign facebook_video_id = trimmed_segment %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-        {% if facebook_video_id %}
-          {% assign thumbnail_url = 'https://graph.facebook.com/' | append: facebook_video_id | append: '/picture?type=large' %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endif %}
-{% endif %}
-{% if thumbnail_url == nil or thumbnail_url == '' %}
-  {% if platform == 'youtube' and video_data.youtube_id %}
-    {% assign thumbnail_url = 'https://img.youtube.com/vi/' | append: video_data.youtube_id | append: '/hqdefault.jpg' %}
-  {% endif %}
-{% endif %}
-
 {% capture role_classes %}
   {% for role in video_data.roles %}
     {{- role | strip | slugify: 'raw' -}}{% unless forloop.last %} {% endunless %}
@@ -135,20 +88,15 @@
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
   <div class="embed-responsive embed-responsive-16by9">
     {% if embed_url %}
-      <div
-        class="embed-responsive-item video-placeholder"
-        role="button"
-        tabindex="0"
-        data-embed-url="{{ embed_url | escape }}"
-        data-platform="{{ platform }}"
-        data-video-title="{{ video_data.title | escape }}"
-        aria-label="Play video: {{ video_data.title | escape }}"
-      >
-        <img src="{{ thumbnail_url | escape }}" alt="Thumbnail for {{ video_data.title | escape }}" loading="lazy" />
-        <span class="video-play-button" aria-hidden="true">
-          <i class="fas fa-play"></i>
-        </span>
-      </div>
+      <iframe
+        class="embed-responsive-item"
+        src="{{ embed_url | escape }}"
+        title="{{ video_data.title | escape }}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
     {% endif %}
   </div>
   <div class="video-info mt-2 text-center">

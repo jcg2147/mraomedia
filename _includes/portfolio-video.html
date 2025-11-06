@@ -67,6 +67,49 @@
   {% endif %}
 {% endif %}
 {% if thumbnail_url == nil or thumbnail_url == '' %}
+  {% if platform == 'facebook' %}
+    {% assign facebook_source_url = nil %}
+    {% if video_data.facebook_thumbnail_url %}
+      {% assign thumbnail_url = video_data.facebook_thumbnail_url %}
+    {% else %}
+      {% if video_data.facebook_permalink %}
+        {% assign facebook_source_url = video_data.facebook_permalink %}
+      {% elsif video_data.facebook_url %}
+        {% assign facebook_source_url = video_data.facebook_url %}
+      {% elsif video_data.embed_url %}
+        {% assign facebook_source_url = video_data.embed_url %}
+      {% elsif video_data.facebook_embed_url %}
+        {% assign facebook_source_url = video_data.facebook_embed_url %}
+      {% endif %}
+      {% if facebook_source_url %}
+        {% assign facebook_href = facebook_source_url %}
+        {% if facebook_href contains 'href=' %}
+          {% assign href_segment = facebook_href | split: 'href=' | last %}
+          {% assign facebook_href = href_segment | split: '&' | first | uri_decode %}
+        {% endif %}
+        {% assign facebook_href = facebook_href | split: '?' | first %}
+        {% assign facebook_segments = facebook_href | split: '/' %}
+        {% assign facebook_video_id = nil %}
+        {% for segment in facebook_segments %}
+          {% assign trimmed_segment = segment | strip %}
+          {% if trimmed_segment != '' %}
+            {% assign trimmed_segment = trimmed_segment | split: '?' | first %}
+            {% assign trimmed_segment = trimmed_segment | split: '&' | first %}
+            {% assign trimmed_segment = trimmed_segment | split: '=' | last %}
+            {% assign lowered_segment = trimmed_segment | downcase %}
+            {% unless trimmed_segment contains ':' or lowered_segment == 'reel' or lowered_segment == 'reels' or lowered_segment == 'videos' or lowered_segment == 'watch' or lowered_segment == 'facebook.com' or lowered_segment == 'www.facebook.com' or lowered_segment == 'm.facebook.com' or lowered_segment == 'www.facebook' or lowered_segment == 'facebook' %}
+              {% assign facebook_video_id = trimmed_segment %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+        {% if facebook_video_id %}
+          {% assign thumbnail_url = 'https://graph.facebook.com/' | append: facebook_video_id | append: '/picture?type=large' %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% if thumbnail_url == nil or thumbnail_url == '' %}
   {% if platform == 'youtube' and video_data.youtube_id %}
     {% assign thumbnail_url = 'https://img.youtube.com/vi/' | append: video_data.youtube_id | append: '/hqdefault.jpg' %}
   {% endif %}

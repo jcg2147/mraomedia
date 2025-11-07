@@ -164,16 +164,6 @@ footer p {
     border-radius: 10px;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.work-sans-<uniquifier> {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 /* Default layout for larger screens */
 #latest-projects {
     display: flex;
@@ -528,8 +518,8 @@ form .btn {
 
 /*
 #contact .container {
-    max-width: 600px; /* Limits the width of the form */
-    margin: 0 auto;    /* Centers the form horizontally */
+    max-width: 600px; 
+    margin: 0 auto; 
 }
 */
 /*

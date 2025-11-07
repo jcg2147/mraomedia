@@ -221,6 +221,7 @@ footer p {
     gap: 24px;
     flex-wrap: wrap;
     width: 100%;
+    padding: 0 24px;
 }
 
 /* Style for individual iframes (YouTube videos) 
@@ -286,7 +287,7 @@ footer p {
         gap: 20px;
         display: flex;
         align-items: center;
-        padding: 0;
+        padding: 0 20px;
         margin: 0;
     }
 /*

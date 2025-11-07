@@ -1,0 +1,31 @@
+<section id="latest-projects">
+  <!-- Left section with YouTube videos and text -->
+  <div class="left-section">
+    <h2>Our Latest Projects</h2>
+
+    <!-- Embedded YouTube videos -->
+    <div class="embedded-videos">
+      {% assign videos = site.data.portfolio | slice: 0, 3 %}
+      {% for video in videos %}
+        {% if video.youtube_id %}
+          {% assign embed_src = "https://www.youtube.com/embed/" | append: video.youtube_id %}
+          {% if video.youtube_query %}
+            {% assign embed_src = embed_src | append: "?" | append: video.youtube_query %}
+          {% endif %}
+          <iframe src="{{ embed_src }}" frameborder="0" allowfullscreen></iframe>
+        {% elsif video.embed_url %}
+          <iframe src="{{ video.embed_url }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <p>
+      View our full portfolio <a href="portfolio.html" style="color: white; text-decoration: underline;">here</a>
+    </p>
+  </div>
+
+  <!-- Right section with image -->
+  <div class="right-section">
+    <img src="photos/latest-projects-photo.png" alt="Videographer">
+  </div>
+</section>

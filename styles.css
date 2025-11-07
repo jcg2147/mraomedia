@@ -218,10 +218,11 @@ footer p {
 #latest-projects .embedded-videos {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
+    align-items: stretch;
+    gap: clamp(16px, 2vw, 32px);
+    flex-wrap: nowrap;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 48px);
 }
 
 /* Style for individual iframes (YouTube videos) 
@@ -234,10 +235,9 @@ footer p {
 }
 */
 #latest-projects .latest-video {
-    flex: 1 1 360px;
-    max-width: 420px;
-    min-width: 360px;
-    width: 100%;
+    flex: 1 1 clamp(200px, 28%, 360px);
+    min-width: 0;
+    max-width: 100%;
 }
 
 #latest-projects .latest-video iframe {

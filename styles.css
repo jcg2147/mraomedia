@@ -218,17 +218,31 @@ footer p {
 #latest-projects .embedded-videos {
     display: flex;
     justify-content: center;
-    gap: 2vw;
+    gap: 24px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
-/* Style for individual iframes (YouTube videos) */
+/* Style for individual iframes (YouTube videos) 
 #latest-projects iframe {
     width: 30%;
     max-width: 560px;
     aspect-ratio: 16 / 9;
     height: auto;
     box-sizing: border-box;
+}
+*/
+#latest-projects .latest-video {
+    flex: 1 1 360px;
+    max-width: 420px;
+    min-width: 360px;
+    width: 100%;
+}
+
+#latest-projects .latest-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 #latest-projects img {
@@ -275,10 +289,17 @@ footer p {
         padding: 0;
         margin: 0;
     }
-
+/*
     #latest-projects iframe {
-        width: 90%; /* Make iframes take up almost full width on mobile */
-        box-sizing: border-box; /* Ensure width includes paddings and borders */
+        width: 90%; 
+        box-sizing: border-box; 
+    }
+*/
+    #latest-projects .latest-video {
+        flex: 1 1 auto;
+        max-width: 480px;
+        width: 100%;
+        min-width: 0;
     }
 
     #latest-projects img {

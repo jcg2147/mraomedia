@@ -12,9 +12,29 @@
           {% if video.youtube_query %}
             {% assign embed_src = embed_src | append: "?" | append: video.youtube_query %}
           {% endif %}
-          <iframe src="{{ embed_src }}" frameborder="0" allowfullscreen></iframe>
+<!--          <iframe src="{{ embed_src }}" frameborder="0" allowfullscreen></iframe> -->
+          <div class="latest-video embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="{{ embed_src }}"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              frameborder="0"
+            ></iframe>
+          </div>
         {% elsif video.embed_url %}
-          <iframe src="{{ video.embed_url }}" frameborder="0" allowfullscreen></iframe>
+<!--          <iframe src="{{ video.embed_url }}" frameborder="0" allowfullscreen></iframe> -->
+          <div class="latest-video embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="{{ video.embed_url }}"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              frameborder="0"
+            ></iframe>
+          </div>
         {% endif %}
       {% endfor %}
     </div>

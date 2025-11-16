@@ -5,10 +5,12 @@
 - title: Broadway and Beyond
   youtube_id: NLRUTUusD00
   youtube_query: start=50&end=382
+  blurb: Test blurb 1
   roles:
     - editor
 - title: BTS Christmas Spectacular 2024
   youtube_id: k7KujpYUD5A
+  blurb: Test blurb 2
   roles:
     - producer
     - editor
@@ -21,6 +23,7 @@
     - videographer
 - title: Through the Lens of an Immigrant Advocate - Documentary
   youtube_id: evsLPReGy-A
+  blurb: Test blurb 3
   roles:
     - producer
     - editor

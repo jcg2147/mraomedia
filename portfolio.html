@@ -23,6 +23,142 @@ permalink: /portfolio
     <!-- Header Section -->
     <div id="header-section"></div>
 
+    {% assign featured_videos = site.data.portfolio | slice: 0, 3 %}
+    {% if featured_videos.size > 0 %}
+    <section id="featured-videos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="header-text text-center mb-4">Featured Videos</h2>
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    {% for video in featured_videos %}
+                        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
+                    {% endfor %}
+                </div>
+                <div class="carousel-inner">
+                    {% for video in featured_videos %}
+                        {% assign video_data = video %}
+                        {% assign platform = video_data.platform | default: 'youtube' %}
+                        {% assign embed_url = nil %}
+                        {% assign instagram_shortcode = nil %}
+
+                        {% if platform == 'youtube' %}
+                          {% if video_data.embed_url %}
+                            {% assign embed_url = video_data.embed_url %}
+                          {% elsif video_data.youtube_id %}
+                            {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_data.youtube_id %}
+                            {% if video_data.youtube_query %}
+                              {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
+                            {% endif %}
+                          {% endif %}
+                        {% elsif platform == 'facebook' %}
+                          {% if video_data.embed_url %}
+                            {% assign embed_url = video_data.embed_url %}
+                          {% elsif video_data.facebook_embed_url %}
+                            {% assign embed_url = video_data.facebook_embed_url %}
+                          {% elsif video_data.facebook_permalink %}
+                            {% assign permalink = video_data.facebook_permalink | split: '?' | first %}
+                            {% assign encoded_permalink = permalink | uri_escape %}
+                            {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
+                          {% elsif video_data.facebook_url %}
+                            {% assign permalink = video_data.facebook_url | split: '?' | first %}
+                            {% assign encoded_permalink = permalink | uri_escape %}
+                            {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
+                          {% endif %}
+                        {% elsif platform == 'instagram' %}
+                          {% if video_data.instagram_shortcode %}
+                            {% assign instagram_shortcode = video_data.instagram_shortcode %}
+                          {% elsif video_data.instagram_permalink %}
+                            {% assign permalink = video_data.instagram_permalink | split: '?' | first %}
+                            {% assign segments = permalink | split: '/' %}
+                            {% for segment in segments %}
+                              {% assign trimmed = segment | strip %}
+                              {% if trimmed != '' and trimmed != 'reel' and trimmed != 'reels' and trimmed != 'p' %}
+                                {% assign instagram_shortcode = trimmed %}
+                              {% endif %}
+                            {% endfor %}
+                          {% elsif video_data.instagram_embed_url %}
+                            {% assign embed_path = video_data.instagram_embed_url | split: '?' | first %}
+                            {% assign segments = embed_path | split: '/' %}
+                            {% for segment in segments %}
+                              {% assign trimmed = segment | strip %}
+                              {% if trimmed != '' and trimmed != 'embed' and trimmed != 'reel' and trimmed != 'reels' %}
+                                {% assign instagram_shortcode = trimmed %}
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+
+                          {% if video_data.instagram_embed_url %}
+                            {% assign embed_url = video_data.instagram_embed_url %}
+                          {% elsif instagram_shortcode %}
+                            {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed/?hidecaption=true' %}
+                          {% endif %}
+                          {% if embed_url and embed_url contains '/reel/' and embed_url contains '/embed' %}
+                            {% unless embed_url contains '?hidecaption=' %}
+                              {% if embed_url contains '?' %}
+                                {% assign embed_url = embed_url | append: '&hidecaption=true' %}
+                              {% else %}
+                                {% assign embed_url = embed_url | append: '?hidecaption=true' %}
+                              {% endif %}
+                            {% endunless %}
+                            {% unless embed_url contains '/embed/' %}
+                              {% assign embed_url = embed_url | replace: '/embed', '/embed/' %}
+                            {% endunless %}
+                          {% endif %}
+                        {% endif %}
+
+                        {% assign roles_display = '' %}
+                        {% for role in video_data.roles %}
+                          {% assign role_label = role | strip | capitalize %}
+                          {% if forloop.first %}
+                            {% assign roles_display = role_label %}
+                          {% else %}
+                            {% assign roles_display = roles_display | append: ', ' | append: role_label %}
+                          {% endif %}
+                        {% endfor %}
+
+                        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        {% if embed_url %}
+                                            <iframe
+                                                class="embed-responsive-item"
+                                                src="{{ embed_url | escape }}"
+                                                title="{{ video_data.title | escape }}"
+                                                loading="lazy"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen
+                                                frameborder="0"
+                                            ></iframe>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mt-4 mt-lg-0">
+                                    <h3 class="montserrat-400">{{ video_data.title }}</h3>
+                                    {% if video_data.blurb %}
+                                        <p class="mb-3">{{ video_data.blurb }}</p>
+                                    {% endif %}
+                                    {% if roles_display != '' %}
+                                        <p class="text-muted"><strong>Roles:</strong> {{ roles_display }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    
     <section id="portfolio" class="py-5">
         <div class="container">
             <h1 class="header-text text-center">Portfolio</h1>

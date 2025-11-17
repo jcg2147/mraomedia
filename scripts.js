@@ -402,18 +402,35 @@ function showSlides() {
 function activeNavlink(){
     // Get all nav-link elements
     const navLinks = document.querySelectorAll('.nav-link');
-    // Get the current URL (without query parameters, if any)
-    const currentPath = window.location.pathname;
-    //console.log("Current Path: " + window.location.pathname);
+    // Normalize the current path to avoid partial matches (e.g., '/' matching '/portfolio')
+    const currentPath = normalizePath(window.location.pathname);
     // Loop through all nav links to check which one matches the current page
     navLinks.forEach(function(link) {
       // Remove 'active' class from all links first
       link.classList.remove('active');
-      //console.log("href: " + link.getAttribute('href'));
-      // Check if the link's href is included in the current path
-      if (currentPath.includes(link.getAttribute('href'))) {
-        // Add the 'active' class to the matching link
+      const linkPath = normalizePath(link.getAttribute('href'));
+      // Add the 'active' class only when the current path matches the link exactly
+      if (currentPath === linkPath) {
         link.classList.add('active');
       }
     });
+}
+
+// Helper function to normalize paths for comparison
+function normalizePath(path) {
+    if (!path) {
+        return '/';
+    }
+
+    let normalizedPath = path.trim();
+
+    // Convert relative paths to absolute-style paths for comparison
+    if (!normalizedPath.startsWith('/')) {
+        normalizedPath = '/' + normalizedPath;
+    }
+
+    // Remove trailing slash unless it's just '/'
+    normalizedPath = normalizedPath.replace(/\/+$/, '');
+
+    return normalizedPath === '' ? '/' : normalizedPath;
 }

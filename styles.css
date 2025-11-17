@@ -1428,33 +1428,57 @@ body.contact-page #contact-section {
 
 #featured-videos .carousel-control-prev,
 #featured-videos .carousel-control-next {
-  width: 7.5%;
+  width: auto;
+  height: auto;
+  padding: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #featured-videos .carousel-control-prev {
-  left: -4.5rem;
+  left: -3.5rem;
 }
 
 #featured-videos .carousel-control-next {
-  right: -4.5rem;
+  right: -3.5rem;
 }
 
 @media (max-width: 1200px) {
   #featured-videos .carousel-control-prev {
-    left: -2.5rem;
+    left: -1.75rem;
   }
 
   #featured-videos .carousel-control-next {
-    right: -2.5rem;
+    right: -1.75rem;
   }
 }
 
 @media (max-width: 992px) {
+  #featured-videos .carousel-control-prev,
+  #featured-videos .carousel-control-next {
+    padding: 0.65rem;
+  }
+
   #featured-videos .carousel-control-prev {
-    left: 1.5rem;
+    left: 0.25rem;
   }
 
   #featured-videos .carousel-control-next {
-    right: 1.5rem;
+    right: 0.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #featured-videos .carousel-control-prev,
+  #featured-videos .carousel-control-next {
+    padding: 0.5rem;
+  }
+
+    #featured-videos .carousel-control-prev {
+    left: 0.5rem;
+  }
+
+  #featured-videos .carousel-control-next {
+    right: 0.5rem;
   }
 }

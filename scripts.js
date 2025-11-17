@@ -266,10 +266,39 @@ window.open(gmailLink, '_blank');
 
 // Function to load the header
 function loadHeader() {
-  return fetch('header.html')
+  return fetch('header2.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-section').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the header:', error));
+}
+
+function loadHeaderBackup() {
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      // Insert the fetched HTML into the DOM
+      document.getElementById('header-section').innerHTML = data;
+
+      // Now that the header is inserted, add the event listener for the hamburger icon
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const navLinks = document.getElementById('nav-links');
+
+      if (hamburgerIcon && navLinks) {
+        hamburgerIcon.addEventListener('click', function() {
+          console.log("Hamburger clicked!"); // Debug: Check if click event triggers
+          navLinks.classList.toggle('active'); // Show/hide the nav links
+          // Optionally toggle the visibility of the hamburger icon
+          hamburgerIcon.classList.toggle('active'); // Hide or show hamburger icon if needed
+        });
+
+        // When mouse leaves the nav-links area, hide the links and show the hamburger
+        navLinks.addEventListener('mouseleave', function() {
+          navLinks.classList.remove('active'); // Hide nav links when mouse leaves
+          hamburgerIcon.classList.remove('active'); // Show hamburger icon again (optional)
+        });
+      }
     })
     .catch(error => console.error('Error loading the header:', error));
 }

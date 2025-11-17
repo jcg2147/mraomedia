@@ -679,11 +679,11 @@ header {
 }
 
 /* Optional: Change the color of navbar links on hover */
-.navbar .nav-link.montserrat-500:hover {
+.navbar .nav-link.montserrat-700:hover {
   color: #aeb3fc; /* Hover color */
 }
 
-.navbar .nav-link.montserrat-500.active {
+.navbar .nav-link.montserrat-700.active {
   color: #aeb3fc; /* Active page color, same as hover color */
 }
 
@@ -1427,29 +1427,29 @@ body.contact-page #contact-section {
 }
 
 #featured-videos .carousel-control-prev {
-  left: -3.5rem;
+  left: -4.5rem;
 }
 
 #featured-videos .carousel-control-next {
-  right: -3.5rem;
+  right: -4.5rem;
 }
 
 @media (max-width: 1200px) {
   #featured-videos .carousel-control-prev {
-    left: -1.5rem;
+    left: -2.5rem;
   }
 
   #featured-videos .carousel-control-next {
-    right: -1.5rem;
+    right: -2.5rem;
   }
 }
 
 @media (max-width: 992px) {
   #featured-videos .carousel-control-prev {
-    left: 0.5rem;
+    left: 1.5rem;
   }
 
   #featured-videos .carousel-control-next {
-    right: 0.5rem;
+    right: 1.5rem;
   }
 }

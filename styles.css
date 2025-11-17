@@ -656,6 +656,21 @@ header {
     color: white;
 }
 
+.hero-nav-link {
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.hero-nav-link:hover,
+.hero-nav-link:focus {
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(174, 179, 252, 0.9);
+}
+
 .header-logo {
     padding-left: 50px;
 }

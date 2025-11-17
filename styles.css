@@ -679,11 +679,11 @@ header {
 }
 
 /* Optional: Change the color of navbar links on hover */
-.navbar .nav-link.montserrat-300:hover {
+.navbar .nav-link.montserrat-500:hover {
   color: #aeb3fc; /* Hover color */
 }
 
-.navbar .nav-link.montserrat-300.active {
+.navbar .nav-link.montserrat-500.active {
   color: #aeb3fc; /* Active page color, same as hover color */
 }
 

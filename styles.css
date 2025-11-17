@@ -1426,6 +1426,11 @@ body.contact-page #contact-section {
   flex: 1;
 }
 
+#featured-videos .carousel-control-prev,
+#featured-videos .carousel-control-next {
+  width: 7.5%;
+}
+
 #featured-videos .carousel-control-prev {
   left: -4.5rem;
 }

@@ -435,46 +435,31 @@ function normalizePath(path) {
     return normalizedPath === '' ? '/' : normalizedPath;
 }
 
-// Hide the portfolio blurbs once a video starts playing so the iframe remains clear.
+// Permanently hide a video's overlay once it has been clicked to start playback.
 document.addEventListener('DOMContentLoaded', function () {
-    var videoFrames = document.querySelectorAll('.video-card-frame');
+    var videoCards = document.querySelectorAll('.video-card');
 
-    if (!videoFrames.length) {
+    if (!videoCards.length) {
         return;
     }
 
-    var dismissOverlay = function (frame) {
-        if (!frame || frame.classList.contains('video-overlay-dismissed')) {
+    videoCards.forEach(function (card) {
+        var frame = card.querySelector('.video-card-frame');
+        if (!frame) {
             return;
         }
-        frame.classList.add('video-overlay-dismissed');
-    };
 
-    var handleIframeFocus = function (iframe) {
-        if (!iframe || iframe.tagName !== 'IFRAME') {
-            return;
+        var activateCard = function () {
+            card.classList.add('active');
+        };
+
+        frame.addEventListener('pointerdown', activateCard);
+        frame.addEventListener('click', activateCard);
+
+        var iframe = frame.querySelector('iframe');
+        if (iframe) {
+            iframe.addEventListener('pointerdown', activateCard);
+            iframe.addEventListener('focus', activateCard);
         }
-        var frame = iframe.closest('.video-card-frame');
-        if (frame) {
-            dismissOverlay(frame);
-        }
-    };
-
-    document.addEventListener('focusin', function (event) {
-        handleIframeFocus(event.target);
-    });
-
-    window.addEventListener('blur', function () {
-        handleIframeFocus(document.activeElement);
-    });
-
-    videoFrames.forEach(function (frame) {
-        frame.addEventListener('pointerdown', function (event) {
-            // If the user taps the frame (but not yet the iframe), hide the overlay
-            // immediately so that the subsequent interaction is unobstructed.
-            if (event.target && event.target.tagName !== 'IFRAME') {
-                dismissOverlay(frame);
-            }
-        });
     });
 });

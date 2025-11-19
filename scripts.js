@@ -230,9 +230,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //Event listener to fade out main welcome text
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     const fadeText = document.getElementById('fade-text');
-    fadeText.classList.add('fade-out');
+    if (fadeText) {
+        fadeText.classList.add('fade-out');
+    }
 });
 
 //Default & Gmail Mail Calls for sending forms

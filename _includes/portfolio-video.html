@@ -86,18 +86,26 @@
 {% endfor %}
 
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
-  <div class="embed-responsive embed-responsive-16by9">
-    {% if embed_url %}
-      <iframe
-        class="embed-responsive-item"
-        src="{{ embed_url | escape }}"
-        title="{{ video_data.title | escape }}"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        frameborder="0"
-      ></iframe>
-    {% endif %}
+  <div class="video-card-frame">
+    <div class="embed-responsive embed-responsive-16by9">
+      {% if embed_url %}
+        <iframe
+          class="embed-responsive-item"
+          src="{{ embed_url | escape }}"
+          title="{{ video_data.title | escape }}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          frameborder="0"
+        ></iframe>
+      {% endif %}
+    </div>
+    <div class="video-overlay">
+      <div class="video-overlay-content">
+        <h5 class="montserrat-500">{{ video_data.title }}</h5>
+        <p>{{ video_data.blurb | default: roles_display }}</p>
+      </div>
+    </div>
   </div>
   <div class="video-info mt-2 text-center">
     <h5 class="montserrat-400">{{ video_data.title }}</h5>

@@ -5,55 +5,62 @@
 - title: Broadway and Beyond
   youtube_id: NLRUTUusD00
   youtube_query: start=50&end=382
-  blurb: Test blurb 1
+  blurb: High-energy montage that threads classic showmanship with modern pacing to keep every spotlight moment alive.
   roles:
     - editor
 - title: BTS Christmas Spectacular 2024
   youtube_id: k7KujpYUD5A
-  blurb: Test blurb 2
+  blurb: Festive countdown edit weaving rehearsals, performances, and crowd joy into one kinetic holiday story.
   roles:
     - producer
     - editor
     - videographer
 - title: Learning from Video Games - Documentary
   youtube_id: aq2vC4JkoJE
+  blurb: Explores how game mechanics inspire educators, pairing thoughtful interviews with purposeful motion graphics.
   roles:
     - producer
     - editor
     - videographer
 - title: Through the Lens of an Immigrant Advocate - Documentary
   youtube_id: evsLPReGy-A
-  blurb: Test blurb 3
+  blurb: Follows an advocate’s day in the field, blending vérité footage with intimate sound design to humanize policy debates.
   roles:
     - producer
     - editor
     - videographer
 - title: WWE-Themed Event Promotion
   youtube_id: 1KIjmMXemHc
+  blurb: Punchy cuts, title slams, and crowd roars build anticipation for a fan-first experience before the bell rings.
   roles:
     - producer
     - editor
     - videographer 
 - title: The Marriage of Figaro (William Paterson Production) - Trailer
   youtube_id: hmRwDY2yYt8
+  blurb: Operatic trailer balancing backstage glimpses with bold typography to tease the production’s scale.
   roles:
     - editor
     - videographer
 - title: We Don't Talk About Bruno Cover - Music Video
   youtube_id: PNwJFblpltY
+  blurb: Playful coverage of the ensemble uses handheld warmth and rhythmic edits to mirror the song’s layers.
   roles:
     - videographer
 - title: Void Patrol 1 - Live Performance
   youtube_id: dar6VJ_eDCE
+  blurb: Concert capture that rides the lighting cues and guitar solos so viewers feel front-row energy.
   roles:
     - videographer
 - title: Telepatia Cover - Music Video
   youtube_id: a7ubkmP84z8
+  blurb: Dreamy close-ups and color washes glide with the vocals to create an intimate performance vignette.
   roles:
     - videographer
 - title: Save Halloween - Music Video
   youtube_id: LKWTwszLFQM
   youtube_query: modestbranding=3
+  blurb: Narrative-driven Halloween short mixing practical effects and quick cuts for a spirited seasonal anthem.
   roles:
     - producer
     - editor
@@ -61,6 +68,7 @@
 - title: Presenting FBCLG's New Youth Center
   platform: instagram
   instagram_permalink: https://www.instagram.com/reel/DKaDkBFR4ZI/
+  blurb: Community spotlight showcasing new spaces, interviews, and motion graphics to celebrate impact.
   roles: 
     - producer
     - editor
@@ -68,6 +76,7 @@
 - title: Father's Day 2025 Video
   platform: facebook
   facebook_permalink: https://www.facebook.com/reel/4099878450290001
+  blurb: Heartfelt interviews intercut with archival photos create a timeless thank-you to father figures.
   roles:
     - producer
     - editor
@@ -75,6 +84,7 @@
 - title: Mother's Day 2025 Video
   platform: facebook
   facebook_permalink: https://www.facebook.com/reel/670831862474649/
+  blurb: Soft lighting, layered b-roll, and sentimental pacing elevate this tribute to mothers and mentors.
   roles:
     - producer
     - editor

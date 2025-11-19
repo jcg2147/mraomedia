@@ -145,7 +145,6 @@ body {
 .video-card-frame:focus-within .video-overlay {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
 .video-overlay-content {

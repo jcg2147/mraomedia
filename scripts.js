@@ -439,22 +439,42 @@ function normalizePath(path) {
 document.addEventListener('DOMContentLoaded', function () {
     var videoFrames = document.querySelectorAll('.video-card-frame');
 
-    videoFrames.forEach(function (frame) {
-        var iframe = frame.querySelector('iframe');
-        if (!iframe) {
+    if (!videoFrames.length) {
+        return;
+    }
+
+    var dismissOverlay = function (frame) {
+        if (!frame || frame.classList.contains('video-overlay-dismissed')) {
             return;
         }
+        frame.classList.add('video-overlay-dismissed');
+    };
 
-        var overlayDismissed = false;
-        var dismissOverlay = function () {
-            if (overlayDismissed) {
-                return;
+    var handleIframeFocus = function (iframe) {
+        if (!iframe || iframe.tagName !== 'IFRAME') {
+            return;
+        }
+        var frame = iframe.closest('.video-card-frame');
+        if (frame) {
+            dismissOverlay(frame);
+        }
+    };
+
+    document.addEventListener('focusin', function (event) {
+        handleIframeFocus(event.target);
+    });
+
+    window.addEventListener('blur', function () {
+        handleIframeFocus(document.activeElement);
+    });
+
+    videoFrames.forEach(function (frame) {
+        frame.addEventListener('pointerdown', function (event) {
+            // If the user taps the frame (but not yet the iframe), hide the overlay
+            // immediately so that the subsequent interaction is unobstructed.
+            if (event.target && event.target.tagName !== 'IFRAME') {
+                dismissOverlay(frame);
             }
-            overlayDismissed = true;
-            frame.classList.add('video-overlay-dismissed');
-        };
-
-        frame.addEventListener('pointerdown', dismissOverlay);
-        iframe.addEventListener('focus', dismissOverlay);
+        });
     });
 });

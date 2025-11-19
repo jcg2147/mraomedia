@@ -1446,47 +1446,12 @@ body.contact-page #contact-section {
   justify-content: center;
 }
 
-#featured-videos .carousel-control-prev:hover,
-#featured-videos .carousel-control-prev:focus,
-#featured-videos .carousel-control-prev:active,
-#featured-videos .carousel-control-next:hover,
-#featured-videos .carousel-control-next:focus,
-#featured-videos .carousel-control-next:active {
-  text-decoration: none;
-}
-
-#featured-videos .carousel-control-prev-icon,
-#featured-videos .carousel-control-next-icon {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 999px;
-  background-color: #9095e0;
-  background-size: 40% 40%;
-  background-position: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, filter 0.2s ease-in-out;
-  filter: invert(1);
-}
-
-#featured-videos .carousel-control-prev:hover .carousel-control-prev-icon,
-#featured-videos .carousel-control-prev:focus .carousel-control-prev-icon,
-#featured-videos .carousel-control-prev:active .carousel-control-prev-icon,
-#featured-videos .carousel-control-next:hover .carousel-control-next-icon,
-#featured-videos .carousel-control-next:focus .carousel-control-next-icon,
-#featured-videos .carousel-control-next:active .carousel-control-next-icon {
-  background-color: #6d72bf;
-  transform: scale(1.05);
-}
-
 #featured-videos .carousel-indicators button {
   background-color: #9095e0;
   opacity: 1;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 0;
   transition: background-color 0.2s ease-in-out;
 }
 

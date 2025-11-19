@@ -1446,6 +1446,21 @@ body.contact-page #contact-section {
   justify-content: center;
 }
 
+#featured-videos .carousel-indicators button {
+  background-color: #9095e0;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#featured-videos .carousel-indicators button:hover,
+#featured-videos .carousel-indicators button:focus,
+#featured-videos .carousel-indicators .active {
+  background-color: #6d72bf;
+}
+
 #featured-videos .carousel-control-prev {
   left: 0;
 }

@@ -6,6 +6,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // Create YouTube players after the API code downloads.
 var player1, player2;
+var portfolioOverlayPlayers = [];
 function onYouTubeIframeAPIReady() {
     // Check if the element with id "player" exists
     if (document.getElementById('player')) {
@@ -47,6 +48,12 @@ function onYouTubeIframeAPIReady() {
                 'onStateChange': onPlayerServicesStateChange // Separate event handler for looping
             }
         });
+    }
+    // Initialize any portfolio embeds once the API is available.
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializePortfolioVideoOverlays);
+    } else {
+        initializePortfolioVideoOverlays();
     }
 }
 
@@ -437,56 +444,46 @@ function normalizePath(path) {
     return normalizedPath === '' ? '/' : normalizedPath;
 }
 
-// Permanently hide a video's overlay once it has been clicked to start playback.
-document.addEventListener('DOMContentLoaded', function () {
-    var videoCards = Array.from(document.querySelectorAll('.video-card'));
-
-    if (!videoCards.length) {
+function initializePortfolioVideoOverlays() {
+    if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
         return;
     }
 
-    var markCardActive = function (card) {
-        if (card && !card.classList.contains('active')) {
-            card.classList.add('active');
-        }
-    };
+    var videoFrames = document.querySelectorAll('.video-card-frame iframe');
 
-    videoCards.forEach(function (card) {
-        var frame = card.querySelector('.video-card-frame');
-        if (!frame) {
+    if (!videoFrames.length) {
+        return;
+    }
+
+    videoFrames.forEach(function (frame) {
+        if (frame.dataset.overlayPlayerBound === 'true') {
             return;
         }
 
-        var handlePointerStart = function () {
-            markCardActive(card);
-        };
-
-        frame.addEventListener('pointerdown', handlePointerStart, { passive: true });
-        frame.addEventListener('touchstart', handlePointerStart, { passive: true });
-
-        var iframe = frame.querySelector('iframe');
-        if (iframe && !iframe.hasAttribute('tabindex')) {
-            iframe.setAttribute('tabindex', '0');
-        }
-    });
-
-    var checkFocusedIframe = function () {
-        var activeEl = document.activeElement;
-        if (!activeEl || activeEl.tagName !== 'IFRAME') {
+        var src = frame.getAttribute('src') || '';
+        if (!/youtube\.com\/embed/i.test(src)) {
             return;
         }
 
-        var owningCard = activeEl.closest('.video-card');
-        if (owningCard) {
-            markCardActive(owningCard);
+        var parentCard = frame.closest('.video-card');
+        if (!parentCard) {
+            return;
         }
-    };
 
-    document.addEventListener('focusin', checkFocusedIframe);
-    window.addEventListener('blur', checkFocusedIframe);
+        frame.dataset.overlayPlayerBound = 'true';
 
-    var focusPoll = window.setInterval(checkFocusedIframe, 400);
-    window.addEventListener('pagehide', function () {
-        window.clearInterval(focusPoll);
+        var player = new YT.Player(frame, {
+            events: {
+                onStateChange: function (event) {
+                    if (event.data === YT.PlayerState.PLAYING) {
+                        parentCard.classList.add('active');
+                    }
+                }
+            }
+        });
+
+        portfolioOverlayPlayers.push(player);
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initializePortfolioVideoOverlays);

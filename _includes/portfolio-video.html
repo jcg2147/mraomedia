@@ -12,6 +12,15 @@
       {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
     {% endif %}
   {% endif %}
+  {% if embed_url and embed_url contains 'youtube.com' %}
+    {% unless embed_url contains 'enablejsapi=' %}
+      {% if embed_url contains '?' %}
+        {% assign embed_url = embed_url | append: '&enablejsapi=1' %}
+      {% else %}
+        {% assign embed_url = embed_url | append: '?enablejsapi=1' %}
+      {% endif %}
+    {% endunless %}
+  {% endif %}
 {% elsif platform == 'facebook' %}
   {% if video_data.embed_url %}
     {% assign embed_url = video_data.embed_url %}
@@ -85,6 +94,13 @@
   {% endif %}
 {% endfor %}
 
+{% assign title_slug = video_data.title | slugify: 'latin' %}
+{% if include.index %}
+  {% assign video_dom_id = 'portfolio-video-' | append: title_slug | append: '-' | append: include.index %}
+{% else %}
+  {% assign video_dom_id = 'portfolio-video-' | append: title_slug %}
+{% endif %}
+
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
   <div class="video-card-frame">
     <div class="embed-responsive embed-responsive-16by9">
@@ -93,6 +109,7 @@
           class="embed-responsive-item"
           src="{{ embed_url | escape }}"
           title="{{ video_data.title | escape }}"
+          id="{{ video_dom_id | escape }}"
           tabindex="0"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

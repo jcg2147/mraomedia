@@ -170,7 +170,7 @@ permalink: /portfolio
             </div>
             <div id="portfolio-items" class="row">
                 {% for video in site.data.portfolio %}
-                    {% include portfolio-video.html video=video %}
+                    {% include portfolio-video.html video=video index=forloop.index0 %}
                 {% endfor %}
             </div>
         </div>

@@ -439,11 +439,17 @@ function normalizePath(path) {
 
 // Permanently hide a video's overlay once it has been clicked to start playback.
 document.addEventListener('DOMContentLoaded', function () {
-    var videoCards = document.querySelectorAll('.video-card');
+    var videoCards = Array.from(document.querySelectorAll('.video-card'));
 
     if (!videoCards.length) {
         return;
     }
+
+    var markCardActive = function (card) {
+        if (card && !card.classList.contains('active')) {
+            card.classList.add('active');
+        }
+    };
 
     videoCards.forEach(function (card) {
         var frame = card.querySelector('.video-card-frame');
@@ -451,17 +457,36 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        var activateCard = function () {
-            card.classList.add('active');
+        var handlePointerStart = function () {
+            markCardActive(card);
         };
 
-        frame.addEventListener('pointerdown', activateCard);
-        frame.addEventListener('click', activateCard);
+        frame.addEventListener('pointerdown', handlePointerStart, { passive: true });
+        frame.addEventListener('touchstart', handlePointerStart, { passive: true });
 
         var iframe = frame.querySelector('iframe');
-        if (iframe) {
-            iframe.addEventListener('pointerdown', activateCard);
-            iframe.addEventListener('focus', activateCard);
+        if (iframe && !iframe.hasAttribute('tabindex')) {
+            iframe.setAttribute('tabindex', '0');
         }
+    });
+
+    var checkFocusedIframe = function () {
+        var activeEl = document.activeElement;
+        if (!activeEl || activeEl.tagName !== 'IFRAME') {
+            return;
+        }
+
+        var owningCard = activeEl.closest('.video-card');
+        if (owningCard) {
+            markCardActive(owningCard);
+        }
+    };
+
+    document.addEventListener('focusin', checkFocusedIframe);
+    window.addEventListener('blur', checkFocusedIframe);
+
+    var focusPoll = window.setInterval(checkFocusedIframe, 400);
+    window.addEventListener('pagehide', function () {
+        window.clearInterval(focusPoll);
     });
 });

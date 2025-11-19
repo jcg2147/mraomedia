@@ -434,3 +434,27 @@ function normalizePath(path) {
 
     return normalizedPath === '' ? '/' : normalizedPath;
 }
+
+// Hide the portfolio blurbs once a video starts playing so the iframe remains clear.
+document.addEventListener('DOMContentLoaded', function () {
+    var videoFrames = document.querySelectorAll('.video-card-frame');
+
+    videoFrames.forEach(function (frame) {
+        var iframe = frame.querySelector('iframe');
+        if (!iframe) {
+            return;
+        }
+
+        var overlayDismissed = false;
+        var dismissOverlay = function () {
+            if (overlayDismissed) {
+                return;
+            }
+            overlayDismissed = true;
+            frame.classList.add('video-overlay-dismissed');
+        };
+
+        frame.addEventListener('pointerdown', dismissOverlay);
+        iframe.addEventListener('focus', dismissOverlay);
+    });
+});

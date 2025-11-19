@@ -115,6 +115,12 @@ body {
     background-color: #050505;
 }
 
+.video-card-frame.video-overlay-dismissed .video-overlay {
+    opacity: 0 !important;
+    transform: translateY(12px) !important;
+    visibility: hidden;
+}
+
 .video-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);

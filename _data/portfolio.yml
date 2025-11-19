@@ -66,25 +66,29 @@
     - editor
     - videographer
 - title: Presenting FBCLG's New Youth Center
-  platform: instagram
-  instagram_permalink: https://www.instagram.com/reel/DKaDkBFR4ZI/
+  youtube_id: zAWDBeGl3T0
   blurb: Community spotlight showcasing new spaces, interviews, and motion graphics to celebrate impact.
   roles: 
     - producer
     - editor
     - videographer
 - title: Father's Day 2025 Video
-  platform: facebook
-  facebook_permalink: https://www.facebook.com/reel/4099878450290001
+  youtube_id: 1_74XUIT_F0
   blurb: Heartfelt interviews intercut with archival photos create a timeless thank-you to father figures.
   roles:
     - producer
     - editor
     - videographer
 - title: Mother's Day 2025 Video
-  platform: facebook
-  facebook_permalink: https://www.facebook.com/reel/670831862474649/
+  youtube_id: tvabgE6Tmhw
   blurb: Soft lighting, layered b-roll, and sentimental pacing elevate this tribute to mothers and mentors.
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: Community in Crisis - Recovery Highlight
+  youtube_id: 0Lno1gnYhyg
+  blurb: Video showcasing one person's road to recovery from Community in Crisis' own Recovery Specialist.
   roles:
     - producer
     - editor

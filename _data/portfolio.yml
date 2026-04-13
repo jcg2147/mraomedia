@@ -2,29 +2,29 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
-- title: Broadway and Beyond
+- title: "Broadway and Beyond"
   youtube_id: NLRUTUusD00
   youtube_query: start=50&end=382
-  blurb: High-energy montage that threads classic showmanship with modern pacing to keep every spotlight moment alive.
+  blurb: "'Broadway and Beyond' is a piece I edited for Montclair State University's show named Carpe Diem. It went on to win Best Journalism Project: All Media in MSU's School of Communication and Media 2019 Awards Show."
   roles:
     - editor
-- title: BTS Christmas Spectacular 2024
+- title: "BTS Christmas Spectacular 2024"
   youtube_id: k7KujpYUD5A
-  blurb: Festive countdown edit weaving rehearsals, performances, and crowd joy into one kinetic holiday story.
+  blurb: "I produced this video to showcase the rehearsal process and story behind a Christmas performance put together by various ministries at First Baptist Church of Lincoln Gardens"
   roles:
     - producer
     - editor
     - videographer
-- title: Learning from Video Games - Documentary
+- title: "Learning from Video Games - Documentary"
   youtube_id: aq2vC4JkoJE
-  blurb: Explores how game mechanics inspire educators, pairing thoughtful interviews with purposeful motion graphics.
+  blurb: "I produced a 30 minute program that shows how video games can be used to teach a wide range of skills and subjects, how they're being used in classrooms today, and also how games not directly designed for learning can still teach you things."
   roles:
     - producer
     - editor
     - videographer
-- title: Through the Lens of an Immigrant Advocate - Documentary
+- title: "Through the Lens of an Immigrant Advocate - Documentary"
   youtube_id: evsLPReGy-A
-  blurb: Follows an advocate’s day in the field, blending vérité footage with intimate sound design to humanize policy debates.
+  blurb: "Over the course of my Spring 2019 semester at MSU, I produced 'Through the Lens of an Immigrant Advocate', a piece providing insight to the way the U.S immigration system affects people at the borders and living in the U.S., and focusing on three Immigrant advocates"
   roles:
     - producer
     - editor
@@ -36,9 +36,9 @@
     - producer
     - editor
     - videographer 
-- title: The Marriage of Figaro (William Paterson Production) - Trailer
+- title: "The Marriage of Figaro (William Paterson Production) - Trailer"
   youtube_id: hmRwDY2yYt8
-  blurb: Operatic trailer balancing backstage glimpses with bold typography to tease the production’s scale.
+  blurb: "I shot and edited rehearsal videos for the Vocal Department at William Paterson University’s performance of Mozart’s 'Marriage of Figaro'."
   roles:
     - editor
     - videographer
@@ -57,23 +57,23 @@
   blurb: Dreamy close-ups and color washes glide with the vocals to create an intimate performance vignette.
   roles:
     - videographer
-- title: Presenting FBCLG's New Youth Center
+- title: "Presenting FBCLG's New Youth Center"
   youtube_id: zAWDBeGl3T0
-  blurb: Community spotlight showcasing new spaces, interviews, and motion graphics to celebrate impact.
+  blurb: "I produced this video for a church congregation to showcase their new Youth Center while highlighting the process of renovating the space."
   roles: 
     - producer
     - editor
     - videographer
-- title: Father's Day 2025 Video
+- title: "Father's Day 2025 Video"
   youtube_id: 1_74XUIT_F0
-  blurb: Heartfelt interviews intercut with archival photos create a timeless thank-you to father figures.
+  blurb: "I conducted various interviews between fathers and their children to produce this video in celebration of Fathers Day"
   roles:
     - producer
     - editor
     - videographer
-- title: Mother's Day 2025 Video
+- title: "Mother's Day 2025 Video"
   youtube_id: tvabgE6Tmhw
-  blurb: Soft lighting, layered b-roll, and sentimental pacing elevate this tribute to mothers and mentors.
+  blurb: "In celebration of Mother's day I produced a video featuring the senior community at First Baptist Church of Lincoln Gardens."
   roles:
     - producer
     - editor

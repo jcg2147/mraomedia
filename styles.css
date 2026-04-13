@@ -1537,6 +1537,34 @@ body.contact-page #contact-section {
   margin-bottom: 1.25rem !important;
 }
 
+body.portfolio-page.portfolio-immersive #header-section {
+  display: none;
+}
+
+body.portfolio-page.portfolio-immersive #sabrina-reel {
+  min-height: 100vh;
+  padding: 0;
+}
+
+body.portfolio-page.portfolio-immersive #sabrina-reel .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+body.portfolio-page.portfolio-immersive #sabrina-reel .row {
+  margin: 0;
+}
+
+body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
+  max-width: 100vw;
+  padding: 0;
+}
+
+body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 #featured-videos .carousel-inner {
   padding: 0 4rem;
 }

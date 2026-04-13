@@ -19,7 +19,7 @@ permalink: /portfolio
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </head>
-<body>
+<body class="portfolio-page portfolio-immersive">
     <!-- Header Section -->
     <div id="header-section"></div>
 
@@ -218,8 +218,11 @@ permalink: /portfolio
         const sabrinaReelSection = document.getElementById('sabrina-reel');
 
         if (sabrinaReelSection) {
+            const immersiveClass = 'portfolio-immersive';          
             const updateSabrinaReelSize = () => {
-                sabrinaReelSection.classList.toggle('compact', window.scrollY > 40);
+                const isCompact = window.scrollY > 40;
+                sabrinaReelSection.classList.toggle('compact', isCompact);
+                document.body.classList.toggle(immersiveClass, !isCompact);
             };
 
             updateSabrinaReelSize();

@@ -23,6 +23,27 @@ permalink: /portfolio
     <!-- Header Section -->
     <div id="header-section"></div>
 
+        <section id="sabrina-reel" class="py-5">
+        <div class="container">
+            <h1 class="header-text text-center mb-4">Sabrina's Reel</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=1&mute=1&playsinline=1&rel=0"
+                            title="Sabrina Portfolio Reel"
+                            loading="eager"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            frameborder="0"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     {% assign featured_videos = site.data.portfolio | slice: 0, 3 %}
     {% if featured_videos.size > 0 %}
     <section id="featured-videos" class="py-5">

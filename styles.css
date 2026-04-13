@@ -1496,6 +1496,47 @@ body.contact-page #contact-section {
   position: relative;
 }
 
+#sabrina-reel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  transition: min-height 0.35s ease, padding 0.35s ease;
+}
+
+#sabrina-reel .container {
+  width: 100%;
+}
+
+#sabrina-reel .sabrina-reel-frame {
+  max-width: min(96vw, 1800px);
+  transition: max-width 0.35s ease;
+}
+
+#sabrina-reel .embed-responsive {
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.32);
+}
+
+#sabrina-reel.compact {
+  min-height: auto;
+  padding: 2.75rem 0 2rem;
+}
+
+#sabrina-reel.compact .sabrina-reel-frame {
+  max-width: min(90vw, 1080px);
+}
+
+#sabrina-reel .header-text {
+  transition: margin-bottom 0.35s ease;
+}
+
+#sabrina-reel.compact .header-text {
+  margin-bottom: 1.25rem !important;
+}
+
 #featured-videos .carousel-inner {
   padding: 0 4rem;
 }
@@ -1558,6 +1599,14 @@ body.contact-page #contact-section {
 }
 
 @media (max-width: 576px) {
+  #sabrina-reel {
+    padding: 1.5rem 0;
+  }
+
+  #sabrina-reel.compact {
+    padding: 2rem 0 1.25rem;
+  }
+  
   #featured-videos .carousel-inner {
     padding: 0 2.25rem;
   }
@@ -1565,5 +1614,13 @@ body.contact-page #contact-section {
   #featured-videos .carousel-control-prev,
   #featured-videos .carousel-control-next {
     width: 2.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #sabrina-reel,
+  #sabrina-reel .sabrina-reel-frame,
+  #sabrina-reel .header-text {
+    transition: none;
   }
 }

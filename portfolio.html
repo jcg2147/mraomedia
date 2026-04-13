@@ -233,6 +233,18 @@ permalink: /portfolio
 
             updateSabrinaReelSize();
             window.addEventListener('scroll', updateSabrinaReelSize, { passive: true });
+    
+            const scrollCueButton = document.getElementById('reel-scroll-cue');
+            if (scrollCueButton) {
+                scrollCueButton.addEventListener('click', () => {
+                    const targetSection = document.getElementById('featured-videos') || document.getElementById('portfolio');
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+                    }
+                });
+            }
         }
     </script>
     <script>

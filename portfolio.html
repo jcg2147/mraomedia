@@ -23,11 +23,10 @@ permalink: /portfolio
     <!-- Header Section -->
     <div id="header-section"></div>
 
-        <section id="sabrina-reel" class="py-5">
+    <section id="sabrina-reel">
         <div class="container">
-            <h1 class="header-text text-center mb-4">Sabrina's Reel</h1>
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-12 sabrina-reel-frame">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe
                             class="embed-responsive-item"
@@ -216,6 +215,18 @@ permalink: /portfolio
         });
     </script>
     <script>
+        const sabrinaReelSection = document.getElementById('sabrina-reel');
+
+        if (sabrinaReelSection) {
+            const updateSabrinaReelSize = () => {
+                sabrinaReelSection.classList.toggle('compact', window.scrollY > 40);
+            };
+
+            updateSabrinaReelSize();
+            window.addEventListener('scroll', updateSabrinaReelSize, { passive: true });
+        }
+    </script>
+    <script>
         // Initialize Isotope on the container with your video cards.
         var iso = new Isotope('#portfolio-items', {
           itemSelector: '.video-card',
@@ -225,4 +236,3 @@ permalink: /portfolio
     </script>
 </body>
 </html>
-

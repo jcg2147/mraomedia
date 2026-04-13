@@ -1537,8 +1537,19 @@ body.contact-page #contact-section {
   margin-bottom: 1.25rem !important;
 }
 
+body.portfolio-page #header-section {
+  max-height: 220px;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.45s ease;
+}
+
 body.portfolio-page.portfolio-immersive #header-section {
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-14px);
+  pointer-events: none;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {
@@ -1549,6 +1560,13 @@ body.portfolio-page.portfolio-immersive #sabrina-reel {
 body.portfolio-page.portfolio-immersive #sabrina-reel .container {
   max-width: 100%;
   padding: 0;
+}
+
+body.portfolio-page #sabrina-reel .container,
+body.portfolio-page #sabrina-reel .row,
+body.portfolio-page #sabrina-reel .sabrina-reel-frame,
+body.portfolio-page #sabrina-reel .embed-responsive {
+  transition: max-width 0.45s ease, padding 0.45s ease, margin 0.45s ease, border-radius 0.45s ease, box-shadow 0.45s ease;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .row {

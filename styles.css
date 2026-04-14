@@ -1625,9 +1625,13 @@ body.portfolio-page #sabrina-reel.compact .reel-scroll-cue {
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {
+  height: calc(var(--portfolio-vh, 1vh) * 100);
   height: 100vh;
+  height: 100svh;
   height: 100dvh;
+  min-height: calc(var(--portfolio-vh, 1vh) * 100);
   min-height: 100vh;
+  min-height: 100svh;
   min-height: 100dvh;
   padding: 0 0 clamp(4rem, 9vh, 6rem);
   box-sizing: border-box;
@@ -1650,7 +1654,9 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .row {
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
+  width: min(100vw, calc((calc(var(--portfolio-vh, 1vh) * 100) - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
   width: min(100vw, calc((100vh - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
+  width: min(100vw, calc((100svh - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
   width: min(100vw, calc((100dvh - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
   max-width: 100vw;
   padding: 0;
@@ -1766,7 +1772,9 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
   }
 
   body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
+    width: min(100vw, calc((calc(var(--portfolio-vh, 1vh) * 100) - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
     width: min(100vw, calc((100vh - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
+    width: min(100vw, calc((100svh - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
     width: min(100vw, calc((100dvh - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
   }
 }

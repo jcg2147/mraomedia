@@ -1625,9 +1625,12 @@ body.portfolio-page #sabrina-reel.compact .reel-scroll-cue {
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
-  min-height: 100svh;
-  padding: 0;
+  min-height: 100dvh;
+  padding: 0 0 clamp(4rem, 9vh, 6rem);
+  box-sizing: border-box;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .container {
@@ -1647,14 +1650,16 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .row {
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
-  width: min(100vw, calc(100vh * (16 / 9)));
-  width: min(100vw, calc(100svh * (16 / 9)));
+  width: min(100vw, calc((100vh - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
+  width: min(100vw, calc((100dvh - clamp(4rem, 9vh, 6rem)) * (16 / 9)));
   max-width: 100vw;
   padding: 0;
   margin: 0 auto;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
+  padding-top: 0;
+  aspect-ratio: 16 / 9;
   border-radius: 0;
   box-shadow: none;
 }
@@ -1754,6 +1759,15 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
     bottom: max(1.25rem, calc(env(safe-area-inset-bottom) + 0.8rem));
     font-size: 0.8rem;
     padding: 0.5rem 0.85rem 0.55rem;
+  }
+
+  body.portfolio-page.portfolio-immersive #sabrina-reel {
+    padding-bottom: clamp(3.5rem, 10vh, 5rem);
+  }
+
+  body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
+    width: min(100vw, calc((100vh - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
+    width: min(100vw, calc((100dvh - clamp(3.5rem, 10vh, 5rem)) * (16 / 9)));
   }
 }
 

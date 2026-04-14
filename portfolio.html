@@ -224,14 +224,22 @@ permalink: /portfolio
         const sabrinaReelSection = document.getElementById('sabrina-reel');
 
         if (sabrinaReelSection) {
-            const immersiveClass = 'portfolio-immersive';          
+            const immersiveClass = 'portfolio-immersive';  
+            const syncPortfolioViewportHeight = () => {
+                const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+                document.documentElement.style.setProperty('--portfolio-vh', `${viewportHeight * 0.01}px`);
+            };
             const updateSabrinaReelSize = () => {
                 const isCompact = window.scrollY > 40;
                 sabrinaReelSection.classList.toggle('compact', isCompact);
                 document.body.classList.toggle(immersiveClass, !isCompact);
             };
 
+            syncPortfolioViewportHeight();
             updateSabrinaReelSize();
+            window.visualViewport?.addEventListener('resize', syncPortfolioViewportHeight);
+            window.addEventListener('resize', syncPortfolioViewportHeight);
+            window.addEventListener('orientationchange', syncPortfolioViewportHeight);
             window.addEventListener('scroll', updateSabrinaReelSize, { passive: true });
     
             const scrollCueButton = document.getElementById('reel-scroll-cue');

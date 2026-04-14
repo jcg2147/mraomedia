@@ -41,6 +41,12 @@ permalink: /portfolio
                 </div>
             </div>
         </div>
+        <button id="reel-scroll-cue" class="reel-scroll-cue" type="button" aria-label="Scroll to explore">
+            <span class="reel-scroll-cue__label montserrat-500">Scroll to explore</span>
+            <span class="reel-scroll-cue__icon" aria-hidden="true">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+        </button>
     </section>
     
     {% assign featured_videos = site.data.portfolio | slice: 0, 3 %}

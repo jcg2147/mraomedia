@@ -1560,11 +1560,15 @@ body.portfolio-page.portfolio-immersive #header-section {
 }
 
 body.portfolio-page.portfolio-immersive #header-section header {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.15) 100%);
+  background: transparent;
 }
 
 body.portfolio-page.portfolio-immersive #header-section .navbar {
   margin-left: auto;
+}
+
+body.portfolio-page.portfolio-immersive #header-section .header-logo {
+  display: none;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {

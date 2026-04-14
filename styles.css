@@ -1585,7 +1585,7 @@ body.portfolio-page.portfolio-immersive #header-section .nav-link {
 .reel-scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: 2.1rem;
+  bottom: max(2.1rem, calc(env(safe-area-inset-bottom) + 1rem));
   transform: translateX(-50%);
   z-index: 20;
   border: 0;
@@ -1626,6 +1626,7 @@ body.portfolio-page #sabrina-reel.compact .reel-scroll-cue {
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {
   min-height: 100vh;
+  min-height: 100svh;
   padding: 0;
 }
 
@@ -1646,8 +1647,11 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .row {
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .sabrina-reel-frame {
+  width: min(100vw, calc(100vh * (16 / 9)));
+  width: min(100vw, calc(100svh * (16 / 9)));
   max-width: 100vw;
   padding: 0;
+  margin: 0 auto;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
@@ -1747,7 +1751,7 @@ body.portfolio-page.portfolio-immersive #sabrina-reel .embed-responsive {
   }
 
   .reel-scroll-cue {
-    bottom: 1.25rem;
+    bottom: max(1.25rem, calc(env(safe-area-inset-bottom) + 0.8rem));
     font-size: 0.8rem;
     padding: 0.5rem 0.85rem 0.55rem;
   }

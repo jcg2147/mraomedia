@@ -2,7 +2,7 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
--- title: "Presenting FBCLG's New Youth Center"
+- title: "Presenting FBCLG's New Youth Center"
   youtube_id: zAWDBeGl3T0
   blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
   roles: 

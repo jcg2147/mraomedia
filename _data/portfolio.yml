@@ -2,20 +2,6 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
-- title: "Presenting FBCLG's New Youth Center"
-  youtube_id: zAWDBeGl3T0
-  blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
-  roles: 
-    - producer
-    - editor
-    - videographer
-- title: "Father's Day 2025 Video"
-  youtube_id: 1_74XUIT_F0
-  blurb: "Produced through a series of interviews between fathers and their children, capturing personal stories in celebration of Father’s Day."
-  roles:
-    - producer
-    - editor
-    - videographer
 - title: "Mother's Day 2025 Video"
   youtube_id: tvabgE6Tmhw
   blurb: "Created in celebration of Mother’s Day, this piece features mothers of the senior community at First Baptist Church of Lincoln Gardens."
@@ -30,19 +16,26 @@
     - producer
     - editor
     - videographer
+- title: "Father's Day 2025 Video"
+  youtube_id: 1_74XUIT_F0
+  blurb: "Produced through a series of interviews between fathers and their children, capturing personal stories in celebration of Father’s Day."
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: "Presenting FBCLG's New Youth Center"
+  youtube_id: zAWDBeGl3T0
+  blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
+  roles: 
+    - producer
+    - editor
+    - videographer
 - title: "Broadway and Beyond"
   youtube_id: NLRUTUusD00
   youtube_query: start=50&end=382
   blurb: "Edited for Montclair State University’s Carpe Diem, this piece went on to win Best Journalism Project: All Media at the School of Communication and Media 2019 Awards."
   roles:
     - editor
-- title: "BTS Christmas Spectacular 2024"
-  youtube_id: k7KujpYUD5A
-  blurb: "Produced to showcase the rehearsal process and storytelling behind a Christmas performance brought together by multiple ministries at First Baptist Church of Lincoln Gardens."
-  roles:
-    - producer
-    - editor
-    - videographer
 - title: "Learning from Video Games - Documentary"
   youtube_id: aq2vC4JkoJE
   blurb: "A 30-minute program exploring how video games can be used to teach a wide range of skills and subjects, highlighting both classroom applications and the educational value of games not specifically designed for learning."
@@ -53,6 +46,13 @@
 - title: "Through the Lens of an Immigrant Advocate - Documentary"
   youtube_id: evsLPReGy-A
   blurb: "Produced as a semester-long project at Montclair State University, this documentary offers insight into how the U.S. immigration system impacts individuals at the border and within the country, with a focus on three immigrant advocates."
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: "BTS Christmas Spectacular 2024"
+  youtube_id: k7KujpYUD5A
+  blurb: "Produced to showcase the rehearsal process and storytelling behind a Christmas performance brought together by multiple ministries at First Baptist Church of Lincoln Gardens."
   roles:
     - producer
     - editor

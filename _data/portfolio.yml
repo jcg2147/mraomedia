@@ -2,6 +2,34 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
+-- title: "Presenting FBCLG's New Youth Center"
+  youtube_id: zAWDBeGl3T0
+  blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
+  roles: 
+    - producer
+    - editor
+    - videographer
+- title: "Father's Day 2025 Video"
+  youtube_id: 1_74XUIT_F0
+  blurb: "Produced through a series of interviews between fathers and their children, capturing personal stories in celebration of Father’s Day."
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: "Mother's Day 2025 Video"
+  youtube_id: tvabgE6Tmhw
+  blurb: "Created in celebration of Mother’s Day, this piece features mothers of the senior community at First Baptist Church of Lincoln Gardens."
+  roles:
+    - producer
+    - editor
+    - videographer
+- title: "Community in Crisis - Recovery Highlight"
+  youtube_id: 0Lno1gnYhyg
+  blurb: "Created in collaboration with Community in Crisis, this video raises awareness of available support groups while sharing a personal testimony from a recovery specialist to inform and support neighboring communities in Somerset County."
+  roles:
+    - producer
+    - editor
+    - videographer
 - title: "Broadway and Beyond"
   youtube_id: NLRUTUusD00
   youtube_query: start=50&end=382
@@ -47,41 +75,14 @@
   blurb: "A collaborative project featuring multiple musicians and vocalists, this piece captures the recording process with dynamic coverage and character-inspired lighting, reflecting the energy and color of Encanto."
   roles:
     - videographer
-- title: "Void Patrol 1 - Live Performance"
-  youtube_id: dar6VJ_eDCE
-  blurb: "Filmed in New York City, this live performance features a multi-camera setup designed to capture the energy and musicianship of jazz group Void Patrol."
-  roles:
-    - videographer
 - title: "Telepatia Cover - Music Video"
   youtube_id: a7ubkmP84z8
   blurb: "Produced in collaboration with New Jersey-based artist Pam Urgiles, this cover video brings a moody visual tone to life through intentional lighting, backdrop design, and staging aligned with the song’s atmosphere."
   roles:
     - videographer
-- title: "Presenting FBCLG's New Youth Center"
-  youtube_id: zAWDBeGl3T0
-  blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
-  roles: 
-    - producer
-    - editor
-    - videographer
-- title: "Father's Day 2025 Video"
-  youtube_id: 1_74XUIT_F0
-  blurb: "Produced through a series of interviews between fathers and their children, capturing personal stories in celebration of Father’s Day."
+- title: "Void Patrol 1 - Live Performance"
+  youtube_id: dar6VJ_eDCE
+  blurb: "Filmed in New York City, this live performance features a multi-camera setup designed to capture the energy and musicianship of jazz group Void Patrol."
   roles:
-    - producer
-    - editor
     - videographer
-- title: "Mother's Day 2025 Video"
-  youtube_id: tvabgE6Tmhw
-  blurb: "Created in celebration of Mother’s Day, this piece features mothers of the senior community at First Baptist Church of Lincoln Gardens."
-  roles:
-    - producer
-    - editor
-    - videographer
-- title: "Community in Crisis - Recovery Highlight"
-  youtube_id: 0Lno1gnYhyg
-  blurb: "Created in collaboration with Community in Crisis, this video raises awareness of available support groups while sharing a personal testimony from a recovery specialist to inform and support neighboring communities in Somerset County."
-  roles:
-    - producer
-    - editor
-    - videographer
+

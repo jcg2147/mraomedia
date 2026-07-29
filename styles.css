@@ -1896,6 +1896,29 @@ header .hamburger .bar {
   box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
 }
 
+/* Services page surfaces inherit the site background instead of the legacy black theme. */
+.services-page,
+.cta-section,
+.slideshow-text-container {
+  color: var(--mrao-brown);
+  background: transparent;
+}
+
+.service-box,
+#cta-container {
+  color: var(--mrao-brown);
+  background: var(--mrao-card);
+  border-color: var(--mrao-border);
+  box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
+}
+
+.service-box h3,
+.service-box p,
+.slideshow-text-container #text-section p,
+.slideshow-text-container .checklist li {
+  color: var(--mrao-brown);
+}
+
 #latest-projects a {
   color: var(--mrao-brown) !important;
 }

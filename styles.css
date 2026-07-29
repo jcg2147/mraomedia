@@ -1785,11 +1785,7 @@ body,
 #services-body {
   color: var(--mrao-brown);
   background-color: var(--mrao-cream-bottom);
-  background-image:
-    radial-gradient(circle at 17% 23%, rgba(197, 160, 89, 0.12) 0 0.6px, transparent 0.9px),
-    radial-gradient(circle at 81% 71%, rgba(44, 26, 14, 0.055) 0 0.55px, transparent 0.85px),
-    linear-gradient(180deg, var(--mrao-cream-top) 0%, var(--mrao-cream-bottom) 52%, var(--mrao-cream-top) 100%);
-  background-size: 8px 8px, 11px 11px, 100% 100%;
+  background-image: linear-gradient(180deg, var(--mrao-cream-top) 0%, var(--mrao-cream-bottom) 100%);
   background-attachment: fixed;
 }
 
@@ -1857,6 +1853,14 @@ header {
 
 /* Keep the home navigation over the hero footage, as in the original layout. */
 #hero header {
+  background: transparent;
+  border-bottom: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* The portfolio reel uses the same uninterrupted video treatment. */
+body.portfolio-page #header-section header {
   background: transparent;
   border-bottom: 0;
   backdrop-filter: none;

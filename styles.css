@@ -116,9 +116,8 @@ body {
 }
 
 .video-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    filter: brightness(0.9);
+    /* Keep the Isotope grid item's footprint fixed. Thumbnail motion is scoped below. */
+    transform: none;
 }
 
 .video-card .embed-responsive iframe {
@@ -1930,6 +1929,52 @@ header .hamburger .bar {
 
 .direct-contact-container hr {
   border-color: var(--mrao-border);
+}
+
+/* Portfolio grid: fixed card footprints with a thumbnail-only hover treatment. */
+body.portfolio-page #portfolio-items .video-card {
+  display: flex;
+  flex-direction: column;
+  height: 24rem;
+  transform: none !important;
+  filter: none;
+}
+
+body.portfolio-page #portfolio-items .video-card-frame {
+  flex: 0 0 auto;
+}
+
+body.portfolio-page #portfolio-items .video-card-frame .embed-responsive {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+body.portfolio-page #portfolio-items .video-card:not(.active) .video-card-frame:hover .embed-responsive,
+body.portfolio-page #portfolio-items .video-card:not(.active) .video-card-frame:focus-within .embed-responsive {
+  transform: scale(1.035);
+}
+
+body.portfolio-page #portfolio-items .video-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+body.portfolio-page #portfolio-items .video-info h5 {
+  display: -webkit-box;
+  margin-inline: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 767.98px) {
+  body.portfolio-page #portfolio-items .video-card {
+    height: auto;
+  }
 }
 
 .btn,

@@ -1810,6 +1810,11 @@ select,
 #latest-projects p,
 .footer p,
 .nav-link,
+.contact-blurb,
+.contact-list,
+.contact-list .list-item,
+.contact-list .contact-text,
+.contact-list .contact-text a,
 .text-white {
   color: var(--mrao-brown) !important;
 }
@@ -1893,6 +1898,15 @@ header .hamburger .bar {
 
 #latest-projects a {
   color: var(--mrao-brown) !important;
+}
+
+.contact-list .contact-text a:hover,
+.contact-list .contact-text a:focus-visible {
+  color: var(--mrao-gold) !important;
+}
+
+.direct-contact-container hr {
+  border-color: var(--mrao-border);
 }
 
 .btn,

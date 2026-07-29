@@ -1847,13 +1847,20 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-header,
-#hero header {
+header {
   color: var(--mrao-brown);
   background: rgba(253, 252, 245, 0.82);
   border-bottom: 1px solid rgba(197, 160, 89, 0.3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+/* Keep the home navigation over the hero footage, as in the original layout. */
+#hero header {
+  background: transparent;
+  border-bottom: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .navbar .nav-link,

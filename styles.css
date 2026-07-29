@@ -1764,3 +1764,164 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
     animation: none;
   }
 }
+
+/* Flyer-inspired brand palette ------------------------------------------------
+   Keep these declarations at the end so the older, page-specific theme rules
+   inherit the new visual system without changing their responsive layout. */
+:root {
+  --mrao-cream-top: #f4f1e1;
+  --mrao-cream-bottom: #fdfcf5;
+  --mrao-gold: #c5a059;
+  --mrao-brown: #2c1a0e;
+  --mrao-card: rgba(255, 253, 244, 0.86);
+  --mrao-border: rgba(197, 160, 89, 0.42);
+}
+
+html {
+  background: var(--mrao-cream-top);
+}
+
+body,
+#services-body {
+  color: var(--mrao-brown);
+  background-color: var(--mrao-cream-bottom);
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(197, 160, 89, 0.12) 0 0.6px, transparent 0.9px),
+    radial-gradient(circle at 81% 71%, rgba(44, 26, 14, 0.055) 0 0.55px, transparent 0.85px),
+    linear-gradient(180deg, var(--mrao-cream-top) 0%, var(--mrao-cream-bottom) 52%, var(--mrao-cream-top) 100%);
+  background-size: 8px 8px, 11px 11px, 100% 100%;
+  background-attachment: fixed;
+}
+
+/* The flyer uses gold for the visual hierarchy and brown for all supporting copy. */
+h1,
+h2,
+.section-header,
+.hero-title {
+  color: var(--mrao-gold) !important;
+}
+
+body,
+p,
+li,
+label,
+input,
+textarea,
+select,
+.service-item h3,
+.service-item p,
+#latest-projects .left-section,
+#latest-projects p,
+.footer p,
+.nav-link,
+.text-white {
+  color: var(--mrao-brown) !important;
+}
+
+a {
+  color: var(--mrao-brown);
+  text-decoration-color: var(--mrao-gold);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--mrao-gold);
+}
+
+#hero {
+  color: var(--mrao-brown);
+}
+
+.hero-content {
+  color: var(--mrao-gold);
+  text-shadow: 0 2px 12px rgba(44, 26, 14, 0.68);
+}
+
+.hero-title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, 3.6vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+header,
+#hero header {
+  color: var(--mrao-brown);
+  background: rgba(253, 252, 245, 0.82);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar .nav-link,
+.nav-link,
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--mrao-brown) !important;
+}
+
+header .hamburger .bar {
+  background-color: var(--mrao-brown);
+}
+
+#about,
+.container,
+#contact-section {
+  background-color: transparent;
+}
+
+.service-item,
+#latest-projects {
+  background: var(--mrao-card);
+  border: 1px solid var(--mrao-border);
+  box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
+}
+
+#latest-projects a {
+  color: var(--mrao-brown) !important;
+}
+
+.btn,
+.send-button {
+  color: var(--mrao-brown);
+  background-color: var(--mrao-gold);
+  border-color: var(--mrao-gold);
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active-filter {
+  color: var(--mrao-cream-bottom);
+  background-color: var(--mrao-brown);
+  border-color: var(--mrao-brown);
+}
+
+.form-control,
+textarea,
+form div div input.form-control {
+  color: var(--mrao-brown);
+  background-color: rgba(253, 252, 245, 0.92);
+  border-color: var(--mrao-border);
+}
+
+.footer {
+  background: rgba(244, 241, 225, 0.94);
+  border-top: 1px solid var(--mrao-border);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-inline: 1rem;
+  }
+
+  #latest-projects {
+    margin: 2vw;
+  }
+
+  .service-item {
+    max-width: min(300px, calc(100vw - 2rem));
+  }
+}

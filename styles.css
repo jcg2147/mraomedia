@@ -1772,6 +1772,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   --mrao-cream-bottom: #fdfcf5;
   --mrao-gold: #c5a059;
   --mrao-brown: #2c1a0e;
+  --mrao-lilac: #aeb3fc;
   --mrao-card: rgba(255, 253, 244, 0.86);
   --mrao-border: rgba(197, 160, 89, 0.42);
 }
@@ -1873,13 +1874,19 @@ body.portfolio-page #header-section header {
 
 .navbar .nav-link,
 .nav-link,
-.navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: var(--mrao-brown) !important;
+  color: var(--mrao-gold) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--mrao-lilac) !important;
 }
 
 header .hamburger .bar {
-  background-color: var(--mrao-brown);
+  background-color: var(--mrao-gold);
 }
 
 #about,
@@ -1932,10 +1939,15 @@ header .hamburger .bar {
 }
 
 /* Portfolio grid: fixed card footprints with a thumbnail-only hover treatment. */
+body.portfolio-page #portfolio-items {
+  margin-inline: -1rem;
+}
+
 body.portfolio-page #portfolio-items .video-card {
   display: flex;
   flex-direction: column;
-  height: 20rem;
+  height: 16rem;
+  padding-inline: 1rem;
   transform: none !important;
   filter: none;
 }
@@ -1972,8 +1984,13 @@ body.portfolio-page #portfolio-items .video-info h5 {
 }
 
 @media (max-width: 767.98px) {
+  body.portfolio-page #portfolio-items {
+    margin-inline: -15px;
+  }
+
   body.portfolio-page #portfolio-items .video-card {
     height: auto;
+    padding-inline: 15px;
   }
 }
 

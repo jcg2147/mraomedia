@@ -1691,7 +1691,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   height: 3.25rem;
   top: 50%;
   bottom: auto;
-  border: 2px solid var(--mrao-gold);
+  border: 1px solid var(--mrao-gold);
   border-radius: 50%;
   background-color: rgba(197, 160, 89, 0.28);
   transform: translateY(-50%);

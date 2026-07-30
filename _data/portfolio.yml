@@ -2,6 +2,13 @@
 # `embed_url` or a `youtube_id`, and the list of roles for filtering. Optional
 # `youtube_query` values let you append query parameters to the generated embed.
 
+- title: "AI Adoption Day Highlight Reel"
+  youtube_id: 9GxGGpIyito
+  blurb: "Highlight reel I captured and edited from Global AI Adoption Day, featuring keynote speakers, attendee interactions, networking moments, and the energy of a day dedicated to advancing AI innovation and adoption."
+  roles:
+    - producer
+    - editor
+    - videographer
 - title: "Mother's Day 2025 Video"
   youtube_id: tvabgE6Tmhw
   blurb: "Created in celebration of Mother’s Day, this piece features mothers of the senior community at First Baptist Church of Lincoln Gardens."

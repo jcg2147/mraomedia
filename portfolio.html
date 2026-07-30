@@ -55,11 +55,6 @@ permalink: /portfolio
         <div class="container">
             <h2 class="header-text text-center mb-4">Featured Videos</h2>
             <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    {% for video in featured_videos %}
-                        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
-                    {% endfor %}
-                </div>
                 <div class="carousel-inner">
                     {% for video in featured_videos %}
                         {% assign video_data = video %}

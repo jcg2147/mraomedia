@@ -1951,7 +1951,7 @@ body.portfolio-page #portfolio-items {
 body.portfolio-page #portfolio-items .video-card {
   display: flex;
   flex-direction: column;
-  height: 18rem;
+  height: 19rem;
   padding-inline: 0.85rem;
   background: transparent;
   box-shadow: none;
@@ -1966,7 +1966,7 @@ body.portfolio-page #portfolio-items .video-card-surface {
   padding: 0.75rem 0.75rem 0.5rem;
   background: var(--mrao-card);
   border: 0;
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: 0 10px 24px rgba(44, 26, 14, 0.12);
   overflow: hidden;
 }

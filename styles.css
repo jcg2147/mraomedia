@@ -1674,7 +1674,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   height: 100%;
   top: 0;
   bottom: 0;
-  border: 1px solid var(--mrao-gold);
+  border: 2px solid var(--mrao-gold);
   background-color: transparent;
   transform: none;
   display: flex;
@@ -2031,6 +2031,14 @@ body.portfolio-page #portfolio-items .video-info h5 {
 .send-button:hover,
 .send-button:focus-visible {
   color: var(--mrao-brown);
+  background-color: var(--mrao-lilac);
+  border-color: var(--mrao-lilac);
+}
+
+#portfolio .btn:hover,
+#portfolio .btn:focus-visible,
+#portfolio .btn.active-filter {
+  color: #fff;
   background-color: var(--mrao-lilac);
   border-color: var(--mrao-lilac);
 }

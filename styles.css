@@ -1488,7 +1488,7 @@ body.contact-page {
 
 /* Allow the main content area to expand */
 body.contact-page #contact-section {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 #featured-videos #featuredCarousel {

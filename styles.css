@@ -1175,7 +1175,7 @@ header .hamburger .bar {
 
 .slideshow-text-container .checklist li::before {
     content: '✔';
-    color: #00ff00;
+    color: #dcc17f;
     margin-right: 10px;
 }
 
@@ -1960,11 +1960,14 @@ header .hamburger .bar {
   box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
 }
 
-.service-box h3,
 .service-box p,
 .slideshow-text-container #text-section p,
 .slideshow-text-container .checklist li {
   color: var(--mrao-brown);
+}
+
+.services-page .service-box h3 {
+  color: var(--mrao-gold);
 }
 
 #latest-projects a {

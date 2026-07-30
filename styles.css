@@ -1684,9 +1684,13 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 }
 
 #featured-videos .carousel-control-prev:hover,
+#featured-videos .carousel-control-prev:focus,
 #featured-videos .carousel-control-prev:focus-visible,
+#featured-videos .carousel-control-prev:active,
 #featured-videos .carousel-control-next:hover,
-#featured-videos .carousel-control-next:focus-visible {
+#featured-videos .carousel-control-next:focus,
+#featured-videos .carousel-control-next:focus-visible,
+#featured-videos .carousel-control-next:active {
   border-color: var(--mrao-lilac);
   background-color: rgba(174, 179, 252, 0.28);
 }
@@ -1777,6 +1781,22 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 
 html {
   background: var(--mrao-cream-top);
+}
+
+/* Keep keyboard and click focus visible without Bootstrap's default blue ring. */
+:focus-visible {
+  outline: 3px solid var(--mrao-lilac);
+  outline-offset: 3px;
+}
+
+.btn:focus,
+.form-control:focus,
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(174, 179, 252, 0.55);
 }
 
 body,

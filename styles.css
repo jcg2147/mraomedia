@@ -2072,6 +2072,20 @@ body.portfolio-page #portfolio-items .video-info h5 {
   border-color: var(--mrao-lilac);
 }
 
+#meowButton:hover,
+#meowButton:focus-visible,
+#meowButton:active,
+#about a .btn:hover,
+#about a .btn:focus-visible,
+#about a .btn:active,
+.cta-button:hover,
+.cta-button:focus-visible,
+.cta-button:active {
+  color: #fff;
+  background-color: var(--mrao-lilac);
+  border-color: var(--mrao-lilac);
+}
+
 .form-control,
 textarea,
 form div div input.form-control {

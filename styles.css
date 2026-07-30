@@ -1668,13 +1668,30 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   padding: 0 4rem;
 }
 
+/* Bootstrap 5's carousel script applies the *-start/*-end state classes,
+   while this site retains Bootstrap 4's base stylesheet.  Supply the matching
+   transition states here so the incoming slide starts moving immediately. */
+#featuredCarousel .carousel-item {
+  transition: transform 0.35s ease-in-out;
+}
+
+#featuredCarousel .carousel-item-next:not(.carousel-item-start),
+#featuredCarousel .active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+#featuredCarousel .carousel-item-prev:not(.carousel-item-end),
+#featuredCarousel .active.carousel-item-start {
+  transform: translateX(-100%);
+}
+
 #featured-videos .carousel-control-prev,
 #featured-videos .carousel-control-next {
   width: 3.25rem;
   height: 3.25rem;
   top: 50%;
   bottom: auto;
-  border: 0;
+  border: 2px solid var(--mrao-gold);
   border-radius: 50%;
   background-color: rgba(197, 160, 89, 0.28);
   transform: translateY(-50%);

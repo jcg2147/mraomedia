@@ -1665,7 +1665,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 }
 
 #featured-videos .carousel-inner {
-  padding: 0 4rem;
+  padding: 0 4.5rem;
 }
 
 /* Bootstrap 5's carousel script applies the *-start/*-end state classes,
@@ -1734,7 +1734,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 
 @media (max-width: 1200px) {
   #featured-videos .carousel-inner {
-    padding: 0 3.25rem;
+    padding: 0 3.75rem;
   }
 
   #featured-videos .carousel-control-prev,
@@ -1746,7 +1746,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 
 @media (max-width: 992px) {
   #featured-videos .carousel-inner {
-    padding: 0 2.75rem;
+    padding: 0 3.25rem;
   }
 
   #featured-videos .carousel-control-prev,
@@ -1766,7 +1766,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   }
   
   #featured-videos .carousel-inner {
-    padding: 0 2.25rem;
+    padding: 0 2.75rem;
   }
 
   #featured-videos .carousel-control-prev,

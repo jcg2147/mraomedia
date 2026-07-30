@@ -2052,36 +2052,14 @@ body.portfolio-page #portfolio-items .video-info h5 {
 .btn:hover,
 .btn:focus,
 .btn.active-filter {
-  color: var(--mrao-cream-bottom);
-  background-color: var(--mrao-brown);
-  border-color: var(--mrao-brown);
+  color: #fff;
+  background-color: var(--mrao-lilac);
+  border-color: var(--mrao-lilac);
 }
 
 .send-button:hover,
 .send-button:focus-visible {
   color: var(--mrao-brown);
-  background-color: var(--mrao-lilac);
-  border-color: var(--mrao-lilac);
-}
-
-#portfolio .btn:hover,
-#portfolio .btn:focus-visible,
-#portfolio .btn.active-filter {
-  color: #fff;
-  background-color: var(--mrao-lilac);
-  border-color: var(--mrao-lilac);
-}
-
-#meowButton:hover,
-#meowButton:focus-visible,
-#meowButton:active,
-#about a .btn:hover,
-#about a .btn:focus-visible,
-#about a .btn:active,
-.cta-button:hover,
-.cta-button:focus-visible,
-.cta-button:active {
-  color: #fff;
   background-color: var(--mrao-lilac);
   border-color: var(--mrao-lilac);
 }

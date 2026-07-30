@@ -1564,11 +1564,12 @@ body.portfolio-page.portfolio-immersive #header-section header {
 
 body.portfolio-page.portfolio-immersive #header-section .navbar {
   margin-left: auto;
-  margin-top: 2.125rem;
+  margin-top: 0;
 }
 
 body.portfolio-page.portfolio-immersive #header-section .header-logo {
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 body.portfolio-page.portfolio-immersive #sabrina-reel {

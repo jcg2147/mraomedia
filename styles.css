@@ -1950,7 +1950,6 @@ body.portfolio-page #portfolio-items .video-card {
   flex-direction: column;
   height: 16rem;
   padding-inline: 1rem;
-  transform: none !important;
   filter: none;
 }
 

@@ -1699,10 +1699,11 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 #featured-videos .carousel-control-next-icon {
   width: 2.5rem;
   height: 2.5rem;
-  border: 2px solid var(--mrao-gold);
+  border: 0;
   border-radius: 50%;
+  background-color: rgba(197, 160, 89, 0.28);
   background-size: 42% 42%;
-  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #featured-videos .carousel-control-prev:hover .carousel-control-prev-icon,
@@ -1711,7 +1712,6 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
 #featured-videos .carousel-control-next:hover .carousel-control-next-icon,
 #featured-videos .carousel-control-next:focus .carousel-control-next-icon,
 #featured-videos .carousel-control-next:active .carousel-control-next-icon {
-  border-color: var(--mrao-lilac);
   background-color: rgba(174, 179, 252, 0.28);
 }
 

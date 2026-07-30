@@ -2031,6 +2031,13 @@ body.portfolio-page #portfolio-items .video-info h5 {
   border-color: var(--mrao-brown);
 }
 
+.send-button:hover,
+.send-button:focus-visible {
+  color: var(--mrao-brown);
+  background-color: var(--mrao-lilac);
+  border-color: var(--mrao-lilac);
+}
+
 .form-control,
 textarea,
 form div div input.form-control {

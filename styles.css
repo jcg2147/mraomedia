@@ -2174,6 +2174,46 @@ form div div input.form-control {
 }
 
 @media (max-width: 768px) {
+  /* Present the home introduction as heading, full-width slideshow, then copy. */
+  #about .container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem 0;
+  }
+
+  #about .about-text-index {
+    display: contents;
+  }
+
+  #about .about-text-index h1 {
+    grid-row: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  #about .slideshow-container-index {
+    grid-row: 2;
+    width: 100vw;
+    height: min(75vw, 360px);
+    margin-inline: calc(50% - 50vw);
+  }
+
+  #about .slideshow-container-index .slide-image-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #about .about-copy {
+    grid-row: 3;
+    width: 100%;
+  }
+
+  #about .about-copy p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
   /* Crop the landscape YouTube player to fill the vertical hero, centered on the footage. */
   #hero .video-background #player,
   #hero .video-background iframe {
@@ -2202,6 +2242,11 @@ form div div input.form-control {
 
 /* Keep the mobile toggle and its expanded links centered in the shared header. */
 @media (max-width: 991.98px) {
+  body.portfolio-page #header-section {
+    max-height: none;
+    overflow: visible;
+  }
+
   header .navbar > .container-fluid {
     flex-direction: column;
     align-items: center;

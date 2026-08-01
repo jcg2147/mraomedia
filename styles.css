@@ -2142,13 +2142,14 @@ form div div input.form-control {
 
 @media (max-width: 768px) {
   /* Crop the landscape YouTube player to fill the vertical hero, centered on the footage. */
+  #hero .video-background #player,
   #hero .video-background iframe {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 177.778vh;
-    max-width: none;
-    height: 100%;
+    width: 177.778vh !important;
+    max-width: none !important;
+    height: 100% !important;
     transform: translateX(-50%);
   }
 

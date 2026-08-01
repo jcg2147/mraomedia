@@ -1993,6 +1993,31 @@ header .hamburger .bar {
 
 /* Keep each mobile contact detail paired with its icon on one line. */
 @media screen and (max-width: 850px) {
+  #contact .form-horizontal {
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+  }
+
+  #contact .form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #contact .form-horizontal .col-sm-12 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #contact .form-horizontal .form-control,
+  #contact .form-horizontal textarea,
+  #contact .form-horizontal .send-button,
+  #contact .form-horizontal .alt-send-button {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .direct-contact-container {
     width: 100%;
     max-width: 340px;
@@ -2155,6 +2180,7 @@ form div div input.form-control {
 
   .hero-content {
     padding-inline: 1rem;
+    transform: translateY(-1.2em);
   }
 
   #latest-projects {

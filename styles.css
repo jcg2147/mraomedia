@@ -1993,6 +1993,14 @@ header .hamburger .bar {
 
 /* Keep each mobile contact detail paired with its icon on one line. */
 @media screen and (max-width: 850px) {
+  body.contact-page #contact-section {
+    flex: 0 0 auto;
+  }
+
+  body.contact-page #contact {
+    height: auto;
+  }
+
   #contact .form-horizontal {
     width: 100%;
     max-width: 400px;

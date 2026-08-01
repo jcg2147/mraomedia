@@ -29,8 +29,11 @@ permalink: /portfolio
                 <div class="col-12 sabrina-reel-frame">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe
+                            id="sabrina-reel-player"
                             class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=1&mute=0&playsinline=1&rel=0"
+                            src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=0&mute=0&playsinline=1&rel=0"
+                            data-mobile-src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=0&mute=0&playsinline=1&rel=0"
+                            data-desktop-autoplay-src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=1&mute=0&playsinline=1&rel=0"
                             title="Sabrina Portfolio Reel"
                             loading="eager"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -220,22 +223,40 @@ permalink: /portfolio
 
         if (sabrinaReelSection) {
             const immersiveClass = 'portfolio-immersive';  
+            const mobilePortfolioQuery = window.matchMedia('(max-width: 991.98px)');
+            const sabrinaReelPlayer = document.getElementById('sabrina-reel-player');
             const syncPortfolioViewportHeight = () => {
                 const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
                 document.documentElement.style.setProperty('--portfolio-vh', `${viewportHeight * 0.01}px`);
             };
             const updateSabrinaReelSize = () => {
-                const isCompact = window.scrollY > 40;
+                const isCompact = mobilePortfolioQuery.matches || window.scrollY > 40;
                 sabrinaReelSection.classList.toggle('compact', isCompact);
                 document.body.classList.toggle(immersiveClass, !isCompact);
             };
+            const syncSabrinaReelPlayback = () => {
+                if (!sabrinaReelPlayer) return;
+
+                const reelSource = mobilePortfolioQuery.matches
+                    ? sabrinaReelPlayer.dataset.mobileSrc
+                    : sabrinaReelPlayer.dataset.desktopAutoplaySrc;
+
+                if (sabrinaReelPlayer.getAttribute('src') !== reelSource) {
+                    sabrinaReelPlayer.src = reelSource;
+                }
+            };
 
             syncPortfolioViewportHeight();
+            syncSabrinaReelPlayback();
             updateSabrinaReelSize();
             window.visualViewport?.addEventListener('resize', syncPortfolioViewportHeight);
             window.addEventListener('resize', syncPortfolioViewportHeight);
             window.addEventListener('orientationchange', syncPortfolioViewportHeight);
             window.addEventListener('scroll', updateSabrinaReelSize, { passive: true });
+            mobilePortfolioQuery.addEventListener('change', () => {
+                syncSabrinaReelPlayback();
+                updateSabrinaReelSize();
+            });
     
             const scrollCueButton = document.getElementById('reel-scroll-cue');
             if (scrollCueButton) {

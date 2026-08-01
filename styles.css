@@ -1924,6 +1924,14 @@ body.portfolio-page #header-section header {
   color: var(--mrao-lilac) !important;
 }
 
+/* Bootstrap's navbar-dark icon is white by default; render it in the brand gold. */
+.navbar-toggler-icon {
+  background-color: var(--mrao-gold);
+  background-image: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
 header .hamburger .bar {
   background-color: var(--mrao-gold);
 }
@@ -1981,6 +1989,46 @@ header .hamburger .bar {
 
 .direct-contact-container hr {
   border-color: var(--mrao-border);
+}
+
+/* Keep each mobile contact detail paired with its icon on one line. */
+@media screen and (max-width: 850px) {
+  .direct-contact-container {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .contact-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-list .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    white-space: nowrap;
+  }
+
+  .contact-list .contact-icon {
+    flex: 0 0 30px;
+    margin-left: 0;
+  }
+
+  .contact-list .contact-text,
+  .contact-list .place,
+  .contact-list .phone,
+  .contact-list .gmail {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact-list .contact-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
 }
 
 /* Portfolio grid: fixed card footprints with a thumbnail-only hover treatment. */
@@ -2093,6 +2141,17 @@ form div div input.form-control {
 }
 
 @media (max-width: 768px) {
+  /* Crop the landscape YouTube player to fill the vertical hero, centered on the footage. */
+  #hero .video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 177.778vh;
+    max-width: none;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
   .hero-content {
     padding-inline: 1rem;
   }

@@ -10,8 +10,13 @@ var portfolioOverlayPlayers = [];
 function onYouTubeIframeAPIReady() {
     // Check if the element with id "player" exists
     if (document.getElementById('player')) {
+        var heroPlayerElement = document.getElementById('player');
+        var heroVideoId = window.matchMedia('(max-width: 768px)').matches && heroPlayerElement.dataset.mobileVideoId
+            ? heroPlayerElement.dataset.mobileVideoId
+            : heroPlayerElement.dataset.videoId;
+
         player1 = new YT.Player('player', {
-            videoId: 'NLRUTUusD00',  // YouTube Video ID for player
+            videoId: heroVideoId,  // Falls back to the desktop video until a mobile edit is supplied.
             playerVars: {
                 'autoplay': 1,
                 'mute': 1,

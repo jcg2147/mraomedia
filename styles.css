@@ -2048,11 +2048,9 @@ header .hamburger .bar {
     white-space: nowrap;
   }
 
-  /* Separate the stacked contact details without affecting the desktop row. */
+  /* Give each stacked contact detail its own breathing room on mobile. */
   .contact-list .list-item + .list-item {
-    margin-top: 0.25rem;
-    padding-top: 0.25rem;
-    border-top: 1px solid var(--mrao-border);
+    margin-top: 1rem;
   }
 
   .contact-list .contact-icon {

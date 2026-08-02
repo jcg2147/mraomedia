@@ -2278,7 +2278,15 @@ form div div input.form-control {
 
   #hero-services .video-background {
     width: 85%;
+    height: 47.8125vw;
     margin-left: 15%;
+  }
+
+  #hero-services .video-background #player-services,
+  #hero-services .video-background iframe {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   /* About page: use the full screen in the reading order of headline, portrait,

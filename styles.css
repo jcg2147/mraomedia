@@ -229,6 +229,34 @@ footer p {
     border-radius: 10px;
 }
 
+.work-featured {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.work-featured__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.work-featured__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.25rem, 4vw, 4rem);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.work-featured__logo {
+    display: block;
+    flex: 1 1 0;
+    width: 100%;
+    max-width: 280px;
+    height: 100px;
+    object-fit: contain;
+}
+
 /* Default layout for larger screens */
 #latest-projects {
     display: flex;
@@ -2183,6 +2211,16 @@ form div div input.form-control {
 }
 
 @media (max-width: 768px) {
+  .work-featured__logos {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .work-featured__logo {
+    flex: 0 0 auto;
+    width: min(100%, 280px);
+  }
+
   /* About page: use the full screen in the reading order of headline, portrait,
      then biography instead of squeezing the desktop columns side by side. */
   #about .about-text {

@@ -230,7 +230,13 @@ footer p {
 }
 
 .work-featured {
-    padding: 2rem 1rem;
+    width: min(90%, 1200px);
+    margin: 3rem auto;
+    padding: 2.75rem 2rem;
+    background: var(--mrao-featured-card);
+    border: 1px solid var(--mrao-border);
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
     text-align: center;
 }
 
@@ -1840,6 +1846,7 @@ body.portfolio-page:not(.portfolio-immersive) .reel-scroll-cue {
   --mrao-brown: #2c1a0e;
   --mrao-lilac: #aeb3fc;
   --mrao-card: rgba(255, 253, 244, 0.86);
+  --mrao-featured-card: #fffdf4;
   --mrao-border: rgba(197, 160, 89, 0.42);
 }
 
@@ -1979,6 +1986,10 @@ header .hamburger .bar {
   background: var(--mrao-card);
   border: 1px solid var(--mrao-border);
   box-shadow: 0 12px 30px rgba(44, 26, 14, 0.1);
+}
+
+#latest-projects {
+  background: var(--mrao-featured-card);
 }
 
 /* Let one body-level gradient flow continuously through the services page. */
@@ -2219,6 +2230,11 @@ form div div input.form-control {
   .work-featured__logo {
     flex: 0 0 auto;
     width: min(100%, 280px);
+  }
+
+  .work-featured {
+    width: min(94%, 1200px);
+    padding: 2rem 1rem;
   }
 
   /* About page: use the full screen in the reading order of headline, portrait,

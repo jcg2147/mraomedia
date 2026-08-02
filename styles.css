@@ -2269,22 +2269,16 @@ form div div input.form-control {
     margin-inline: calc(50% - 50vw);
   }
 
-  /* Crop the landscape Services player to the mobile hero so YouTube's
-     letterbox bars never show above or below the footage. */
-  #hero-services .video-background {
-    width: 100%;
-    margin-left: 0;
+  /* Match the mobile Services hero to the landscape player so the complete
+     video stays visible without letterbox space above or below it. */
+  #hero-services {
+    height: 47.8125vw;
+    min-height: 0;
   }
 
-  #hero-services .video-background iframe,
-  #hero-services .video-background #player-services {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 177.778vh !important;
-    max-width: none !important;
-    height: 100% !important;
-    transform: translate(-50%, -50%);
+  #hero-services .video-background {
+    width: 85%;
+    margin-left: 15%;
   }
 
   /* About page: use the full screen in the reading order of headline, portrait,

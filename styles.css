@@ -2237,6 +2237,56 @@ form div div input.form-control {
     padding: 2rem 1rem;
   }
 
+  /* Services: stack the Why Book Our Service copy before its slideshow. */
+  .slideshow-text-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+  }
+
+  .slideshow-text-container #text-section {
+    order: -1;
+    width: 100% !important;
+    margin: 0;
+    text-align: center;
+  }
+
+  .slideshow-text-container #text-section .checklist {
+    width: 100%;
+    max-width: 38rem;
+    margin: 2rem auto 0;
+  }
+
+  .slideshow-text-container .checklist li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slideshow-text-container .slideshow-container {
+    order: 0;
+    width: 100vw;
+    height: min(100vw, 420px);
+    margin-inline: calc(50% - 50vw);
+  }
+
+  /* Crop the landscape Services player to the mobile hero so YouTube's
+     letterbox bars never show above or below the footage. */
+  #hero-services .video-background {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #hero-services .video-background iframe,
+  #hero-services .video-background #player-services {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.778vh !important;
+    max-width: none !important;
+    height: 100% !important;
+    transform: translate(-50%, -50%);
+  }
+
   /* About page: use the full screen in the reading order of headline, portrait,
      then biography instead of squeezing the desktop columns side by side. */
   #about .about-text {

@@ -1484,6 +1484,10 @@ body.contact-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Full viewport height */
+  /* The contact form stacks on narrow screens. Keep its cream gradient in the
+     document's coordinate space so it does not restart between the form and
+     the contact-details block while the page scrolls. */
+  background-attachment: scroll;
 }
 
 /* Allow the main content area to expand */

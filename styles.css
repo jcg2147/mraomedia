@@ -2048,6 +2048,13 @@ header .hamburger .bar {
     white-space: nowrap;
   }
 
+  /* Separate the stacked contact details without affecting the desktop row. */
+  .contact-list .list-item + .list-item {
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+    border-top: 1px solid var(--mrao-border);
+  }
+
   .contact-list .contact-icon {
     flex: 0 0 30px;
     margin-left: 0;

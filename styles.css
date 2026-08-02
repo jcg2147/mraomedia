@@ -2183,6 +2183,56 @@ form div div input.form-control {
 }
 
 @media (max-width: 768px) {
+  /* About page: use the full screen in the reading order of headline, portrait,
+     then biography instead of squeezing the desktop columns side by side. */
+  #about .about-text {
+    display: contents;
+  }
+
+  #about .about-text h1 {
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  #about .about-photo {
+    grid-row: 2;
+    width: 100vw !important;
+    margin-inline: calc(50% - 50vw);
+  }
+
+  #about .about-photo img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  #about .about-text p {
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  #about .about-text > a {
+    justify-self: center;
+  }
+
+  /* Keep the About-page thank-you message readable at mobile width. */
+  .text-wrapper {
+    display: block;
+    width: 100%;
+    padding: 2.5rem 1rem;
+  }
+
+  .text-container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    text-align: center;
+  }
+
   /* Present the home introduction as heading, full-width slideshow, then copy. */
   #about .container {
     display: grid !important;

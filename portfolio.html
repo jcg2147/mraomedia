@@ -23,17 +23,18 @@ permalink: /portfolio
     <!-- Header Section -->
     <div id="header-section"></div>
 
-    <section id="sabrina-reel">
+    {% capture reel_id %}{% include youtube-id.html url=site.data.portfolio_settings.reel_url %}{% endcapture %}
+    <section id="sabrina-reel"{% if site.data.portfolio_settings.reel_orientation == 'vertical' %} class="reel-vertical"{% endif %}>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 sabrina-reel-frame">
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <div class="embed-responsive {% if site.data.portfolio_settings.reel_orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
                         <iframe
                             id="sabrina-reel-player"
                             class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=0&mute=0&playsinline=1&rel=0"
-                            data-mobile-src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=0&mute=0&playsinline=1&rel=0"
-                            data-desktop-autoplay-src="https://www.youtube.com/embed/qikw6sdsl9E?autoplay=1&mute=0&playsinline=1&rel=0"
+                            src="https://www.youtube.com/embed/{{ reel_id }}?autoplay=0&mute=0&playsinline=1&rel=0"
+                            data-mobile-src="https://www.youtube.com/embed/{{ reel_id }}?autoplay=0&mute=0&playsinline=1&rel=0"
+                            data-desktop-autoplay-src="https://www.youtube.com/embed/{{ reel_id }}?autoplay=1&mute=0&playsinline=1&rel=0"
                             title="Sabrina Portfolio Reel"
                             loading="eager"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -52,83 +53,16 @@ permalink: /portfolio
         </button>
     </section>
     
-    {% assign featured_videos = site.data.portfolio | slice: 0, 3 %}
+    {% assign featured_videos = site.data.portfolio.videos | where: 'featured', true %}
     {% if featured_videos.size > 0 %}
     <section id="featured-videos" class="py-5">
         <div class="container">
-            <h2 class="header-text text-center mb-4">Featured Videos</h2>
+            <h2 class="header-text text-center mb-4">{{ site.data.portfolio_settings.featured_heading | escape }}</h2>
             <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     {% for video in featured_videos %}
                         {% assign video_data = video %}
-                        {% assign platform = video_data.platform | default: 'youtube' %}
-                        {% assign embed_url = nil %}
-                        {% assign instagram_shortcode = nil %}
-
-                        {% if platform == 'youtube' %}
-                          {% if video_data.embed_url %}
-                            {% assign embed_url = video_data.embed_url %}
-                          {% elsif video_data.youtube_id %}
-                            {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_data.youtube_id %}
-                            {% if video_data.youtube_query %}
-                              {% assign embed_url = embed_url | append: '?' | append: video_data.youtube_query %}
-                            {% endif %}
-                          {% endif %}
-                        {% elsif platform == 'facebook' %}
-                          {% if video_data.embed_url %}
-                            {% assign embed_url = video_data.embed_url %}
-                          {% elsif video_data.facebook_embed_url %}
-                            {% assign embed_url = video_data.facebook_embed_url %}
-                          {% elsif video_data.facebook_permalink %}
-                            {% assign permalink = video_data.facebook_permalink | split: '?' | first %}
-                            {% assign encoded_permalink = permalink | uri_escape %}
-                            {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
-                          {% elsif video_data.facebook_url %}
-                            {% assign permalink = video_data.facebook_url | split: '?' | first %}
-                            {% assign encoded_permalink = permalink | uri_escape %}
-                            {% assign embed_url = 'https://www.facebook.com/plugins/video.php?height=315&href=' | append: encoded_permalink | append: '&show_text=false&width=560&t=0' %}
-                          {% endif %}
-                        {% elsif platform == 'instagram' %}
-                          {% if video_data.instagram_shortcode %}
-                            {% assign instagram_shortcode = video_data.instagram_shortcode %}
-                          {% elsif video_data.instagram_permalink %}
-                            {% assign permalink = video_data.instagram_permalink | split: '?' | first %}
-                            {% assign segments = permalink | split: '/' %}
-                            {% for segment in segments %}
-                              {% assign trimmed = segment | strip %}
-                              {% if trimmed != '' and trimmed != 'reel' and trimmed != 'reels' and trimmed != 'p' %}
-                                {% assign instagram_shortcode = trimmed %}
-                              {% endif %}
-                            {% endfor %}
-                          {% elsif video_data.instagram_embed_url %}
-                            {% assign embed_path = video_data.instagram_embed_url | split: '?' | first %}
-                            {% assign segments = embed_path | split: '/' %}
-                            {% for segment in segments %}
-                              {% assign trimmed = segment | strip %}
-                              {% if trimmed != '' and trimmed != 'embed' and trimmed != 'reel' and trimmed != 'reels' %}
-                                {% assign instagram_shortcode = trimmed %}
-                              {% endif %}
-                            {% endfor %}
-                          {% endif %}
-
-                          {% if video_data.instagram_embed_url %}
-                            {% assign embed_url = video_data.instagram_embed_url %}
-                          {% elsif instagram_shortcode %}
-                            {% assign embed_url = 'https://www.instagram.com/reel/' | append: instagram_shortcode | append: '/embed/?hidecaption=true' %}
-                          {% endif %}
-                          {% if embed_url and embed_url contains '/reel/' and embed_url contains '/embed' %}
-                            {% unless embed_url contains '?hidecaption=' %}
-                              {% if embed_url contains '?' %}
-                                {% assign embed_url = embed_url | append: '&hidecaption=true' %}
-                              {% else %}
-                                {% assign embed_url = embed_url | append: '?hidecaption=true' %}
-                              {% endif %}
-                            {% endunless %}
-                            {% unless embed_url contains '/embed/' %}
-                              {% assign embed_url = embed_url | replace: '/embed', '/embed/' %}
-                            {% endunless %}
-                          {% endif %}
-                        {% endif %}
+                        {% capture embed_url %}{% include youtube-embed-url.html video=video_data %}{% endcapture %}
 
                         {% assign roles_display = '' %}
                         {% for role in video_data.roles %}
@@ -143,8 +77,8 @@ permalink: /portfolio
                         <div class="carousel-item{% if forloop.first %} active{% endif %}">
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        {% if embed_url %}
+                                    <div class="embed-responsive {% if video_data.orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+                                        {% if embed_url != '' %}
                                             <iframe
                                                 class="embed-responsive-item"
                                                 src="{{ embed_url | escape }}"
@@ -158,9 +92,9 @@ permalink: /portfolio
                                     </div>
                                 </div>
                                 <div class="col-lg-5 mt-4 mt-lg-0">
-                                    <h3 class="montserrat-400">{{ video_data.title }}</h3>
+                                    <h3 class="montserrat-400">{{ video_data.title | escape }}</h3>
                                     {% if video_data.blurb %}
-                                        <p class="mb-3">{{ video_data.blurb }}</p>
+                                        <p class="mb-3">{{ video_data.blurb | escape | newline_to_br }}</p>
                                     {% endif %}
                                     {% if roles_display != '' %}
                                         <p class="text-muted"><strong>Roles:</strong> {{ roles_display }}</p>
@@ -185,7 +119,7 @@ permalink: /portfolio
 
     <section id="portfolio" class="py-5">
         <div class="container">
-            <h1 class="header-text text-center">Portfolio</h1>
+            <h1 class="header-text text-center">{{ site.data.portfolio_settings.title | escape }}</h1>
             <div class="text-center mb-4">
                 <button class="btn mx-1" onclick="filterVideos('all', this)">All</button>
                 <button class="btn mx-1" onclick="filterVideos('editor', this)">Editor</button>
@@ -193,7 +127,7 @@ permalink: /portfolio
                 <button class="btn mx-1" onclick="filterVideos('producer', this)">Producer</button>
             </div>
             <div id="portfolio-items" class="row">
-                {% for video in site.data.portfolio %}
+                {% for video in site.data.portfolio.videos %}
                     {% include portfolio-video.html video=video index=forloop.index0 %}
                 {% endfor %}
             </div>

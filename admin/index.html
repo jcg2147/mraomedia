@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Mrao Media — Content editor</title>
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to use the Mrao Media content editor.</noscript>
+    <!-- Pin the Turbo-compatible release so updates can be tested before adoption. -->
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.17.0-beta.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: function ({ entry }) {
+          if (entry.get('collection') !== 'portfolio' || entry.get('slug') !== 'videos') return;
+          const videos = entry.getIn(['data', 'videos']);
+          if (!videos) return;
+          videos.forEach(function (video) {
+            const start = Number(video.get('start_seconds') || 0);
+            const end = video.get('end_seconds');
+            if (end !== undefined && end !== null && end !== '' && Number(end) <= start) {
+              throw new Error('For "' + video.get('title') + '", the end time must be after the start time.');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

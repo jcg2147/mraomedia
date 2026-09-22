@@ -11,6 +11,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITH: test
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -28,3 +30,20 @@ jobs:
         with:
           name: jekyll-site
           path: _site
+
+  cloudflare-build:
+    name: Cloudflare production dependency check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.10'
+      - name: Install only Cloudflare production dependencies
+        run: bundle install
+        env:
+          BUNDLE_WITHOUT: development test
+      - name: Build without the install-time exclusion variable
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production

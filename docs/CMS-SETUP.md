@@ -76,6 +76,7 @@ Video files are hosted on YouTube. There is no video upload field.
 With Ruby and Bundler installed:
 
 ```sh
+bundle config set --local with test
 bundle install
 bundle exec ruby tests/site_test.rb
 bundle exec jekyll build --trace
@@ -84,6 +85,8 @@ bundle exec jekyll serve
 
 The tests cover link formats, portrait/landscape markup, featured selection,
 text escaping, editable data fields, existing entries, and complete page rendering.
+The test dependency group is optional, so Cloudflare can build without installing
+Minitest. CI separately checks Cloudflare's production-only dependency installation.
 
 Sources: [Cloudflare Jekyll setup](https://developers.cloudflare.com/pages/framework-guides/deploy-a-jekyll-site/),
 [Turbo connection setup](https://decapcms.org/docs/turbo-connecting-a-site/).

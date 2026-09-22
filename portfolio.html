@@ -97,7 +97,7 @@ permalink: /portfolio
                                         <p class="mb-3">{{ video_data.blurb | escape | newline_to_br }}</p>
                                     {% endif %}
                                     {% if roles_display != '' %}
-                                        <p class="text-muted"><strong>Roles:</strong> {{ roles_display }}</p>
+                                        <p class="text-muted"><strong>Roles:</strong> {{ roles_display | escape }}</p>
                                     {% endif %}
                                 </div>
                             </div>

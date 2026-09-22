@@ -115,144 +115,132 @@ collections:
         name: index
         file: _data/index.json
         fields:
-          - label: Homepage hero tagline
+          - label: Hero tagline
             name: paragraph_1
             widget: text
-          - label: Welcome to Mrao Media! — heading 1
+          - label: Welcome heading
             name: heading_1
             widget: string
-          - label: Welcome to Mrao Media! — paragraph 2
+          - label: Welcome — first paragraph
             name: paragraph_2
             widget: text
-          - label: Welcome to Mrao Media! — paragraph 3
+          - label: Welcome — second paragraph
             name: paragraph_3
             widget: text
-          - label: We can help you with — heading 2
+          - label: Services section heading
             name: heading_2
             widget: string
-          - label: Video Editing — heading 3
-            name: heading_3
-            widget: string
-          - label: Video Editing — paragraph 4
-            name: paragraph_4
-            widget: text
-          - label: Event Videography — heading 4
-            name: heading_4
-            widget: string
-          - label: Event Videography — paragraph 5
-            name: paragraph_5
-            widget: text
-          - label: Drone Videography — heading 5
-            name: heading_5
-            widget: string
-          - label: Drone Videography — paragraph 6
-            name: paragraph_6
-            widget: text
       - label: About Sabrina
         name: about
         file: _data/about.json
         fields:
-          - label: I'm Sabrina, a video production specialist — heading 1
+          - label: Bio heading
             name: heading_1
             widget: string
-          - label: I'm Sabrina, a video production specialist — paragraph 1
+          - label: Bio — first paragraph
             name: paragraph_1
             widget: text
-          - label: I'm Sabrina, a video production specialist — paragraph 2
+          - label: Bio — second paragraph
             name: paragraph_2
             widget: text
-          - label: "Work Featured On: — heading 2"
+          - label: Featured work heading
             name: heading_2
             widget: string
-          - label: "Work Featured On: — caption 1"
+          - label: Sand Dunes photo caption
             name: caption_1
             widget: string
-          - label: "Work Featured On: — caption 2"
+          - label: Telluride photo caption
             name: caption_2
             widget: string
-          - label: "Work Featured On: — caption 3"
+          - label: Cover video photo caption
             name: caption_3
             widget: string
-          - label: "Work Featured On: — caption 4"
+          - label: Filming photo caption
             name: caption_4
             widget: string
-          - label: Thanks for visiting our page! We are a video production company w — heading 3
+          - label: Thank-you message
             name: heading_3
             widget: string
-          - label: Let us bring your idea to life! — heading 4
+          - label: Working together heading
             name: heading_4
             widget: string
-          - label: Let us bring your idea to life! — paragraph 3
+          - label: Working together description
             name: paragraph_3
             widget: text
-          - label: The Details — heading 5
+          - label: Planning heading
             name: heading_5
             widget: string
-          - label: The Details — paragraph 4
+          - label: Planning description
             name: paragraph_4
             widget: text
-          - label: Capturing Events — heading 6
+          - label: Event coverage heading
             name: heading_6
             widget: string
-          - label: Capturing Events — paragraph 5
+          - label: Event coverage description
             name: paragraph_5
             widget: text
-          - label: Video Editing — heading 7
+          - label: Editing heading
             name: heading_7
             widget: string
-          - label: Video Editing — paragraph 6
+          - label: Editing description
             name: paragraph_6
             widget: text
       - label: Services
         name: services
         file: _data/services.json
         fields:
-          - label: Services — heading 1
+          - label: Page heading
             name: heading_1
             widget: string
-          - label: Services — paragraph 1
+          - label: Services introduction
             name: paragraph_1
             widget: text
-          - label: Video Editing — heading 2
+          - label: Video editing title
             name: heading_2
             widget: string
-          - label: Video Editing — paragraph 2
+            hint: Shown on both the homepage and Services page.
+          - label: Video editing description
             name: paragraph_2
             widget: text
-          - label: Event Videography — heading 3
+            hint: Shown on both the homepage and Services page.
+          - label: Event videography title
             name: heading_3
             widget: string
-          - label: Event Videography — paragraph 3
+            hint: Shown on both the homepage and Services page.
+          - label: Event videography description
             name: paragraph_3
             widget: text
-          - label: Drone Videography — heading 4
+            hint: Shown on both the homepage and Services page.
+          - label: Drone videography title
             name: heading_4
             widget: string
-          - label: Drone Videography — paragraph 4
+            hint: Shown on both the homepage and Services page.
+          - label: Drone videography description
             name: paragraph_4
             widget: text
-          - label: Have unique requirements for your project? — heading 5
+            hint: Shown on both the homepage and Services page.
+          - label: Contact invitation heading
             name: heading_5
             widget: string
-          - label: Have unique requirements for your project? — paragraph 5
+          - label: Contact invitation text
             name: paragraph_5
             widget: text
-          - label: Why book our service? — heading 6
+          - label: Why book us heading
             name: heading_6
             widget: string
-          - label: Why book our service? — paragraph 6
+          - label: Why book us introduction
             name: paragraph_6
             widget: text
-          - label: Why book our service? — point 1
+          - label: Experience highlight
             name: point_1
             widget: string
-          - label: Why book our service? — point 2
+          - label: Credibility highlight
             name: point_2
             widget: string
-          - label: Why book our service? — point 3
+          - label: Passion highlight
             name: point_3
             widget: string
-          - label: Why book our service? — point 4
+          - label: Project variety highlight
             name: point_4
             widget: string
       - label: Contact section (all pages)

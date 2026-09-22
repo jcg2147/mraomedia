@@ -47,7 +47,7 @@
     <div class="video-info mt-2 text-center">
       <h5 class="montserrat-400">{{ video_data.title | escape }}</h5>
       {% if roles_display != '' %}
-        <p>{{ roles_display }}</p>
+        <p>{{ roles_display | escape }}</p>
       {% endif %}
     </div>
   </article>

@@ -18,6 +18,11 @@ Connect `jcg2147/mraomedia` using **Pages → Import an existing Git repository*
 | Ruby version | `RUBY_VERSION=3.3.10` (also pinned in `.ruby-version`) |
 
 The Gemfile supplies Jekyll. Cloudflare installs its dependencies before building.
+Before this pull request is merged, use `codex/cloudflare-decap-cms` as the initial
+Cloudflare project branch to preview the migration. After merging, change the
+Cloudflare production branch to `main`. Do not use the CMS to publish from that
+initial preview: its configured target is `main`, which receives the content files
+when the pull request is merged.
 Keep GitHub Pages active while reviewing the first `pages.dev` deployment.
 Check Home, About, Services, Portfolio, Contact, mobile layouts, role filters,
 the featured carousel, and contact form delivery before switching DNS.
@@ -51,8 +56,8 @@ a preview URL alone does not change which branch the CMS writes to.
 
 - Open `/admin/` and choose **Login with Turbo**.
 - Choose **Website text** for the homepage, About, Services, or shared Contact section.
-  Enter ordinary text; HTML is not needed. Homepage service summaries and Services
-  page descriptions are separate fields.
+  Enter ordinary text; HTML is not needed. Editing the three service descriptions
+  updates both the homepage and Services page.
 - Choose **Portfolio → Portfolio videos** to edit the video list. Add an entry,
   paste a YouTube link, enter a title and description, choose your roles, and select
   **Horizontal (16:9)** or **Vertical / Shorts (9:16)**.

@@ -20,7 +20,7 @@ collections:
             label_singular: Video
             name: videos
             widget: list
-            summary: "{{fields.title}} · {{fields.orientation}}"
+            summary: "{{fields.title}}"
             collapsed: true
             hint: Add a video or drag entries to reorder. The first three also appear in Latest Projects.
             fields:
@@ -30,19 +30,10 @@ collections:
               - label: YouTube link
                 name: youtube_url
                 widget: string
-                hint: Paste a full YouTube, youtu.be, or YouTube Shorts link. Choose the video orientation below.
+                hint: Paste a full YouTube, youtu.be, or YouTube Shorts link.
                 pattern:
                   - ^https://(?:(?:(?:www\.|m\.)?youtube\.com)/(?:watch\?(?:[^#\s]*&)?v=[A-Za-z0-9_-]{11}(?:[&#][^\s]*)?|(?:shorts|embed|live)/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)|youtu\.be/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)$
                   - Paste a valid https:// YouTube video link (not a channel or playlist).
-              - label: Video shape
-                name: orientation
-                widget: select
-                default: horizontal
-                options:
-                  - label: Horizontal (16:9)
-                    value: horizontal
-                  - label: Vertical / Shorts (9:16)
-                    value: vertical
               - label: Description
                 name: blurb
                 widget: text
@@ -89,16 +80,10 @@ collections:
           - label: Top showreel YouTube link
             name: reel_url
             widget: string
-            hint: Paste a full YouTube, youtu.be, or YouTube Shorts link. Choose the video orientation below.
+            hint: Paste a full YouTube, youtu.be, or YouTube Shorts link.
             pattern:
               - ^https://(?:(?:(?:www\.|m\.)?youtube\.com)/(?:watch\?(?:[^#\s]*&)?v=[A-Za-z0-9_-]{11}(?:[&#][^\s]*)?|(?:shorts|embed|live)/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)|youtu\.be/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)$
               - Paste a valid https:// YouTube video link (not a channel or playlist).
-          - label: Showreel shape
-            name: reel_orientation
-            widget: select
-            options:
-              - horizontal
-              - vertical
           - label: Latest projects heading
             name: latest_heading
             widget: string

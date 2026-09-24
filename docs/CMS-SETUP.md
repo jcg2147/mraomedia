@@ -59,8 +59,9 @@ a preview URL alone does not change which branch the CMS writes to.
   Enter ordinary text; HTML is not needed. Editing the three service descriptions
   updates both the homepage and Services page.
 - Choose **Portfolio → Portfolio videos** to edit the video list. Add an entry,
-  paste a YouTube link, enter a title and description, choose your roles, and select
-  **Horizontal (16:9)** or **Vertical / Shorts (9:16)**.
+  paste a YouTube link, enter a title and description, and choose your roles.
+  All videos use the same horizontal (16:9) frame, including Shorts. Use the
+  YouTube fullscreen button to view a video in its original shape.
 - Drag entries to reorder them. The first three appear in Latest Projects. Turn on
   **Featured** for videos you want in the portfolio carousel.
 - Optional start/end times are in seconds. Parameters in pasted share links are
@@ -83,7 +84,7 @@ bundle exec jekyll build --trace
 bundle exec jekyll serve
 ```
 
-The tests cover link formats, portrait/landscape markup, featured selection,
+The tests cover link formats, consistent video frames, featured selection,
 text escaping, editable data fields, existing entries, and complete page rendering.
 The test dependency group is optional, so Cloudflare can build without installing
 Minitest. CI separately checks Cloudflare's production-only dependency installation.

@@ -24,11 +24,11 @@ permalink: /portfolio
     <div id="header-section"></div>
 
     {% capture reel_id %}{% include youtube-id.html url=site.data.portfolio_settings.reel_url %}{% endcapture %}
-    <section id="sabrina-reel"{% if site.data.portfolio_settings.reel_orientation == 'vertical' %} class="reel-vertical"{% endif %}>
+    <section id="sabrina-reel">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 sabrina-reel-frame">
-                    <div class="embed-responsive {% if site.data.portfolio_settings.reel_orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+                    <div class="embed-responsive embed-responsive-16by9">
                         <iframe
                             id="sabrina-reel-player"
                             class="embed-responsive-item"
@@ -77,7 +77,7 @@ permalink: /portfolio
                         <div class="carousel-item{% if forloop.first %} active{% endif %}">
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
-                                    <div class="embed-responsive {% if video_data.orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+                                    <div class="embed-responsive embed-responsive-16by9">
                                         {% if embed_url != '' %}
                                             <iframe
                                                 class="embed-responsive-item"

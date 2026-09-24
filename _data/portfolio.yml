@@ -8,7 +8,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: vertical
     featured: true
   - title: AI Adoption Day Highlight Reel
     youtube_url: https://www.youtube.com/watch?v=9GxGGpIyito
@@ -19,7 +18,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: true
   - title: Maternal Health Spotlight
     youtube_url: https://www.youtube.com/watch?v=yQYYjg579ro
@@ -31,7 +29,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: true
   - title: Mother's Day Tribute Video
     youtube_url: https://www.youtube.com/watch?v=tvabgE6Tmhw
@@ -41,7 +38,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Community in Crisis - Recovery Highlight
     youtube_url: https://www.youtube.com/watch?v=0Lno1gnYhyg
@@ -53,7 +49,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Father's Day Tribute Video
     youtube_url: https://www.youtube.com/watch?v=1_74XUIT_F0
@@ -63,7 +58,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Day in the Life | Founder of Global AI Adoption Day
     youtube_url: https://www.youtube.com/watch?v=8GbLipsiiCc
@@ -75,7 +69,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Presenting FBCLG's New Youth Center
     youtube_url: https://www.youtube.com/watch?v=zAWDBeGl3T0
@@ -86,7 +79,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Broadway and Beyond
     youtube_url: https://www.youtube.com/watch?v=NLRUTUusD00
@@ -97,7 +89,6 @@ videos:
       and Media 2019 Awards."
     roles:
       - editor
-    orientation: horizontal
     featured: false
   - title: Learning from Video Games - Documentary
     youtube_url: https://www.youtube.com/watch?v=aq2vC4JkoJE
@@ -108,7 +99,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Through the Lens of an Immigrant Advocate - Documentary
     youtube_url: https://www.youtube.com/watch?v=evsLPReGy-A
@@ -120,7 +110,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: Christmas Spectacular BTS
     youtube_url: https://www.youtube.com/watch?v=k7KujpYUD5A
@@ -131,7 +120,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: WWE-Themed Event Promotion
     youtube_url: https://www.youtube.com/watch?v=1KIjmMXemHc
@@ -142,7 +130,6 @@ videos:
       - producer
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: The Marriage of Figaro (William Paterson Production) - Trailer
     youtube_url: https://www.youtube.com/watch?v=hmRwDY2yYt8
@@ -152,7 +139,6 @@ videos:
     roles:
       - editor
       - videographer
-    orientation: horizontal
     featured: false
   - title: We Don't Talk About Bruno Cover - Music Video
     youtube_url: https://www.youtube.com/watch?v=PNwJFblpltY
@@ -161,7 +147,6 @@ videos:
       character-inspired lighting, reflecting the energy and color of Encanto.
     roles:
       - videographer
-    orientation: horizontal
     featured: false
   - title: Telepatia Cover - Music Video
     youtube_url: https://www.youtube.com/watch?v=a7ubkmP84z8
@@ -170,7 +155,6 @@ videos:
       lighting, backdrop design, and staging aligned with the song’s atmosphere.
     roles:
       - videographer
-    orientation: horizontal
     featured: false
   - title: Void Patrol 1 - Live Performance
     youtube_url: https://www.youtube.com/watch?v=dar6VJ_eDCE
@@ -179,5 +163,4 @@ videos:
       Patrol.
     roles:
       - videographer
-    orientation: horizontal
     featured: false

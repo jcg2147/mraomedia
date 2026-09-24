@@ -46,14 +46,16 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_video_shapes_and_escaped_text
+  def test_consistent_video_frames_and_escaped_text
     video = {
       "title" => '<script>alert("title")</script>', "blurb" => "Text <b>here</b>",
       "youtube_url" => "https://youtube.com/shorts/njiKrqDk_0E",
       "roles" => ["editor", "videographer"], "orientation" => "vertical"
     }
     output = render('{% include portfolio-video.html video=video index=0 %}', { "video" => video })
-    assert_includes output, "video-vertical"
+    assert_includes output, "embed-responsive-16by9"
+    refute_includes output, "video-vertical"
+    assert_includes output, "allowfullscreen"
     assert_includes output, "editor videographer"
     assert_includes output, "&lt;script&gt;"
     refute_includes output, "<script>"
@@ -100,7 +102,9 @@ class SiteTest < Minitest::Test
     portfolio = @site.pages.find { |page| page.name == "portfolio.html" }.output
     contact = @site.pages.find { |page| page.name == "contact-form2.html" }.output
     assert_includes homepage, "Changed heading &lt;test&gt;"
-    assert_includes homepage, "video-vertical"
+    assert_includes homepage, "embed-responsive-16by9"
+    refute_includes homepage, "video-vertical"
+    refute_includes portfolio, "video-vertical"
     assert_equal 2, portfolio.scan(/class="col-md-4 mb-4 video-card/).length
     assert_equal 1, portfolio.scan(/class="carousel-item/).length
     assert_includes contact, "mailto:#{@site.data['contact']['email']}"

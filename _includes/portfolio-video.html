@@ -22,7 +22,7 @@
 <div class="col-md-4 mb-4 video-card{% if role_classes != '' %} {{ role_classes }}{% endif %}">
   <article class="video-card-surface">
     <div class="video-card-frame">
-      <div class="embed-responsive {% if video_data.orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+      <div class="embed-responsive embed-responsive-16by9">
         {% if embed_url != '' %}
           <iframe
             class="embed-responsive-item"

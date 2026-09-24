@@ -2437,32 +2437,3 @@ form div div input.form-control {
     text-align: center;
   }
 }
-
-/* CMS-selected portrait videos keep their native shape in every placement. */
-.embed-responsive.video-vertical {
-    width: 100%;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    aspect-ratio: 9 / 16;
-}
-.embed-responsive.video-vertical::before {
-    display: none;
-}
-#latest-projects .embedded-videos {
-    align-items: flex-start;
-}
-#latest-projects .latest-video.video-vertical {
-    max-width: 240px;
-}
-body.portfolio-page #sabrina-reel.reel-vertical .embed-responsive {
-    aspect-ratio: 9 / 16;
-    width: min(100%, 320px);
-    height: auto;
-    padding-bottom: 0;
-    margin: 0 auto;
-}
-body.portfolio-page.portfolio-immersive #sabrina-reel.reel-vertical .embed-responsive {
-    width: min(100%, 48vh);
-    height: auto;
-}

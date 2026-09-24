@@ -9,7 +9,7 @@
       {% for video in videos %}
         {% capture embed_src %}{% include youtube-embed-url.html video=video %}{% endcapture %}
         {% if embed_src != '' %}
-          <div class="latest-video embed-responsive {% if video.orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+          <div class="latest-video embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="{{ embed_src | escape }}" title="{{ video.title | escape }}"
               loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen frameborder="0"></iframe>

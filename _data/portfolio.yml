@@ -1,146 +1,182 @@
 videos:
-  - title: "Cafe Arirang Introduction Reel"
+  - title: Cafe Arirang Introduction Reel
     youtube_url: https://www.youtube.com/watch?v=njiKrqDk_0E
-    blurb: "I filmed and edited this introduction reel for Cafe Arirang's grand opening, to highlight its menu items and invite people to check it out."
+    blurb: I filmed and edited this introduction reel for Cafe Arirang's grand
+      opening, to highlight its menu items and invite people to check it out.
+      TEST
     roles:
       - producer
       - editor
       - videographer
-    orientation: horizontal
+    orientation: vertical
     featured: true
-  - title: "AI Adoption Day Highlight Reel"
+  - title: AI Adoption Day Highlight Reel
     youtube_url: https://www.youtube.com/watch?v=9GxGGpIyito
-    blurb: "Highlight reel I filmed and edited from Global AI Adoption Day, featuring keynote speakers, attendee interactions, networking moments, and the energy of a day dedicated to advancing AI innovation and adoption."
+    blurb: Highlight reel I filmed and edited from Global AI Adoption Day, featuring
+      keynote speakers, attendee interactions, networking moments, and the
+      energy of a day dedicated to advancing AI innovation and adoption.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: true
-  - title: "Maternal Health Spotlight"
+  - title: Maternal Health Spotlight
     youtube_url: https://www.youtube.com/watch?v=yQYYjg579ro
-    blurb: "Created and edited a testimonial video for Maternal Health Awareness Month showcasing a member of the First Baptist Church of Lincoln Gardens as she shared her experience with pregnancy loss, grief, faith, and healing."
+    blurb: Created and edited a testimonial video for Maternal Health Awareness
+      Month showcasing a member of the First Baptist Church of Lincoln Gardens
+      as she shared her experience with pregnancy loss, grief, faith, and
+      healing.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: true
-  - title: "Mother's Day Tribute Video"
+  - title: Mother's Day Tribute Video
     youtube_url: https://www.youtube.com/watch?v=tvabgE6Tmhw
-    blurb: "Created in celebration of Mother’s Day, this piece features mothers of the senior community at First Baptist Church of Lincoln Gardens."
+    blurb: Created in celebration of Mother’s Day, this piece features mothers of
+      the senior community at First Baptist Church of Lincoln Gardens.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Community in Crisis - Recovery Highlight"
+  - title: Community in Crisis - Recovery Highlight
     youtube_url: https://www.youtube.com/watch?v=0Lno1gnYhyg
-    blurb: "Created in collaboration with Community in Crisis, this video raises awareness of available support groups while sharing a personal testimony from a recovery specialist to inform and support neighboring communities in Somerset County."
+    blurb: Created in collaboration with Community in Crisis, this video raises
+      awareness of available support groups while sharing a personal testimony
+      from a recovery specialist to inform and support neighboring communities
+      in Somerset County.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Father's Day Tribute Video"
+  - title: Father's Day Tribute Video
     youtube_url: https://www.youtube.com/watch?v=1_74XUIT_F0
-    blurb: "Produced through a series of interviews between fathers and their children, capturing personal stories in celebration of Father’s Day."
+    blurb: Produced through a series of interviews between fathers and their
+      children, capturing personal stories in celebration of Father’s Day.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Day in the Life | Founder of Global AI Adoption Day"
+  - title: Day in the Life | Founder of Global AI Adoption Day
     youtube_url: https://www.youtube.com/watch?v=8GbLipsiiCc
-    blurb: "Followed the founder of Global AI Adoption Day behind the scenes, capturing a day in her life as she prepared for the event, spoke on a panel, connected with a global online audience, and engaged with attendees in person."
+    blurb: Followed the founder of Global AI Adoption Day behind the scenes,
+      capturing a day in her life as she prepared for the event, spoke on a
+      panel, connected with a global online audience, and engaged with attendees
+      in person.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Presenting FBCLG's New Youth Center"
+  - title: Presenting FBCLG's New Youth Center
     youtube_url: https://www.youtube.com/watch?v=zAWDBeGl3T0
-    blurb: "Produced to introduce a newly renovated Youth Center for a church congregation, highlighting both the transformation of the space and the process behind it."
+    blurb: Produced to introduce a newly renovated Youth Center for a church
+      congregation, highlighting both the transformation of the space and the
+      process behind it.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Broadway and Beyond"
+  - title: Broadway and Beyond
     youtube_url: https://www.youtube.com/watch?v=NLRUTUusD00
     start_seconds: 50
     end_seconds: 382
-    blurb: "Edited for Montclair State University’s Carpe Diem, this piece went on to win Best Journalism Project: All Media at the School of Communication and Media 2019 Awards."
+    blurb: "Edited for Montclair State University’s Carpe Diem, this piece went on
+      to win Best Journalism Project: All Media at the School of Communication
+      and Media 2019 Awards."
     roles:
       - editor
     orientation: horizontal
     featured: false
-  - title: "Learning from Video Games - Documentary"
+  - title: Learning from Video Games - Documentary
     youtube_url: https://www.youtube.com/watch?v=aq2vC4JkoJE
-    blurb: "A 30-minute program exploring how video games can be used to teach a wide range of skills and subjects, highlighting both classroom applications and the educational value of games not specifically designed for learning."
+    blurb: A 30-minute program exploring how video games can be used to teach a wide
+      range of skills and subjects, highlighting both classroom applications and
+      the educational value of games not specifically designed for learning.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Through the Lens of an Immigrant Advocate - Documentary"
+  - title: Through the Lens of an Immigrant Advocate - Documentary
     youtube_url: https://www.youtube.com/watch?v=evsLPReGy-A
-    blurb: "Produced as a semester-long project at Montclair State University, this documentary offers insight into how the U.S. immigration system impacts individuals at the border and within the country, with a focus on three immigrant advocates."
+    blurb: Produced as a semester-long project at Montclair State University, this
+      documentary offers insight into how the U.S. immigration system impacts
+      individuals at the border and within the country, with a focus on three
+      immigrant advocates.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Christmas Spectacular BTS"
+  - title: Christmas Spectacular BTS
     youtube_url: https://www.youtube.com/watch?v=k7KujpYUD5A
-    blurb: "Produced to showcase the rehearsal process and storytelling behind a Christmas performance brought together by multiple ministries at First Baptist Church of Lincoln Gardens."
+    blurb: Produced to showcase the rehearsal process and storytelling behind a
+      Christmas performance brought together by multiple ministries at First
+      Baptist Church of Lincoln Gardens.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "WWE-Themed Event Promotion"
+  - title: WWE-Themed Event Promotion
     youtube_url: https://www.youtube.com/watch?v=1KIjmMXemHc
-    blurb: "Recorded and edited to promote a client’s themed birthday event, this piece builds excitement through a WWE-inspired, behind-the-scenes interview and promo style."
+    blurb: Recorded and edited to promote a client’s themed birthday event, this
+      piece builds excitement through a WWE-inspired, behind-the-scenes
+      interview and promo style.
     roles:
       - producer
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "The Marriage of Figaro (William Paterson Production) - Trailer"
+  - title: The Marriage of Figaro (William Paterson Production) - Trailer
     youtube_url: https://www.youtube.com/watch?v=hmRwDY2yYt8
-    blurb: "Shot and edited rehearsal footage for the Vocal Department at William Paterson University’s production of Mozart’s The Marriage of Figaro, capturing both performance and preparation."
+    blurb: Shot and edited rehearsal footage for the Vocal Department at William
+      Paterson University’s production of Mozart’s The Marriage of Figaro,
+      capturing both performance and preparation.
     roles:
       - editor
       - videographer
     orientation: horizontal
     featured: false
-  - title: "We Don't Talk About Bruno Cover - Music Video"
+  - title: We Don't Talk About Bruno Cover - Music Video
     youtube_url: https://www.youtube.com/watch?v=PNwJFblpltY
-    blurb: "A collaborative project featuring multiple musicians and vocalists, this piece captures the recording process with dynamic coverage and character-inspired lighting, reflecting the energy and color of Encanto."
+    blurb: A collaborative project featuring multiple musicians and vocalists, this
+      piece captures the recording process with dynamic coverage and
+      character-inspired lighting, reflecting the energy and color of Encanto.
     roles:
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Telepatia Cover - Music Video"
+  - title: Telepatia Cover - Music Video
     youtube_url: https://www.youtube.com/watch?v=a7ubkmP84z8
-    blurb: "Produced in collaboration with New Jersey-based artist Pam Urgiles, this cover video brings a moody visual tone to life through intentional lighting, backdrop design, and staging aligned with the song’s atmosphere."
+    blurb: Produced in collaboration with New Jersey-based artist Pam Urgiles, this
+      cover video brings a moody visual tone to life through intentional
+      lighting, backdrop design, and staging aligned with the song’s atmosphere.
     roles:
       - videographer
     orientation: horizontal
     featured: false
-  - title: "Void Patrol 1 - Live Performance"
+  - title: Void Patrol 1 - Live Performance
     youtube_url: https://www.youtube.com/watch?v=dar6VJ_eDCE
-    blurb: "Filmed in New York City, this live performance features a multi-camera setup designed to capture the energy and musicianship of jazz group Void Patrol."
+    blurb: Filmed in New York City, this live performance features a multi-camera
+      setup designed to capture the energy and musicianship of jazz group Void
+      Patrol.
     roles:
       - videographer
     orientation: horizontal

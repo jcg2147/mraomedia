@@ -9,7 +9,6 @@ exclude:
   - README.md
   - docs
   - tests
-  - scripts
   - package.json
   - package-lock.json
   - node_modules

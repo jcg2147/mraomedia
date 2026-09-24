@@ -25,6 +25,8 @@ jobs:
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+      - name: Verify exported public assets
+        run: ruby tests/check_build_output.rb
       - name: Keep the generated site for review
         uses: actions/upload-artifact@v4
         with:
@@ -47,3 +49,5 @@ jobs:
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+      - name: Verify exported public assets
+        run: ruby tests/check_build_output.rb

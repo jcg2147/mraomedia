@@ -180,11 +180,11 @@ collections:
           - label: Services introduction
             name: paragraph_1
             widget: text
-          - label: Video editing title
+          - label: Video production title
             name: heading_2
             widget: string
             hint: Shown on both the homepage and Services page.
-          - label: Video editing description
+          - label: Video production description
             name: paragraph_2
             widget: text
             hint: Shown on both the homepage and Services page.
@@ -196,25 +196,55 @@ collections:
             name: paragraph_3
             widget: text
             hint: Shown on both the homepage and Services page.
-          - label: Drone videography title
+          - label: Promotional & brand content title
             name: heading_4
             widget: string
             hint: Shown on both the homepage and Services page.
-          - label: Drone videography description
+          - label: Promotional & brand content description
             name: paragraph_4
             widget: text
             hint: Shown on both the homepage and Services page.
-          - label: Contact invitation heading
+          - label: Social media content title
             name: heading_5
             widget: string
-          - label: Contact invitation text
+          - label: Social media content description
             name: paragraph_5
             widget: text
-          - label: Why book us heading
+          - label: Photography title
             name: heading_6
             widget: string
-          - label: Why book us introduction
+          - label: Photography description
             name: paragraph_6
+            widget: text
+          - label: Video editing & post-production title
+            name: heading_7
+            widget: string
+          - label: Video editing & post-production description
+            name: paragraph_7
+            widget: text
+          - label: Drone videography title
+            name: heading_8
+            widget: string
+          - label: Drone videography description
+            name: paragraph_8
+            widget: text
+          - label: Website design title
+            name: heading_9
+            widget: string
+          - label: Website design description
+            name: paragraph_9
+            widget: text
+          - label: Contact invitation heading
+            name: heading_10
+            widget: string
+          - label: Contact invitation text
+            name: paragraph_10
+            widget: text
+          - label: Why book us heading
+            name: heading_11
+            widget: string
+          - label: Why book us introduction
+            name: paragraph_11
             widget: text
           - label: Experience highlight
             name: point_1

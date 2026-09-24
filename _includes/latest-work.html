@@ -1,46 +1,25 @@
 <section id="latest-projects">
   <!-- Left section with YouTube videos and text -->
   <div class="left-section">
-    <h2>Our Latest Projects</h2>
+    <h2>{{ site.data.portfolio_settings.latest_heading | escape }}</h2>
 
     <!-- Embedded YouTube videos -->
     <div class="embedded-videos">
-      {% assign videos = site.data.portfolio | slice: 0, 3 %}
+      {% assign videos = site.data.portfolio.videos | slice: 0, 3 %}
       {% for video in videos %}
-        {% if video.youtube_id %}
-          {% assign embed_src = "https://www.youtube.com/embed/" | append: video.youtube_id %}
-          {% if video.youtube_query %}
-            {% assign embed_src = embed_src | append: "?" | append: video.youtube_query %}
-          {% endif %}
-<!--          <iframe src="{{ embed_src }}" frameborder="0" allowfullscreen></iframe> -->
-          <div class="latest-video embed-responsive embed-responsive-16by9">
-            <iframe
-              class="embed-responsive-item"
-              src="{{ embed_src }}"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              frameborder="0"
-            ></iframe>
-          </div>
-        {% elsif video.embed_url %}
-<!--          <iframe src="{{ video.embed_url }}" frameborder="0" allowfullscreen></iframe> -->
-          <div class="latest-video embed-responsive embed-responsive-16by9">
-            <iframe
-              class="embed-responsive-item"
-              src="{{ video.embed_url }}"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              frameborder="0"
-            ></iframe>
+        {% capture embed_src %}{% include youtube-embed-url.html video=video %}{% endcapture %}
+        {% if embed_src != '' %}
+          <div class="latest-video embed-responsive {% if video.orientation == 'vertical' %}video-vertical{% else %}embed-responsive-16by9{% endif %}">
+            <iframe class="embed-responsive-item" src="{{ embed_src | escape }}" title="{{ video.title | escape }}"
+              loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen frameborder="0"></iframe>
           </div>
         {% endif %}
       {% endfor %}
     </div>
 
     <p>
-      View our full portfolio <a href="portfolio.html" style="color: white; text-decoration: underline;">here</a>
+      {{ site.data.portfolio_settings.latest_text | escape }} <a href="portfolio.html" style="color: white; text-decoration: underline;">{{ site.data.portfolio_settings.latest_link_text | escape }}</a>
     </p>
   </div>
 

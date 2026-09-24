@@ -26,7 +26,7 @@ layout: null
         <!-- Header Section -->
         <div id="header-section"></div>
         <div class="hero-content mt-auto mb-4 montserrat-700">
-            <p class="hero-title">Capture the Moments that Matter</p>
+            <p class="hero-title">{{ site.data.index.paragraph_1 | escape | newline_to_br }}</p>
         </div>
     </section>
 
@@ -34,10 +34,10 @@ layout: null
     <section id="about" class="py-5">
         <div class="container d-flex align-items-center">
             <div class="about-text-index w-50 pr-4">
-                <h1>Welcome to Mrao Media!</h1>
+                <h1>{{ site.data.index.heading_1 | escape | newline_to_br }}</h1>
                 <div class="about-copy">
-                <p>At Mrao Media, we bring your vision to life with a comprehensive approach—from thoughtful pre-production planning and dynamic live event filming to expert editing that transforms raw footage into a captivating narrative. Named in honor of our beloved cats, our company mixes technical expertise with a playful spirit.</p>
-                <p>We’re a husband and wife duo where Sabrina brings the technical know-how in all aspects of video production, while Juan adds his web design and drone videography expertise. We handle projects ranging from fun, quirky marketing materials to polished, cinematic storytelling, and we look forward to working with you to capture every moment with creativity and precision.</p>
+                <p>{{ site.data.index.paragraph_2 | escape | newline_to_br }}</p>
+                <p>{{ site.data.index.paragraph_3 | escape | newline_to_br }}</p>
                 </div>
             </div>
             <div class="slideshow-container-index">
@@ -60,22 +60,22 @@ layout: null
 
     <!-- Services Seciton -->
     <div class="container">
-        <h1 class="montserrat-700 section-header">We can help you with</h1>
+        <h1 class="montserrat-700 section-header">{{ site.data.index.heading_2 | escape | newline_to_br }}</h1>
         <div class="services">
             <div class="service-item">
                 <img src="photos/video-editting2.png" alt="Editing">
-                <h3 class="montserrat-600">Video Editing</h3>
-                <p>We specialize in professional video editing, transforming raw footage into polished, engaging content with precise cuts, color correction, sound editing, and visual effects.</p>
+                <h3 class="montserrat-600">{{ site.data.services.heading_2 | escape | newline_to_br }}</h3>
+                <p>{{ site.data.services.paragraph_2 | escape | newline_to_br }}</p>
             </div>
             <div class="service-item">
                 <img src="photos/liveevent.JPG" alt="Event Videography">
-                <h3 class="montserrat-600">Event Videography</h3>
-                <p>We capture the essence of your events, whether it’s a wedding, conference, or live performance, creating stunning highlight reels or full event documentation to preserve every memorable moment.</p>
+                <h3 class="montserrat-600">{{ site.data.services.heading_3 | escape | newline_to_br }}</h3>
+                <p>{{ site.data.services.paragraph_3 | escape | newline_to_br }}</p>
             </div>
             <div class="service-item">
                 <img src="photos/why-2.jpg" alt="Drone Videography">
-                <h3 class="montserrat-600">Drone Videography</h3>
-                <p>With expert drone videography, we offer breathtaking aerial footage for real estate, landscapes, events, or cinematic shots, providing a unique perspective that elevates your video content.</p>
+                <h3 class="montserrat-600">{{ site.data.services.heading_4 | escape | newline_to_br }}</h3>
+                <p>{{ site.data.services.paragraph_4 | escape | newline_to_br }}</p>
             </div>
         </div>
     </div>

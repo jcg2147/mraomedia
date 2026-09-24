@@ -1,0 +1,267 @@
+backend:
+  name: turbo-github
+  turbo_site_id: 2b2fca46-b1c4-48f3-b270-f5141f968e46
+  branch: main
+site_url: https://mraomedia.com
+display_url: https://mraomedia.com
+media_folder: photos/uploads
+public_folder: /photos/uploads
+editor:
+  preview: false
+collections:
+  - name: portfolio
+    label: Portfolio
+    files:
+      - label: Portfolio videos
+        name: videos
+        file: _data/portfolio.yml
+        fields:
+          - label: Videos
+            label_singular: Video
+            name: videos
+            widget: list
+            summary: "{{fields.title}} · {{fields.orientation}}"
+            collapsed: true
+            hint: Add a video or drag entries to reorder. The first three also appear in Latest Projects.
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: YouTube link
+                name: youtube_url
+                widget: string
+                hint: Paste a full YouTube, youtu.be, or YouTube Shorts link. Choose the video orientation below.
+                pattern:
+                  - ^https://(?:(?:(?:www\.|m\.)?youtube\.com)/(?:watch\?(?:[^#\s]*&)?v=[A-Za-z0-9_-]{11}(?:[&#][^\s]*)?|(?:shorts|embed|live)/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)|youtu\.be/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)$
+                  - Paste a valid https:// YouTube video link (not a channel or playlist).
+              - label: Video shape
+                name: orientation
+                widget: select
+                default: horizontal
+                options:
+                  - label: Horizontal (16:9)
+                    value: horizontal
+                  - label: Vertical / Shorts (9:16)
+                    value: vertical
+              - label: Description
+                name: blurb
+                widget: text
+              - label: Roles
+                name: roles
+                widget: select
+                multiple: true
+                min: 1
+                options:
+                  - producer
+                  - editor
+                  - videographer
+              - label: Featured on the portfolio page
+                name: featured
+                widget: boolean
+                default: false
+                hint: Featured videos appear in the carousel, in the same order as this list.
+              - label: Start at (seconds)
+                name: start_seconds
+                widget: number
+                value_type: int
+                min: 0
+                default: 0
+                required: false
+                hint: Optional. Leave at 0 to play from the beginning; timestamp parameters in pasted links are
+                  ignored.
+              - label: End at (seconds)
+                name: end_seconds
+                widget: number
+                value_type: int
+                min: 1
+                required: false
+                hint: Optional. Must be after the start time.
+      - label: Portfolio headings and showreel
+        name: portfolio_settings
+        file: _data/portfolio_settings.json
+        fields:
+          - label: Portfolio heading
+            name: title
+            widget: string
+          - label: Featured heading
+            name: featured_heading
+            widget: string
+          - label: Top showreel YouTube link
+            name: reel_url
+            widget: string
+            hint: Paste a full YouTube, youtu.be, or YouTube Shorts link. Choose the video orientation below.
+            pattern:
+              - ^https://(?:(?:(?:www\.|m\.)?youtube\.com)/(?:watch\?(?:[^#\s]*&)?v=[A-Za-z0-9_-]{11}(?:[&#][^\s]*)?|(?:shorts|embed|live)/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)|youtu\.be/[A-Za-z0-9_-]{11}(?:[/?#][^\s]*)?)$
+              - Paste a valid https:// YouTube video link (not a channel or playlist).
+          - label: Showreel shape
+            name: reel_orientation
+            widget: select
+            options:
+              - horizontal
+              - vertical
+          - label: Latest projects heading
+            name: latest_heading
+            widget: string
+          - label: Latest projects footer text
+            name: latest_text
+            widget: string
+          - label: Portfolio link text
+            name: latest_link_text
+            widget: string
+  - name: pages
+    label: Website text
+    files:
+      - label: Homepage
+        name: index
+        file: _data/index.json
+        fields:
+          - label: Hero tagline
+            name: paragraph_1
+            widget: text
+          - label: Welcome heading
+            name: heading_1
+            widget: string
+          - label: Welcome — first paragraph
+            name: paragraph_2
+            widget: text
+          - label: Welcome — second paragraph
+            name: paragraph_3
+            widget: text
+          - label: Services section heading
+            name: heading_2
+            widget: string
+      - label: About Sabrina
+        name: about
+        file: _data/about.json
+        fields:
+          - label: Bio heading
+            name: heading_1
+            widget: string
+          - label: Bio — first paragraph
+            name: paragraph_1
+            widget: text
+          - label: Bio — second paragraph
+            name: paragraph_2
+            widget: text
+          - label: Featured work heading
+            name: heading_2
+            widget: string
+          - label: Sand Dunes photo caption
+            name: caption_1
+            widget: string
+          - label: Telluride photo caption
+            name: caption_2
+            widget: string
+          - label: Cover video photo caption
+            name: caption_3
+            widget: string
+          - label: Filming photo caption
+            name: caption_4
+            widget: string
+          - label: Thank-you message
+            name: heading_3
+            widget: string
+          - label: Working together heading
+            name: heading_4
+            widget: string
+          - label: Working together description
+            name: paragraph_3
+            widget: text
+          - label: Planning heading
+            name: heading_5
+            widget: string
+          - label: Planning description
+            name: paragraph_4
+            widget: text
+          - label: Event coverage heading
+            name: heading_6
+            widget: string
+          - label: Event coverage description
+            name: paragraph_5
+            widget: text
+          - label: Editing heading
+            name: heading_7
+            widget: string
+          - label: Editing description
+            name: paragraph_6
+            widget: text
+      - label: Services
+        name: services
+        file: _data/services.json
+        fields:
+          - label: Page heading
+            name: heading_1
+            widget: string
+          - label: Services introduction
+            name: paragraph_1
+            widget: text
+          - label: Video editing title
+            name: heading_2
+            widget: string
+            hint: Shown on both the homepage and Services page.
+          - label: Video editing description
+            name: paragraph_2
+            widget: text
+            hint: Shown on both the homepage and Services page.
+          - label: Event videography title
+            name: heading_3
+            widget: string
+            hint: Shown on both the homepage and Services page.
+          - label: Event videography description
+            name: paragraph_3
+            widget: text
+            hint: Shown on both the homepage and Services page.
+          - label: Drone videography title
+            name: heading_4
+            widget: string
+            hint: Shown on both the homepage and Services page.
+          - label: Drone videography description
+            name: paragraph_4
+            widget: text
+            hint: Shown on both the homepage and Services page.
+          - label: Contact invitation heading
+            name: heading_5
+            widget: string
+          - label: Contact invitation text
+            name: paragraph_5
+            widget: text
+          - label: Why book us heading
+            name: heading_6
+            widget: string
+          - label: Why book us introduction
+            name: paragraph_6
+            widget: text
+          - label: Experience highlight
+            name: point_1
+            widget: string
+          - label: Credibility highlight
+            name: point_2
+            widget: string
+          - label: Passion highlight
+            name: point_3
+            widget: string
+          - label: Project variety highlight
+            name: point_4
+            widget: string
+      - label: Contact section (all pages)
+        name: contact
+        file: _data/contact.json
+        fields:
+          - label: Contact heading
+            name: heading
+            widget: string
+          - label: Contact introduction
+            name: blurb
+            widget: text
+          - label: Service area
+            name: location
+            widget: string
+          - label: Phone display
+            name: phone
+            widget: string
+          - label: Phone number for calling
+            name: phone_link
+            widget: string
+          - label: Contact email
+            name: email
+            widget: string

@@ -1,0 +1,18 @@
+{%- assign youtube_id = '' -%}
+{%- assign youtube_link = include.url | strip -%}
+{%- assign youtube_host = youtube_link | split: '/' | slice: 2 | first -%}
+{%- assign youtube_path = youtube_link | split: '/' | slice: 3 | first | split: '?' | first | split: '#' | first -%}
+{%- if youtube_host == 'youtu.be' -%}
+  {%- assign youtube_id = youtube_path -%}
+{%- elsif youtube_host == 'youtube.com' or youtube_host == 'www.youtube.com' or youtube_host == 'm.youtube.com' -%}
+  {%- if youtube_path == 'watch' -%}
+    {%- assign youtube_params = youtube_link | split: '?' | last | split: '#' | first | split: '&' -%}
+    {%- for param in youtube_params -%}
+      {%- assign pair = param | split: '=' -%}
+      {%- if pair.first == 'v' -%}{%- assign youtube_id = pair.last -%}{%- endif -%}
+    {%- endfor -%}
+  {%- elsif youtube_path == 'shorts' or youtube_path == 'embed' or youtube_path == 'live' -%}
+    {%- assign youtube_id = youtube_link | split: '/' | slice: 4 | first | split: '?' | first | split: '#' | first -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if youtube_id.size == 11 -%}{{- youtube_id | escape -}}{%- endif -%}

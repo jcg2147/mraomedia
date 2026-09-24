@@ -1,0 +1,8 @@
+{%- capture youtube_video_id -%}{%- include youtube-id.html url=include.video.youtube_url -%}{%- endcapture -%}
+{%- assign start_seconds = include.video.start_seconds | default: 0 | plus: 0 -%}
+{%- assign end_seconds = include.video.end_seconds | default: 0 | plus: 0 -%}
+{%- if youtube_video_id != '' -%}
+https://www.youtube.com/embed/{{ youtube_video_id }}?enablejsapi=1&playsinline=1&rel=0
+{%- if start_seconds > 0 -%}&start={{ start_seconds }}{%- endif -%}
+{%- if end_seconds > start_seconds -%}&end={{ end_seconds }}{%- endif -%}
+{%- endif -%}

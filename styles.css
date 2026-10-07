@@ -860,6 +860,16 @@ header .hamburger .bar {
     width: 100%;
 }
 
+.home-services .service-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Match photography-image.jpg while preserving each image's proportions. */
+    aspect-ratio: 4618 / 3464;
+    object-fit: cover;
+    object-position: center;
+}
+
 .all-services-link {
     grid-column: 1 / -1;
     justify-self: end;

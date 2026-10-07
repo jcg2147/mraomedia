@@ -964,6 +964,10 @@ header .hamburger .bar {
     object-position: center;
 }
 
+.service-box img.service-image-left {
+    object-position: left center;
+}
+
 .service-box h3 {
     font-size: 1.5em;
     margin-top: 20px;

@@ -955,8 +955,13 @@ header .hamburger .bar {
 }
 
 .service-box img {
+    display: block;
     width: 100%;
     height: auto;
+    /* Match the event videography photo without stretching other images. */
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
 }
 
 .service-box h3 {

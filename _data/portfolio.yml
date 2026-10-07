@@ -1,9 +1,47 @@
 videos:
+  - featured: false
+    start_seconds: 0
+    title: Cafe Arirang Yubuchobap Reel
+    youtube_url: https://youtube.com/shorts/Dv1ZH8417Fs
+    blurb: A colorful, fast-paced look at the making of Café Arirang’s yubuchobap,
+      highlighting the ingredients, preparation, and final presentation.
+    roles:
+      - producer
+      - editor
+      - videographer
+  - featured: true
+    start_seconds: 0
+    title: Cafe Arirang Japchae Reel
+    youtube_url: https://youtube.com/shorts/0fm0rKL9qUs
+    blurb: Showcasing Café Arirang’s japchae from preparation to finished dish, with
+      an emphasis on texture, movement, and the cooking process.
+    roles:
+      - producer
+      - editor
+      - videographer
+  - featured: true
+    start_seconds: 0
+    title: Cafe Arirang Dumpling Reel
+    youtube_url: https://youtube.com/shorts/vPIdGV4PeEY
+    blurb: A behind the scenes look at Café Arirang’s dumplings coming together,
+      captured through detailed food shots and a quick, energetic edit.
+    roles:
+      - producer
+      - editor
+      - videographer
+  - featured: false
+    start_seconds: 0
+    title: Share My Meals x Sweetgreen Event Recap
+    youtube_url: https://www.youtube.com/shorts/YIG91gp3QoU
+    blurb: A recap of Sweetgreen Princeton’s opening day partnership with Share My
+      Meals, edited to highlight the energy of the event and its impact of 400
+      meals donated to the community.
+    roles:
+      - editor
   - title: Cafe Arirang Introduction Reel
     youtube_url: https://www.youtube.com/watch?v=njiKrqDk_0E
     blurb: I filmed and edited this introduction reel for Cafe Arirang's grand
       opening, to highlight its menu items and invite people to check it out.
-      TEST
     roles:
       - producer
       - editor

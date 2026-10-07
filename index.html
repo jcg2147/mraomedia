@@ -61,7 +61,7 @@ layout: null
     <!-- Services Seciton -->
     <div class="container">
         <h1 class="montserrat-700 section-header">{{ site.data.index.heading_2 | escape | newline_to_br }}</h1>
-        <div class="services">
+        <div class="services home-services">
             <div class="service-item">
                 <img src="photos/video-production-image.jpg" alt="Video Production">
                 <h3 class="montserrat-600">{{ site.data.services.heading_2 | escape | newline_to_br }}</h3>
@@ -77,6 +77,10 @@ layout: null
                 <h3 class="montserrat-600">{{ site.data.services.heading_4 | escape | newline_to_br }}</h3>
                 <p>{{ site.data.services.paragraph_4 | escape | newline_to_br }}</p>
             </div>
+            <a class="all-services-link" href="services">
+                <span>See all of our services</span>
+                <span aria-hidden="true">&rarr;</span>
+            </a>
         </div>
     </div>
     

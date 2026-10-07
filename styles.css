@@ -851,6 +851,67 @@ header .hamburger .bar {
     }
 }
 
+.home-services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px));
+}
+
+.home-services .service-item {
+    width: 100%;
+}
+
+.all-services-link {
+    grid-column: 1 / -1;
+    justify-self: end;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--mrao-gold);
+    border-radius: 999px;
+    background: var(--mrao-card);
+    color: var(--mrao-brown);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: background-color 150ms ease;
+}
+
+.all-services-link:hover,
+.all-services-link:focus-visible {
+    background: var(--mrao-gold);
+    color: var(--mrao-brown);
+    text-decoration: none;
+}
+
+.all-services-link:focus-visible {
+    outline: 2px solid var(--mrao-brown);
+    outline-offset: 4px;
+}
+
+@media (min-width: 1200px) {
+    .home-services {
+        grid-template-columns: repeat(3, minmax(0, 300px)) 150px;
+    }
+
+    .all-services-link {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-services {
+        grid-template-columns: minmax(0, 300px);
+    }
+
+    .all-services-link {
+        justify-self: center;
+    }
+}
+
 .gallery {
     column-count: 2;
     column-gap: 20px;

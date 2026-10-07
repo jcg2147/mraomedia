@@ -1,9 +1,26 @@
 videos:
+  - featured: true
+    start_seconds: 0
+    title: Cafe Arirang Japchae Reel
+    youtube_url: https://youtube.com/shorts/0fm0rKL9qUs
+    blurb: TBD
+    roles:
+      - producer
+      - editor
+      - videographer
+  - featured: true
+    start_seconds: 0
+    title: Cafe Arirang Dumpling Reel
+    youtube_url: https://youtube.com/shorts/vPIdGV4PeEY
+    blurb: TBD
+    roles:
+      - producer
+      - editor
+      - videographer
   - title: Cafe Arirang Introduction Reel
     youtube_url: https://www.youtube.com/watch?v=njiKrqDk_0E
     blurb: I filmed and edited this introduction reel for Cafe Arirang's grand
       opening, to highlight its menu items and invite people to check it out.
-      TEST
     roles:
       - producer
       - editor

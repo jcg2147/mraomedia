@@ -46,7 +46,7 @@ videos:
       - producer
       - editor
       - videographer
-    featured: true
+    featured: false
   - title: AI Adoption Day Highlight Reel
     youtube_url: https://www.youtube.com/watch?v=9GxGGpIyito
     blurb: Highlight reel I filmed and edited from Global AI Adoption Day, featuring

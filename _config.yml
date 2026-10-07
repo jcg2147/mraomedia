@@ -1,1 +1,21 @@
-
+title: Mrao Media
+url: "https://mraomedia.com"
+baseurl: ""
+encoding: utf-8
+strict_front_matter: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs
+  - tests
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor
+  - archive
+  - TO-DO
+  - CNAME
+include:
+  - _headers
+  - _redirects

@@ -27,9 +27,9 @@ permalink: /about
     <section id="about" class="py-5">
         <div class="container d-flex align-items-center">
             <div class="about-text w-50 pr-4">
-                <h1>I'm Sabrina, a video production specialist</h1>
-                <p>I graduated from Montclair State University with a major in Television and Digital Media, focusing on TV production. With over 10 years in video production, I've immersed myself in the industry and am excited to share my work with you!</p>
-                <p>I believe that the power of visual media can amplify important messages and contribute to meaningful causes. Here, you'll find a collection of videos that showcase my skills across a diverse range of subjects, styles, and techniques developed throughout my career. Thank you for visiting my online portfolio!</p>
+                <h1>{{ site.data.about.heading_1 | escape | newline_to_br }}</h1>
+                <p>{{ site.data.about.paragraph_1 | escape | newline_to_br }}</p>
+                <p>{{ site.data.about.paragraph_2 | escape | newline_to_br }}</p>
                 <a href="https://www.linkedin.com/in/sabrinaenrriquez/" target="_blank">
                     <button class="btn mb-4">
                         <i class="fab fa-linkedin"></i> Visit my LinkedIn
@@ -42,7 +42,7 @@ permalink: /about
             </div>
         </div>
         <div class="work-featured">
-            <h2 class="work-featured__title">Work Featured On:</h2>
+            <h2 class="work-featured__title">{{ site.data.about.heading_2 | escape | newline_to_br }}</h2>
             <div class="work-featured__logos">
                 <img src="photos/rls-featured.png" alt="RLS Metro Breaking News" class="work-featured__logo">
                 <img src="photos/news12-featured.png" alt="News 12+" class="work-featured__logo">
@@ -56,48 +56,48 @@ permalink: /about
         <!-- Row 1 -->
         <div class="gallery-item">
             <img src="photos/about-sand-dunes.jpg" alt="Filming in the Great Sand Dunes">
-            <div class="caption montserrat-300">Filming in the Great Sand Dunes, Colorado</div>
+            <div class="caption montserrat-300">{{ site.data.about.caption_1 | escape | newline_to_br }}</div>
         </div>
         <div class="gallery-item">
             <img src="photos/mountains.png" alt="Along for the Heliride">
-            <div class="caption montserrat-300">Taken during our most recent project titled "Along for the Telluride"</div>
+            <div class="caption montserrat-300">{{ site.data.about.caption_2 | escape | newline_to_br }}</div>
         </div>
 
         <!-- Row 2 -->
         <div class="gallery-item">
             <img src="photos/about-pam-cover.jpg" alt="Filming of Las Huellas - Ximena Santana (Cover)">
-            <div class="caption montserrat-300">Filming of Las Huellas - Ximena Santana (Cover) by Pam Uglialoro</div>
+            <div class="caption montserrat-300">{{ site.data.about.caption_3 | escape | newline_to_br }}</div>
         </div>
         <br>
         <div class="gallery-item">
             <img src="photos/about-sab-camera.png" alt="Filming of Las Huellas">
-            <div class="caption montserrat-300">Filming of Las Huellas by Pam Uglialoro</div>
+            <div class="caption montserrat-300">{{ site.data.about.caption_4 | escape | newline_to_br }}</div>
         </div>
     </div>
 
     <!-- Text -->
     <div class="text-wrapper">
         <div class="text-container">
-            <h2>Thanks for visiting our page! We are a video production company with a lot of love for storytelling through video and unrelatedly also for cats!</h2>
+            <h2>{{ site.data.about.heading_3 | escape | newline_to_br }}</h2>
         </div>
     </div>
 
     <div class="four-text-container">
         <div class="column">
-            <h1>Let us bring your idea to life!</h1>
-            <p>We are dedicated and passionate in ensuring our videos capture special moments, stories and messages you’d like to share and keep through video!</p>
+            <h1>{{ site.data.about.heading_4 | escape | newline_to_br }}</h1>
+            <p>{{ site.data.about.paragraph_3 | escape | newline_to_br }}</p>
         </div>
         <div class="column">
-            <h2>The Details</h2>
-            <p>In our pre-production planning we discuss if you have in mind a specific style, length or look for your shoot / final video. We also determine the amount of cameras and videographers that will be needed.</p>
+            <h2>{{ site.data.about.heading_5 | escape | newline_to_br }}</h2>
+            <p>{{ site.data.about.paragraph_4 | escape | newline_to_br }}</p>
         </div>
         <div class="column">
-            <h2>Capturing Events</h2>
-            <p>Whether you’re looking for promotional footage, to capture an event or planning a video project, our team is prepared to meet your production needs and equipped to ensure a smooth and seamless day of filming.</p>
+            <h2>{{ site.data.about.heading_6 | escape | newline_to_br }}</h2>
+            <p>{{ site.data.about.paragraph_5 | escape | newline_to_br }}</p>
         </div>
         <div class="column">
-            <h2>Video Editing</h2>
-            <p>We will send the edited video for a final review/revisions before providing the final edit.</p>
+            <h2>{{ site.data.about.heading_7 | escape | newline_to_br }}</h2>
+            <p>{{ site.data.about.paragraph_6 | escape | newline_to_br }}</p>
         </div>
     </div>
     
